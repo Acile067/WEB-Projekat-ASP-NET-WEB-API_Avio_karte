@@ -1,0 +1,6 @@
+@using ASP_NET_WEB_API_Avio_Karte.Areas.HelpPage.ModelDescriptions
+@model CollectionModelDescription
+@if (Model.ElementDescription is ComplexTypeModelDescription)
+{
+    @Html.DisplayFor(m => m.ElementDescription)
+}

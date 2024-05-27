@@ -1,0 +1,80 @@
+﻿.bg-image {
+    background-image: url(./Images/avionHero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 300px !important;
+}
+
+.primary-color {
+    color: #776db7;
+}
+
+.p-hero-text {
+    padding-left: 80px;  
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 1440px) {
+    .bg-image {
+        padding: 270px !important;
+    }
+    .p-hero-text {
+        padding-left: 60px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .bg-image {
+        padding: 230px !important;
+    }
+
+    .p-hero-text {
+        padding-left: 40px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .bg-image {
+        padding: 180px !important;
+    }
+
+    .p-hero-text {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .bg-image {
+        padding: 150px !important;
+    }
+
+    .p-hero-text {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bg-image {
+        padding: 100px !important;
+    }
+
+    .p-hero-text {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .bg-image {
+        padding: 60px !important;
+    }
+
+    .p-hero-text {
+        padding-left: 0px;
+    }
+}
