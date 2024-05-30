@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPutnik xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Putnik>
+    <KorisnickoIme>Aleksandar</KorisnickoIme>
+    <Lozinka>Milanovic</Lozinka>
+    <Ime>Aleksandar</Ime>
+    <Prezime>Milanovic</Prezime>
+    <Email>aleksandar.milanovi067@gmail.com</Email>
+    <DatumRodjenja>05/05/2002</DatumRodjenja>
+    <Pol>Musko</Pol>
+    <TipKorisnika>Putnik</TipKorisnika>
+    <Recenzije />
+  </Putnik>
+</ArrayOfPutnik>

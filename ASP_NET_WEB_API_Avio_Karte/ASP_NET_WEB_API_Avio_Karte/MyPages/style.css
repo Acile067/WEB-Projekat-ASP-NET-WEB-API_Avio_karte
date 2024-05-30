@@ -6,8 +6,25 @@
     padding: 300px !important;
 }
 
+#logout:hover{
+    cursor: pointer;
+}
+
 .primary-color {
     color: #776db7;
+}
+
+.primary-color-background {
+    background-color: #776db7 !important;
+}
+
+.email-width {
+    width: 546px !important;
+}
+
+.btn-register {
+    max-width: 140px;
+    background-color: #776db7;
 }
 
 .p-hero-text {

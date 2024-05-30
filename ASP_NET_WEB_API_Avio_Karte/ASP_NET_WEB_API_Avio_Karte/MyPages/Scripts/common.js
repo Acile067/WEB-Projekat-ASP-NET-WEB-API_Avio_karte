@@ -16,27 +16,29 @@ function navbar() {
         }
         var role = sessionStorage.getItem('role');
         if (role === "Administrator") {
-            //$('nav').append(`<a class="nav-link " href="registertrainer.html">Registruj trenera</a>
-            //                 <a class="nav-link " href="fitnesscenters.html">Fitnes centri</a>`);
+            
         }
         else if (role === "Putnik") {
-            //$('nav').append('<a class="nav-link " href="trainerhistory.html">Istorija</a>');
-            //$('nav').append('<a class="nav-link " href="trainings.html">Treninzi</a>');
+            
         }
         $('nav').append(`<a class="nav-link" href="aviokompanije.html">Aviokompanije</a>
                          <a class="nav-link " href="profile.html">Profil</a>
-                         <a class="nav-link " id="logout">Log out</a>`);
+                         <a class="nav-link cursor-pointer" href="index.html" id="logout">Log out</a>`);
         logout();
     }
     else {
         $('nav').append(`<a class="nav-link" href="aviokompanije.html">Aviokompanije</a>
                          <a class="nav-link" href="register.html">Registracija</a>
-                         <a class="nav-link" href="login.html">Login</a>`);
+                         <a class="nav-link" href="login.html" id="test">Login</a>`);
     }
 
 }
 
 function logout() {
+    document.getElementById('logout').addEventListener('mouseover', function () {
+        this.style.cursor = 'pointer';
+    });
+
     $(document).on('click', "#logout", function () {
         id = sessionStorage.getItem('token');
         $.ajax({

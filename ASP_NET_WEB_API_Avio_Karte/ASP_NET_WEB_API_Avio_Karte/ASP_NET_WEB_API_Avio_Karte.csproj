@@ -167,17 +167,24 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Administrator.cs" />
     <Compile Include="Models\Aviokompanija.cs" />
+    <Compile Include="Models\Data.cs" />
     <Compile Include="Models\Korisnik.cs" />
     <Compile Include="Models\Let.cs" />
+    <Compile Include="Models\ListData.cs" />
+    <Compile Include="Models\Putnik.cs" />
     <Compile Include="Models\Recenzija.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\administratori.xml" />
+    <Content Include="App_Data\putnici.xml" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -204,6 +211,8 @@
     <Content Include="MyPages\profile.html" />
     <Content Include="MyPages\register.html" />
     <Content Include="MyPages\Scripts\common.js" />
+    <Content Include="MyPages\Scripts\login.js" />
+    <Content Include="MyPages\Scripts\register.js" />
     <Content Include="MyPages\style.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -251,9 +260,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
     <Content Include="Content\bootstrap.rtl.css.map" />

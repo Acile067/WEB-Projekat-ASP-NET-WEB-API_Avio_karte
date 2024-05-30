@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ASP_NET_WEB_API_Avio_Karte.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,8 @@ namespace ASP_NET_WEB_API_Avio_Karte
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Data.CreateData();
         }
     }
 }
