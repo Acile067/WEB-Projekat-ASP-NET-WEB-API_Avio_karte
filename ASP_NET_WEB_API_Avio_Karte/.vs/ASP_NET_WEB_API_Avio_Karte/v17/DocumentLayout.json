@@ -3,23 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|c:\\users\\acile\\desktop\\web-projekat-asp-net-web-api\\asp_net_web_api_avio_karte\\asp_net_web_api_avio_karte\\models\\listdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\models\\listdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|c:\\users\\acile\\desktop\\web-projekat-asp-net-web-api\\asp_net_web_api_avio_karte\\asp_net_web_api_avio_karte\\models\\let.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\models\\let.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|c:\\users\\acile\\desktop\\web-projekat-asp-net-web-api\\asp_net_web_api_avio_karte\\asp_net_web_api_avio_karte\\models\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\models\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|c:\\users\\acile\\desktop\\web-projekat-asp-net-web-api\\asp_net_web_api_avio_karte\\asp_net_web_api_avio_karte\\mypages\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\mypages\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|c:\\users\\acile\\desktop\\web-projekat-asp-net-web-api\\asp_net_web_api_avio_karte\\asp_net_web_api_avio_karte\\mypages\\aviokompanije.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\mypages\\aviokompanije.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|c:\\users\\acile\\desktop\\web-projekat-asp-net-web-api\\asp_net_web_api_avio_karte\\asp_net_web_api_avio_karte\\mypages\\profile.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|c:\\users\\acile\\desktop\\web-projekat-asp-net-web-api\\asp_net_web_api_avio_karte\\asp_net_web_api_avio_karte\\mypages\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\mypages\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\asp_net_web_api_avio_karte\\mypages\\profile.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\mypages\\profile.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -27,36 +23,12 @@
       "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\mypages\\register.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\asp_net_web_api_avio_karte\\mypages\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\mypages\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\asp_net_web_api_avio_karte\\mypages\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\mypages\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\asp_net_web_api_avio_karte\\mypages\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\mypages\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\asp_net_web_api_avio_karte\\mypages\\scripts\\common.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\mypages\\scripts\\common.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\asp_net_web_api_avio_karte\\mypages\\scripts\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\mypages\\scripts\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\asp_net_web_api_avio_karte\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|c:\\users\\acile\\desktop\\web-projekat-asp-net-web-api\\asp_net_web_api_avio_karte\\asp_net_web_api_avio_karte\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|c:\\users\\acile\\desktop\\web-projekat-asp-net-web-api\\asp_net_web_api_avio_karte\\asp_net_web_api_avio_karte\\mypages\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\mypages\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\asp_net_web_api_avio_karte\\models\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{897CBAC1-D197-436C-89E2-A2C4A9AEFC96}|ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte.csproj|solutionrelative:asp_net_web_api_avio_karte\\models\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,182 +47,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ListData.cs",
-              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\Models\\ListData.cs",
-              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\Models\\ListData.cs",
-              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\Models\\ListData.cs",
-              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\Models\\ListData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T20:17:15.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Let.cs",
-              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\Models\\Let.cs",
-              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\Models\\Let.cs",
-              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\Models\\Let.cs",
-              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\Models\\Let.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T20:17:12.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Korisnik.cs",
-              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\Models\\Korisnik.cs",
-              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\Models\\Korisnik.cs",
-              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\Models\\Korisnik.cs",
-              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\Models\\Korisnik.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAA4wAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T20:17:01.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "aviokompanije.html",
-              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\aviokompanije.html",
-              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\aviokompanije.html",
-              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\aviokompanije.html",
-              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\aviokompanije.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-30T20:16:58.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "profile.html",
-              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\profile.html",
-              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\profile.html",
-              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\profile.html",
-              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\profile.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-30T20:16:56.955Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Global.asax.cs",
-              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\Global.asax.cs",
-              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\Global.asax.cs",
-              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\Global.asax.cs",
-              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\Global.asax.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T20:05:03.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\style.css",
-              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\style.css",
-              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\style.css",
-              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\style.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-30T19:00:45.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Data.cs",
-              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\Models\\Data.cs",
-              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\Models\\Data.cs",
-              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\Models\\Data.cs",
-              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\Models\\Data.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T19:35:09.584Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\Controllers\\UserController.cs",
-              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\Controllers\\UserController.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAqwEYAAABbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T19:32:00.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "login.js",
-              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\Scripts\\login.js",
-              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\Scripts\\login.js",
-              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\Scripts\\login.js",
-              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\Scripts\\login.js",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAYwBgAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-30T19:26:10.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\index.html",
-              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\index.html",
-              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\index.html",
-              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\index.html",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB8AAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-30T19:23:02.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "common.js",
-              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\Scripts\\common.js",
-              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\Scripts\\common.js",
-              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\Scripts\\common.js",
-              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\Scripts\\common.js",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-30T19:20:11.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "register.html",
-              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\register.html",
-              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\register.html",
-              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\register.html",
-              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\register.html",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAEgAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-30T19:00:01.889Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "login.html",
               "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\login.html",
               "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\login.html",
               "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\login.html",
               "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\login.html",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAC8AAAAmAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAcwDEAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-30T18:46:12.336Z",
+              "WhenOpened": "2024-05-31T06:30:56.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "aviokompanije.html",
+              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\aviokompanije.html",
+              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\aviokompanije.html",
+              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\aviokompanije.html",
+              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\aviokompanije.html",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-31T06:30:45.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\index.html",
+              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\index.html",
+              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\index.html",
+              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\index.html",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-31T06:19:34.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "profile.html",
+              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\profile.html",
+              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\profile.html",
+              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\profile.html",
+              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\profile.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-30T20:25:52.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "common.js",
+              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\Scripts\\common.js",
+              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\Scripts\\common.js",
+              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\Scripts\\common.js",
+              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\Scripts\\common.js",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAYwBkAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-30T20:26:04.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "register.html",
+              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\register.html",
+              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\register.html",
+              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\register.html",
+              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\register.html",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-30T20:25:57.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\style.css",
+              "RelativeDocumentMoniker": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\style.css",
+              "ToolTip": "C:\\Users\\acile\\Desktop\\WEB-Projekat-ASP-NET-WEB-API\\ASP_NET_WEB_API_Avio_Karte\\ASP_NET_WEB_API_Avio_Karte\\MyPages\\style.css",
+              "RelativeToolTip": "ASP_NET_WEB_API_Avio_Karte\\MyPages\\style.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-30T20:28:46.853Z",
               "EditorCaption": ""
             }
           ]

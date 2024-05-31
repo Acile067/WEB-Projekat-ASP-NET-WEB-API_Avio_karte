@@ -21,15 +21,29 @@ function navbar() {
         else if (role === "Putnik") {
             
         }
-        $('nav').append(`<a class="nav-link" href="aviokompanije.html">Aviokompanije</a>
-                         <a class="nav-link " href="profile.html">Profil</a>
-                         <a class="nav-link cursor-pointer" href="index.html" id="logout">Log out</a>`);
+        $('nav').append(`<li class="nav-item">
+                            <a class="nav-link" href="aviokompanije.html">Aviokompanije</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="logout class="nav-link cursor-pointer" href="index.html">Log out</a>
+                        </li>
+                         `);
         logout();
     }
     else {
-        $('nav').append(`<a class="nav-link" href="aviokompanije.html">Aviokompanije</a>
-                         <a class="nav-link" href="register.html">Registracija</a>
-                         <a class="nav-link" href="login.html" id="test">Login</a>`);
+        $('ul').append(`<li class="nav-item">
+                            <a class="nav-link" href="aviokompanije.html">Aviokompanije</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">Registracija</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                         `);
     }
 
 }
@@ -48,7 +62,7 @@ function logout() {
                 console.log(result);
                 window.location = "/MyPages/index.html";
                 sessionStorage.removeItem('token');
-                sessionStorage.removeItem('username');
+                sessionStorage.removeItem('korisnickoime');
                 sessionStorage.removeItem('role');
             },
             error: function (result) { console.log(result); }
