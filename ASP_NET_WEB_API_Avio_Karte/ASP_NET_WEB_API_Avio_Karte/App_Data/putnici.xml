@@ -5,8 +5,30 @@
     <Lozinka>Stefan</Lozinka>
     <Ime>Stefan</Ime>
     <Prezime>Cvjetkovic</Prezime>
-    <Email>stefan.cjetkovic@gmail.com</Email>
+    <Email>stefan.cvjetkovic@gmail.com</Email>
     <DatumRodjenja>03/03/2002</DatumRodjenja>
+    <Pol>Musko</Pol>
+    <TipKorisnika>Putnik</TipKorisnika>
+    <Recenzije />
+  </Putnik>
+  <Putnik>
+    <KorisnickoIme>Pera</KorisnickoIme>
+    <Lozinka>Pera</Lozinka>
+    <Ime>Pera</Ime>
+    <Prezime>Pera</Prezime>
+    <Email>pera@pera.com</Email>
+    <DatumRodjenja>05/05/2002</DatumRodjenja>
+    <Pol>Musko</Pol>
+    <TipKorisnika>Putnik</TipKorisnika>
+    <Recenzije />
+  </Putnik>
+  <Putnik>
+    <KorisnickoIme>Aleksic</KorisnickoIme>
+    <Lozinka>Aleksic</Lozinka>
+    <Ime>Aleksandar</Ime>
+    <Prezime>Aleksic</Prezime>
+    <Email>aleksic@gmail.com</Email>
+    <DatumRodjenja>01/01/2001</DatumRodjenja>
     <Pol>Musko</Pol>
     <TipKorisnika>Putnik</TipKorisnika>
     <Recenzije />

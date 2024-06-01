@@ -7,6 +7,7 @@ using System.Web.Http;
 using static Antlr.Runtime.Tree.TreeWizard;
 using ASP_NET_WEB_API_Avio_Karte.Models;
 using System.Text;
+using System.Globalization;
 
 namespace ASP_NET_WEB_API_Avio_Karte.Controllers
 {
@@ -116,5 +117,35 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
                 Data.Putnici.UpdateFile();
             return Ok();
         }
+
+
+        // GET /api/users
+        [HttpGet, Route("api/users")]
+        public IHttpActionResult GetAllUsers(string ime = null, string prezime = null, string datumOd = null, string datumDo = null)
+        {
+            var putnici = Data.Putnici.GetList().Select(p => (Korisnik)p);
+
+            // Filtriranje korisnika prema unetim parametrima pretrage
+            if (!string.IsNullOrWhiteSpace(ime))
+                putnici = putnici.Where(p => p.Ime.ToLower().Contains(ime.ToLower()));
+            if (!string.IsNullOrWhiteSpace(prezime))
+                putnici = putnici.Where(p => p.Prezime.ToLower().Contains(prezime.ToLower()));
+            if (!string.IsNullOrWhiteSpace(datumOd))
+            {
+                DateTime datumOdDate;
+                if (DateTime.TryParse(datumOd, out datumOdDate))
+                    putnici = putnici.Where(p => DateTime.ParseExact(p.DatumRodjenja, "dd/MM/yyyy", CultureInfo.InvariantCulture) >= datumOdDate);
+            }
+            if (!string.IsNullOrWhiteSpace(datumDo))
+            {
+                DateTime datumDoDate;
+                if (DateTime.TryParse(datumDo, out datumDoDate))
+                    putnici = putnici.Where(p => DateTime.ParseExact(p.DatumRodjenja, "dd/MM/yyyy", CultureInfo.InvariantCulture) <= datumDoDate);
+            }
+
+            return Ok(putnici.ToList());
+        }
+
+
     }
 }

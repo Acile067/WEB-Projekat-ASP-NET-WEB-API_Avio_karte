@@ -10,6 +10,27 @@
     cursor: pointer;
 }
 
+th.sortable:hover {
+    cursor: pointer;
+}
+
+.sortable::after {
+    content: ''; /* Empty content for the pseudo-element */
+    display: inline-block; /* Ensures the pseudo-element is displayed */
+    margin-left: 5px; /* Adjust as needed, provides spacing between text and arrow */
+    vertical-align: middle; /* Aligns the arrow vertically with the text */
+}
+
+/* CSS for ascending sorting indicator */
+.sortable.asc::after {
+    content: '\25B2'; /* Content for the ascending arrow */
+}
+
+/* CSS for descending sorting indicator */
+.sortable.desc::after {
+    content: '\25BC'; /* Content for the descending arrow */
+}
+
 .primary-color {
     color: #776db7;
 }
@@ -51,6 +72,56 @@ body {
     }
 }
 
+@media (max-width:992px) {
+    /* removing table display */
+    .table, .table thead, .table th, .table tbody, .table tr, .table td {
+        display: block;
+    }
+
+    .table {
+        overflow: hidden;
+        position: relative;
+    }
+
+        /* place the header on the left */
+        .table thead {
+            width: 50%;
+        }
+
+
+            .table thead ~ /* make tbody absolute if there is a thead */
+            tbody { /* place the body on the right and make it scrollable */
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                bottom: 0px;
+                width: 50%;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+
+        /* remove unnecessary borders */
+        .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td,
+        .table > tbody > tr:last-child {
+            border: none;
+        }
+
+        /* add borders for every "row" */
+        .table > tbody > tr {
+            border-bottom: 1px solid #DDD;
+        }
+
+
+            /* ensure fields have a one line height or cut them else */
+            .table > tbody > tr > td,
+            .table > thead > tr > th {
+                text-align: left;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+}
+
 @media screen and (max-width: 980px) {
     .bg-image {
         padding: 180px !important;
@@ -70,6 +141,8 @@ body {
         padding-left: 20px;
     }
 }
+
+
 
 @media screen and (max-width: 480px) {
     .bg-image {

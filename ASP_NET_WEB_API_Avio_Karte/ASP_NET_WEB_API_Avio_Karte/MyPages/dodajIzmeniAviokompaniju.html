@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avio Karte - Profil</title>
+    <title>Avio Karte - Admin Aviokompanija</title>
     <link rel="stylesheet" href="../Content/bootstrap.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,7 +13,6 @@
     <script src="../Scripts/jquery-3.7.1.js"></script>
     <script src="../Scripts/bootstrap.js"></script>
     <script src="Scripts/common.js" type="text/javascript"></script>
-    <script src="Scripts/profile.js" type="text/javascript"></script>
     <script src="Scripts/profileOptions.js" type="text/javascript"></script>
 </head>
 <body>
@@ -26,104 +25,61 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    
-
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container-sm container-fluid" >
+    <div class="container-sm container-fluid">
         <div class="row">
             <div id="options" class="col-md-2 col-sm-4">
                 <div class="row">
                     <a href="profile.html">Uredi</a>
                 </div>
-                
+
             </div>
             <div class="col-md-10 col-sm-8">
                 <div class="row justify-content-center text-md-center" id="edit">
-                    <h3>Uredite svoj nalog:</h3>
+                    <h3>Dodajte novu aviokompaniju:</h3>
                 </div>
                 <div class="row justify-content-md-center mt-1">
-                    <div class="col-sm-12 col-md-8 col-lg-6">
+                    <div class="col-sm-12 col-md-8 col-lg-12">
                         <div class="row">
                             <div class="col-12">
-                                <label class="fw-bold">Ime</label>
+                                <label class="fw-bold">Naziv</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <input id="ime" class="form-control rounded-pill" style="border-color: black;" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-8 col-lg-6">
-                        <div class="row">
-                            <div class="col-12">
-                                <label class="fw-bold">Prezime</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <input id="prezime" class="form-control rounded-pill " style="border-color: black;" />
+                                <input id="naziv" class="form-control rounded-pill" style="border-color: black;" />
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="row justify-content-md-center mt-1">
-                    <div class="col-sm-12 col-md-8 col-lg-6">
+                    <div class="col-sm-12 col-md-8 col-lg-12">
                         <div class="row">
                             <div class="col-12">
-                                <label class="fw-bold">Korisničko ime</label>
+                                <label class="fw-bold">Adresa</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <input id="korisnickoime" class="form-control rounded-pill " style="border-color: black;" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-8 col-lg-6">
-                        <div class="row">
-                            <div class="col-12">
-                                <label class="fw-bold">Lozinka</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <input id="lozinka" type="password" class="form-control rounded-pill " style="border-color: black;" />
+                                <input id="adresa" class="form-control rounded-pill" style="border-color: black;" />
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="row justify-content-md-center mt-1">
-                    <div class="col-sm-12 col-md-8 col-lg-6">
+                    <div class="col-sm-12 col-md-8 col-lg-12">
                         <div class="row">
                             <div class="col-12">
-                                <label class="fw-bold">Datum rođenja</label>
+                                <label class="fw-bold">Telefon</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <input id="datumrodjenja" type="date" class="form-control rounded-pill " style="border-color: black;" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-8 col-lg-6">
-                        <div class="row">
-                            <div class="col-12">
-                                <label class="fw-bold">Pol</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <select id="pol" class="form-control rounded-pill border-black ">
-                                    <option>Muško</option>
-                                    <option>Žensko</option>
-                                </select>
+                                <input id="telefon" class="form-control rounded-pill" style="border-color: black;" />
                             </div>
                         </div>
                     </div>
@@ -142,12 +98,11 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="row justify-content-center">
                     <div class="col-sm-12 col-md-8 col-lg-12">
                         <div class="row justify-content-center">
-                            <div class="col-lg-3 col-md-6 col-sm-9 justify-content-center d-flex">
-                                <input type="submit" value="Izmeni" id="editbtn" class="form-control rounded-pill border-black mt-4 btn-register fw-bold" />
+                            <div class="col-lg-3 col-md-9 col-sm-9 justify-content-center d-flex">
+                                <input type="submit" value="Dodaj aviokompaniju" id="dodajkompaniju" class="form-control rounded-pill border-black mt-4 btn-register fw-bold" />
                             </div>
                         </div>
                     </div>
