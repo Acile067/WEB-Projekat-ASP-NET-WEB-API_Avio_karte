@@ -4,8 +4,10 @@
 });
 
 function getReady() {
-    if (sessionStorage.getItem('token'))
+    if (sessionStorage.getItem('token')) {
+        sessionStorage.clear();
         window.location = '/MyPages/index.html';
+    }
 }
 
 function check(id) {
@@ -25,12 +27,14 @@ function login() {
             return;
         }
 
-        data = { 'korisnickoime': $('#korisnickoime').val(), 'lozinka': $('#lozinka').val() };
+        let data = { 'korisnickoime': $('#korisnickoime').val(), 'lozinka': $('#lozinka').val() };
         $.post('/api/login', data, function (result) {
-            console.log(result);
+            sessionStorage.clear();
             sessionStorage.setItem('token', result);
             sessionStorage.setItem('korisnickoime', $('#korisnickoime').val());
             window.location = '/MyPages/index.html';
-        }).fail(function (xhr, status, err) { alert("Lose uneti podaci"); });
+        }).fail(function (xhr, status, err) {
+            alert("Lose uneti podaci");
+        });
     });
 }

@@ -31,9 +31,10 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             if (CheckIfExists(k.KorisnickoIme, k.Email))
                 return BadRequest("Korisnicko ime vec postoji");
             Data.Putnici.Add(new Putnik(k));
-            return Created("User", k.KorisnickoIme);
+            return Created("Korisnik", k.KorisnickoIme);
         }
 
+        //api/login
         [HttpPost, Route("api/login")]
         public IHttpActionResult Login(Korisnik k)
         {
@@ -57,7 +58,10 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
         public IHttpActionResult Logout(string id)
         {
             if (Data.LoggedWithToken.Remove(id))
+            {
                 return Ok();
+            }
+                
             return BadRequest();
         }
 
@@ -69,6 +73,48 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
                 return null;
 
             return Enum.GetName(typeof(TipKorisnika), Data.LoggedWithToken[id].TipKorisnika);
+        }
+
+        //GET /api/user/{id}
+        public Korisnik Get(string id)
+        {
+            if (!Data.LoggedWithToken.ContainsKey(id))
+                return null;
+
+            return Data.LoggedWithToken[id];
+        }
+
+        //PUT /api/user
+        public IHttpActionResult Put([FromUri] string id, [FromBody] Korisnik user)
+        {
+            DateTime dateTime;
+            if (DateTime.TryParse(user.DatumRodjenja, out dateTime))
+                user.DatumRodjenja = dateTime.ToString("dd/MM/yyyy");
+
+            if (!Data.LoggedWithToken.ContainsKey(id))
+                return BadRequest();
+            Korisnik u1 = Data.LoggedWithToken[id];
+            if (u1.KorisnickoIme != user.KorisnickoIme)
+                if (Data.Putnici.Find(u => u.KorisnickoIme == user.KorisnickoIme) != null ||
+                    Data.Administratori.Find(u => u.KorisnickoIme == user.KorisnickoIme) != null)
+                    return BadRequest("Postoji korisnik sa takvim korisnickim imenom");
+            if (string.IsNullOrWhiteSpace(user.Ime) || string.IsNullOrWhiteSpace(user.Prezime) ||
+                string.IsNullOrWhiteSpace(user.KorisnickoIme) || string.IsNullOrWhiteSpace(user.DatumRodjenja) ||
+                string.IsNullOrWhiteSpace(user.Lozinka))
+                return BadRequest("Sva polja moraju biti popunjena");
+
+            u1.Ime = user.Ime;
+            u1.Prezime = user.Prezime;
+            u1.KorisnickoIme = user.KorisnickoIme;
+            u1.Email = user.Email;
+            u1.Pol = user.Pol;
+            u1.DatumRodjenja = user.DatumRodjenja;
+            u1.Lozinka = user.Lozinka;
+            if (u1.TipKorisnika == TipKorisnika.Administrator)
+                Data.Administratori.UpdateFile();
+            else if (u1.TipKorisnika == TipKorisnika.Putnik)
+                Data.Putnici.UpdateFile();
+            return Ok();
         }
     }
 }
