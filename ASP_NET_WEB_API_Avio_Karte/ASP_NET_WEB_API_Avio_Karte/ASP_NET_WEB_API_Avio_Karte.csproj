@@ -165,6 +165,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AviokompanijaController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -184,6 +185,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\administratori.xml" />
+    <Content Include="App_Data\aviokompanije.xml" />
     <Content Include="App_Data\putnici.xml" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -208,11 +210,13 @@
     <Content Include="MyPages\dodajIzmeniAviokompaniju.html" />
     <Content Include="MyPages\Images\avionHero.png" />
     <Content Include="MyPages\index.html" />
+    <Content Include="MyPages\izmeniAviokompaniju.html" />
     <Content Include="MyPages\login.html" />
     <Content Include="MyPages\profile.html" />
     <Content Include="MyPages\register.html" />
     <Content Include="MyPages\Scripts\common.js" />
     <Content Include="MyPages\Scripts\dodajAviokompaniju.js" />
+    <Content Include="MyPages\Scripts\izmeniAviokompaniju.js" />
     <Content Include="MyPages\Scripts\login.js" />
     <Content Include="MyPages\Scripts\profile.js" />
     <Content Include="MyPages\Scripts\profileOptions.js" />

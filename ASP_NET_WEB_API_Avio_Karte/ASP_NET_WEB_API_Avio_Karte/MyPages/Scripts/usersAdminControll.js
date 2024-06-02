@@ -1,13 +1,15 @@
 ﻿$(function () {
     getReady();
     fetchUsers();
-    $('#pretrazibtn').click(function () {
+    $(document).on('click', "#pretrazibtn", function () {
         fetchUsers();
     });
 });
 
 function getReady() {
     if (!sessionStorage.getItem('token'))
+        window.location = '/MyPages/index.html';
+    if (sessionStorage.getItem('role') != 'Administrator')
         window.location = '/MyPages/index.html';
 }
 

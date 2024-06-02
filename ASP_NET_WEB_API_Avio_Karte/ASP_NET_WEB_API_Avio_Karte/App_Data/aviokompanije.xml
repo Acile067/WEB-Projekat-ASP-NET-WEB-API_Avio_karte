@@ -1,2 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfAviokompanija xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+<ArrayOfAviokompanija xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Aviokompanija>
+    <Id>1</Id>
+    <Naziv>AvioLet</Naziv>
+    <Adresa>Masarikova, Sabac</Adresa>
+    <Telefon>0611223344</Telefon>
+    <Email>avio@let.com</Email>
+    <Obrisana>Ne</Obrisana>
+    <Letovi />
+    <Recenzije />
+  </Aviokompanija>
+  <Aviokompanija>
+    <Id>2</Id>
+    <Naziv>MacvaEkspres</Naziv>
+    <Adresa>Kraljevoj, Badovinci</Adresa>
+    <Telefon>0655556677</Telefon>
+    <Email>macva@ekspres.com</Email>
+    <Obrisana>Ne</Obrisana>
+    <Letovi />
+    <Recenzije />
+  </Aviokompanija>
+</ArrayOfAviokompanija>

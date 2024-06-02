@@ -32,13 +32,12 @@ namespace ASP_NET_WEB_API_Avio_Karte.Models
 
         public void UpdateFile()
         {
-            //Update file
+            // Update file
             using (TextWriter w = new StreamWriter(path, false))
             {
                 serializer.Serialize(w, data);
             }
         }
-
 
         public void Add(T item)
         {
@@ -72,5 +71,21 @@ namespace ASP_NET_WEB_API_Avio_Karte.Models
         }
 
         public T this[int index] { get => data[index]; set => data[index] = value; }
+
+        // Metoda za vraćanje maksimalne vrednosti ID-a
+        public int Max(Func<T, int> selector)
+        {
+            return data.Max(selector);
+        }
+
+        public void Update(T item)
+        {
+            var index = data.FindIndex(i => i.Equals(item));
+            if (index != -1)
+            {
+                data[index] = item;
+                UpdateFile();
+            }
+        }
     }
 }
