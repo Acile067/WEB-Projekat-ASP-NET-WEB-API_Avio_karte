@@ -36,7 +36,9 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
         [HttpGet, Route("api/aviokompanije")]
         public IHttpActionResult GetAllUsers(string naziv = null, string adresa = null, string telefon = null, string email = null)
         {
-            var aviokompanije = Data.Aviokompanije.GetList().Select(p => (Aviokompanija)p);
+            var aviokompanije = Data.Aviokompanije.GetList()
+                            .Where(p => p.Obrisana != "Da") 
+                            .Select(p => (Aviokompanija)p);
 
             // Filtriranje korisnika prema unetim parametrima pretrage
             if (!string.IsNullOrWhiteSpace(naziv))
@@ -56,7 +58,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
         public IHttpActionResult GetAviokompanija(int id)
         {
             var aviokompanija = Data.Aviokompanije.Find(p => p.Id == id);
-            if (aviokompanija == null)
+            if (aviokompanija == null || aviokompanija.Obrisana == "Da")
             {
                 return NotFound();
             }
@@ -72,7 +74,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
                 return BadRequest(ModelState);
 
             var aviokompanija = Data.Aviokompanije.Find(p => p.Id == id);
-            if (aviokompanija == null)
+            if (aviokompanija == null || aviokompanija.Obrisana == "Da")
                 return NotFound();
 
             aviokompanija.Naziv = a.Naziv;
@@ -94,7 +96,8 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
 
             //Treba proveriti listu recenzija pre brisanja
 
-            Data.Aviokompanije.Remove(aviokompanija);
+            aviokompanija.Obrisana = "Da";
+            Data.Aviokompanije.UpdateFile();
             return Ok();
         }
     }

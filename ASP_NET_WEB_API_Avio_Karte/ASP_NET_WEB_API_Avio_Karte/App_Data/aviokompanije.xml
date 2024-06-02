@@ -20,4 +20,14 @@
     <Letovi />
     <Recenzije />
   </Aviokompanija>
+  <Aviokompanija>
+    <Id>3</Id>
+    <Naziv>test</Naziv>
+    <Adresa>test</Adresa>
+    <Telefon>test</Telefon>
+    <Email>test@test.com</Email>
+    <Obrisana>Da</Obrisana>
+    <Letovi />
+    <Recenzije />
+  </Aviokompanija>
 </ArrayOfAviokompanija>
