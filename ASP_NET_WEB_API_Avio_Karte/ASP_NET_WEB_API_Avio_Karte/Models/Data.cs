@@ -10,12 +10,14 @@ namespace ASP_NET_WEB_API_Avio_Karte.Models
         public static ListData<Putnik> Putnici;
         public static ListData<Administrator> Administratori;
         public static ListData<Aviokompanija> Aviokompanije;
+        public static ListData<Let> Letovi;
         public static Dictionary<string, Korisnik> LoggedWithToken;
         public static void CreateData()
         {
             Putnici = new ListData<Putnik>("putnici");
             Administratori = new ListData<Administrator>("administratori");
             Aviokompanije = new ListData<Aviokompanija>("aviokompanije");
+            Letovi = new ListData<Let>("letovi");
             LoggedWithToken = new Dictionary<string, Korisnik>();
         }
     }

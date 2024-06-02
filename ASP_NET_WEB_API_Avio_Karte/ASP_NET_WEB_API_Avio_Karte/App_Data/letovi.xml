@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfLet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Let>
+    <AviokompanijaId>1</AviokompanijaId>
+    <Id>1</Id>
+    <Aviokompanija>AvioLet</Aviokompanija>
+    <PolaznaDestinacija>Beograd</PolaznaDestinacija>
+    <OdredistnaDestinacija>Nis</OdredistnaDestinacija>
+    <DatumPolaska>06/06/2024</DatumPolaska>
+    <VremePolaska>10:15</VremePolaska>
+    <DatumDolaska>06/06/2024</DatumDolaska>
+    <VremeDolaska>10:30</VremeDolaska>
+    <BrojSlobodnihMesta>100</BrojSlobodnihMesta>
+    <BrojZauzetihMesta>0</BrojZauzetihMesta>
+    <Cena>3000</Cena>
+    <StatusLeta>Aktivan</StatusLeta>
+    <Obrisan>Ne</Obrisan>
+  </Let>
+</ArrayOfLet>

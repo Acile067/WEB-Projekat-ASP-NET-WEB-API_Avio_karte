@@ -7,7 +7,40 @@
     <Telefon>0611223344</Telefon>
     <Email>avio@let.com</Email>
     <Obrisana>Ne</Obrisana>
-    <Letovi />
+    <Letovi>
+      <Let>
+        <AviokompanijaId>1</AviokompanijaId>
+        <Id>1</Id>
+        <Aviokompanija>AvioLet</Aviokompanija>
+        <PolaznaDestinacija>Sabac</PolaznaDestinacija>
+        <OdredistnaDestinacija>Nis</OdredistnaDestinacija>
+        <DatumPolaska>2024-06-06</DatumPolaska>
+        <VremePolaska>18:15</VremePolaska>
+        <DatumDolaska>2024-06-06</DatumDolaska>
+        <VremeDolaska>18:30</VremeDolaska>
+        <BrojSlobodnihMesta>20</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>0</BrojZauzetihMesta>
+        <Cena>3500</Cena>
+        <StatusLeta>Aktivan</StatusLeta>
+        <Obrisan>Ne</Obrisan>
+      </Let>
+      <Let>
+        <AviokompanijaId>1</AviokompanijaId>
+        <Id>1</Id>
+        <Aviokompanija>AvioLet</Aviokompanija>
+        <PolaznaDestinacija>Beograd</PolaznaDestinacija>
+        <OdredistnaDestinacija>Nis</OdredistnaDestinacija>
+        <DatumPolaska>06/06/2024</DatumPolaska>
+        <VremePolaska>10:15</VremePolaska>
+        <DatumDolaska>06/06/2024</DatumDolaska>
+        <VremeDolaska>10:30</VremeDolaska>
+        <BrojSlobodnihMesta>100</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>0</BrojZauzetihMesta>
+        <Cena>3000</Cena>
+        <StatusLeta>Aktivan</StatusLeta>
+        <Obrisan>Ne</Obrisan>
+      </Let>
+    </Letovi>
     <Recenzije />
   </Aviokompanija>
   <Aviokompanija>

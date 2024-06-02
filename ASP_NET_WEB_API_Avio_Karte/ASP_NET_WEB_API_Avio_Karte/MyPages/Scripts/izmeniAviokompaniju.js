@@ -7,7 +7,7 @@
             updateAviokompanija();
         }       
     });
-    $('#obrisikompaniju').click(function () {
+    $(document).on('click', "#obrisikompaniju", function () {
         deleteAviokompanija();
     });
 });

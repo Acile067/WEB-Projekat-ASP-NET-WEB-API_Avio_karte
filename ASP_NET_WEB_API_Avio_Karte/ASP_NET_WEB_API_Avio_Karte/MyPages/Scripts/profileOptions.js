@@ -25,7 +25,10 @@ async function profileOptions() {
                                     <a href="usersAdminControll.html">Korisnici</a>
                                   </div>
                                   <div class="row">
-                                    <a href="dodajIzmeniAviokompaniju.html">Aviokompanije</a>
+                                    <a href="dodajIzmeniAviokompaniju.html">Kompanije</a>
+                                  </div>
+                                  <div class="row">
+                                    <a href="letAdminControll.html">Letovi</a>
                                   </div>
                                 `);
         }
