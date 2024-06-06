@@ -182,12 +182,15 @@
     <Compile Include="Models\ListData.cs" />
     <Compile Include="Models\Putnik.cs" />
     <Compile Include="Models\Recenzija.cs" />
+    <Compile Include="Models\Rezervacija.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\administratori.xml" />
     <Content Include="App_Data\aviokompanije.xml" />
+    <Content Include="App_Data\letovi.xml" />
     <Content Include="App_Data\putnici.xml" />
+    <Content Include="App_Data\rezervacije.xml" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -218,9 +221,11 @@
     <Content Include="MyPages\login.html" />
     <Content Include="MyPages\profile.html" />
     <Content Include="MyPages\register.html" />
+    <Content Include="MyPages\rezervisiLet.html" />
     <Content Include="MyPages\Scripts\common.js" />
     <Content Include="MyPages\Scripts\dodajAviokompaniju.js" />
     <Content Include="MyPages\Scripts\dodajLet.js" />
+    <Content Include="MyPages\Scripts\index.js" />
     <Content Include="MyPages\Scripts\izmeniAviokompaniju.js" />
     <Content Include="MyPages\Scripts\izmeniLet.js" />
     <Content Include="MyPages\Scripts\letAdminControll.js" />
@@ -228,6 +233,7 @@
     <Content Include="MyPages\Scripts\profile.js" />
     <Content Include="MyPages\Scripts\profileOptions.js" />
     <Content Include="MyPages\Scripts\register.js" />
+    <Content Include="MyPages\Scripts\rezervisiLet.js" />
     <Content Include="MyPages\Scripts\usersAdminControll.js" />
     <Content Include="MyPages\style.css" />
     <Content Include="MyPages\templejtForDeliting.html" />

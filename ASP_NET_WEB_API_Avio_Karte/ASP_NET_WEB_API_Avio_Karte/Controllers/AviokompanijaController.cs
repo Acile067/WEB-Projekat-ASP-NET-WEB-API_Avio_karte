@@ -100,5 +100,17 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             Data.Aviokompanije.UpdateFile();
             return Ok();
         }
+
+        // GET /api/nazivaviokompanija
+        [HttpGet, Route("api/nazivaviokompanija")]
+        public IHttpActionResult GetAllAviokompanije()
+        {
+            var aviokompanije = Data.Aviokompanije.GetList()
+                                .Where(a => a.Obrisana != "Da")
+                                .Select(a => new { a.Id, a.Naziv })
+                                .ToList();
+
+            return Ok(aviokompanije);
+        }
     }
 }

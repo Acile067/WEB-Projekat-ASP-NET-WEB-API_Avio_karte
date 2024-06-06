@@ -17,9 +17,9 @@ namespace ASP_NET_WEB_API_Avio_Karte.Models
         public int AviokompanijaId {  get; set; }
         public int Id { get; set; }
         public string Aviokompanija {  get; set; }
-        [Required]
+        
         public string PolaznaDestinacija {  get; set; }
-        [Required]
+        
         public string OdredistnaDestinacija { get; set; }
         [Required]
         public string DatumPolaska { get; set; }
@@ -35,9 +35,10 @@ namespace ASP_NET_WEB_API_Avio_Karte.Models
         [Required]
         public double Cena {  get; set; }
         public StatusLeta StatusLeta { get; set; }
+        public List<Rezervacija> Rezervacije { get; set; }
         public string Obrisan { get; set; }
 
-        public Let(int id, int aviokompanijaId, string aviokompanija, string polaznaDestinacija, string odredistnaDestinacija, DateTime datumPolaska, string vremePolaska, DateTime datumDolaska, string vremeDolaska, int brojSlobodnihMesta, int brojZauzetihMesta, double cena, StatusLeta statusLeta, string obrisan)
+        public Let(int id, int aviokompanijaId, string aviokompanija, string polaznaDestinacija, string odredistnaDestinacija, DateTime datumPolaska, string vremePolaska, DateTime datumDolaska, string vremeDolaska, int brojSlobodnihMesta, int brojZauzetihMesta, double cena, StatusLeta statusLeta,List<Rezervacija> rezervacija,string obrisan)
         {
             AviokompanijaId = aviokompanijaId;
             Id = id;
@@ -52,6 +53,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Models
             BrojZauzetihMesta = brojZauzetihMesta;
             Cena = cena;
             StatusLeta = statusLeta;
+            Rezervacije = rezervacija;
             Obrisan = obrisan;
         }
 
@@ -70,6 +72,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Models
             BrojZauzetihMesta = 0;
             Cena = l.Cena;
             StatusLeta = StatusLeta.Aktivan;
+            Rezervacije = new List<Rezervacija>();
             Obrisan = "Ne";
         }
 

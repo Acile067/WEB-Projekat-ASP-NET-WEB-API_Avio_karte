@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfLet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Let>
-    <AviokompanijaId>1</AviokompanijaId>
+    <AviokompanijaId>2</AviokompanijaId>
     <Id>1</Id>
-    <Aviokompanija>AvioLet</Aviokompanija>
+    <Aviokompanija>StefanLet</Aviokompanija>
     <PolaznaDestinacija>Beograd</PolaznaDestinacija>
-    <OdredistnaDestinacija>Nis</OdredistnaDestinacija>
-    <DatumPolaska>06/06/2024</DatumPolaska>
-    <VremePolaska>10:15</VremePolaska>
-    <DatumDolaska>06/06/2024</DatumDolaska>
-    <VremeDolaska>10:30</VremeDolaska>
-    <BrojSlobodnihMesta>100</BrojSlobodnihMesta>
+    <OdredistnaDestinacija>Novi Sad</OdredistnaDestinacija>
+    <DatumPolaska>07/07/2024</DatumPolaska>
+    <VremePolaska>12:12</VremePolaska>
+    <DatumDolaska>07/07/2024</DatumDolaska>
+    <VremeDolaska>12:30</VremeDolaska>
+    <BrojSlobodnihMesta>50</BrojSlobodnihMesta>
     <BrojZauzetihMesta>0</BrojZauzetihMesta>
-    <Cena>3000</Cena>
+    <Cena>1000</Cena>
     <StatusLeta>Aktivan</StatusLeta>
+    <Rezervacije />
+    <Obrisan>Da</Obrisan>
+  </Let>
+  <Let>
+    <AviokompanijaId>1</AviokompanijaId>
+    <Id>2</Id>
+    <Aviokompanija>AvioLet</Aviokompanija>
+    <PolaznaDestinacija>Novi Sad</PolaznaDestinacija>
+    <OdredistnaDestinacija>Beograd</OdredistnaDestinacija>
+    <DatumPolaska>07/07/2024</DatumPolaska>
+    <VremePolaska>15:15</VremePolaska>
+    <DatumDolaska>07/07/2024</DatumDolaska>
+    <VremeDolaska>12:12</VremeDolaska>
+    <BrojSlobodnihMesta>121</BrojSlobodnihMesta>
+    <BrojZauzetihMesta>0</BrojZauzetihMesta>
+    <Cena>1000</Cena>
+    <StatusLeta>Aktivan</StatusLeta>
+    <Rezervacije />
     <Obrisan>Ne</Obrisan>
   </Let>
 </ArrayOfLet>

@@ -4,39 +4,23 @@
     <Id>1</Id>
     <Naziv>AvioLet</Naziv>
     <Adresa>Masarikova, Sabac</Adresa>
-    <Telefon>0611223344</Telefon>
+    <Telefon>0677554241</Telefon>
     <Email>avio@let.com</Email>
     <Obrisana>Ne</Obrisana>
     <Letovi>
       <Let>
         <AviokompanijaId>1</AviokompanijaId>
-        <Id>1</Id>
+        <Id>2</Id>
         <Aviokompanija>AvioLet</Aviokompanija>
-        <PolaznaDestinacija>Sabac</PolaznaDestinacija>
-        <OdredistnaDestinacija>Nis</OdredistnaDestinacija>
-        <DatumPolaska>2024-06-06</DatumPolaska>
-        <VremePolaska>18:15</VremePolaska>
-        <DatumDolaska>2024-06-06</DatumDolaska>
-        <VremeDolaska>18:30</VremeDolaska>
-        <BrojSlobodnihMesta>20</BrojSlobodnihMesta>
+        <PolaznaDestinacija>Novi Sad</PolaznaDestinacija>
+        <OdredistnaDestinacija>Beograd</OdredistnaDestinacija>
+        <DatumPolaska>07/07/2024</DatumPolaska>
+        <VremePolaska>15:15</VremePolaska>
+        <DatumDolaska>07/07/2024</DatumDolaska>
+        <VremeDolaska>12:12</VremeDolaska>
+        <BrojSlobodnihMesta>121</BrojSlobodnihMesta>
         <BrojZauzetihMesta>0</BrojZauzetihMesta>
-        <Cena>3500</Cena>
-        <StatusLeta>Aktivan</StatusLeta>
-        <Obrisan>Ne</Obrisan>
-      </Let>
-      <Let>
-        <AviokompanijaId>1</AviokompanijaId>
-        <Id>1</Id>
-        <Aviokompanija>AvioLet</Aviokompanija>
-        <PolaznaDestinacija>Beograd</PolaznaDestinacija>
-        <OdredistnaDestinacija>Nis</OdredistnaDestinacija>
-        <DatumPolaska>06/06/2024</DatumPolaska>
-        <VremePolaska>10:15</VremePolaska>
-        <DatumDolaska>06/06/2024</DatumDolaska>
-        <VremeDolaska>10:30</VremeDolaska>
-        <BrojSlobodnihMesta>100</BrojSlobodnihMesta>
-        <BrojZauzetihMesta>0</BrojZauzetihMesta>
-        <Cena>3000</Cena>
+        <Cena>1000</Cena>
         <StatusLeta>Aktivan</StatusLeta>
         <Obrisan>Ne</Obrisan>
       </Let>
@@ -45,22 +29,30 @@
   </Aviokompanija>
   <Aviokompanija>
     <Id>2</Id>
-    <Naziv>MacvaEkspres</Naziv>
-    <Adresa>Kraljevoj, Badovinci</Adresa>
-    <Telefon>0655556677</Telefon>
-    <Email>macva@ekspres.com</Email>
+    <Naziv>StefanLet</Naziv>
+    <Adresa>Bajic, Novi Sad</Adresa>
+    <Telefon>555333</Telefon>
+    <Email>stefan@let.com</Email>
     <Obrisana>Ne</Obrisana>
-    <Letovi />
-    <Recenzije />
-  </Aviokompanija>
-  <Aviokompanija>
-    <Id>3</Id>
-    <Naziv>test</Naziv>
-    <Adresa>test</Adresa>
-    <Telefon>test</Telefon>
-    <Email>test@test.com</Email>
-    <Obrisana>Da</Obrisana>
-    <Letovi />
+    <Letovi>
+      <Let>
+        <AviokompanijaId>2</AviokompanijaId>
+        <Id>1</Id>
+        <Aviokompanija>StefanLet</Aviokompanija>
+        <PolaznaDestinacija>Beograd</PolaznaDestinacija>
+        <OdredistnaDestinacija>Novi Sad</OdredistnaDestinacija>
+        <DatumPolaska>07/07/2024</DatumPolaska>
+        <VremePolaska>12:12</VremePolaska>
+        <DatumDolaska>07/07/2024</DatumDolaska>
+        <VremeDolaska>12:30</VremeDolaska>
+        <BrojSlobodnihMesta>50</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>0</BrojZauzetihMesta>
+        <Cena>1000</Cena>
+        <StatusLeta>Aktivan</StatusLeta>
+        <Rezervacije />
+        <Obrisan>Da</Obrisan>
+      </Let>
+    </Letovi>
     <Recenzije />
   </Aviokompanija>
 </ArrayOfAviokompanija>

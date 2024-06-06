@@ -11,6 +11,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Models
         public static ListData<Administrator> Administratori;
         public static ListData<Aviokompanija> Aviokompanije;
         public static ListData<Let> Letovi;
+        public static ListData<Rezervacija> Rezervacije;
         public static Dictionary<string, Korisnik> LoggedWithToken;
         public static void CreateData()
         {
@@ -18,6 +19,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Models
             Administratori = new ListData<Administrator>("administratori");
             Aviokompanije = new ListData<Aviokompanija>("aviokompanije");
             Letovi = new ListData<Let>("letovi");
+            Rezervacije = new ListData<Rezervacija>("rezervacije");
             LoggedWithToken = new Dictionary<string, Korisnik>();
         }
     }
