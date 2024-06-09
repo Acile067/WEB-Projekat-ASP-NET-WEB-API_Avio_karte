@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfLet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Let>
-    <AviokompanijaId>2</AviokompanijaId>
-    <Id>1</Id>
-    <Aviokompanija>StefanLet</Aviokompanija>
-    <PolaznaDestinacija>Beograd</PolaznaDestinacija>
-    <OdredistnaDestinacija>Novi Sad</OdredistnaDestinacija>
-    <DatumPolaska>07/07/2024</DatumPolaska>
-    <VremePolaska>12:12</VremePolaska>
-    <DatumDolaska>07/07/2024</DatumDolaska>
-    <VremeDolaska>12:30</VremeDolaska>
-    <BrojSlobodnihMesta>50</BrojSlobodnihMesta>
-    <BrojZauzetihMesta>0</BrojZauzetihMesta>
-    <Cena>1000</Cena>
-    <StatusLeta>Aktivan</StatusLeta>
-    <Rezervacije />
-    <Obrisan>Da</Obrisan>
-  </Let>
-  <Let>
     <AviokompanijaId>1</AviokompanijaId>
-    <Id>2</Id>
+    <Id>1</Id>
     <Aviokompanija>AvioLet</Aviokompanija>
-    <PolaznaDestinacija>Novi Sad</PolaznaDestinacija>
+    <PolaznaDestinacija>Sabac</PolaznaDestinacija>
     <OdredistnaDestinacija>Beograd</OdredistnaDestinacija>
-    <DatumPolaska>07/07/2024</DatumPolaska>
-    <VremePolaska>15:15</VremePolaska>
-    <DatumDolaska>07/07/2024</DatumDolaska>
-    <VremeDolaska>12:12</VremeDolaska>
-    <BrojSlobodnihMesta>121</BrojSlobodnihMesta>
-    <BrojZauzetihMesta>0</BrojZauzetihMesta>
+    <DatumPolaska>12/12/2024</DatumPolaska>
+    <VremePolaska>10:10</VremePolaska>
+    <DatumDolaska>12/12/2024</DatumDolaska>
+    <VremeDolaska>10:20</VremeDolaska>
+    <BrojSlobodnihMesta>91</BrojSlobodnihMesta>
+    <BrojZauzetihMesta>9</BrojZauzetihMesta>
     <Cena>1000</Cena>
     <StatusLeta>Aktivan</StatusLeta>
-    <Rezervacije />
+    <Rezervacije>
+      <Rezervacija>
+        <Id>1</Id>
+        <LetId>1</LetId>
+        <Korisnik>Pera</Korisnik>
+        <BrojPutnika>5</BrojPutnika>
+        <UkupnaCena>5000</UkupnaCena>
+        <Status>Odobrena</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>2</Id>
+        <LetId>1</LetId>
+        <Korisnik>Pera</Korisnik>
+        <BrojPutnika>1</BrojPutnika>
+        <UkupnaCena>1000</UkupnaCena>
+        <Status>Otkazana</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>3</Id>
+        <LetId>1</LetId>
+        <Korisnik>Stefan</Korisnik>
+        <BrojPutnika>3</BrojPutnika>
+        <UkupnaCena>3000</UkupnaCena>
+        <Status>Otkazana</Status>
+      </Rezervacija>
+    </Rezervacije>
     <Obrisan>Ne</Obrisan>
   </Let>
 </ArrayOfLet>

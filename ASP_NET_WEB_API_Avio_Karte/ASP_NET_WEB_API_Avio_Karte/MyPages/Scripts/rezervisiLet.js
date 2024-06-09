@@ -1,6 +1,7 @@
 ﻿$(function () {
     getReady();
     loadLet();
+    register();
 });
 
 function getReady() {
@@ -48,4 +49,45 @@ function loadLet() {
     } else {
         alert('Ne postoji ID u URL');
     }
+}
+
+function check(id) {
+    let prop = $('#' + id).val();
+    if (!prop || prop.trim() === '') {
+        $('#' + id).css('border-color', 'red');
+        return false;
+    }
+    $('#' + id).css('border-color', 'black');
+    return true;
+}
+
+function checkAll(list) {
+    let goodInput = true;
+    for (i in list)
+        if (!check(list[i]))
+            goodInput = false;
+
+    if (!goodInput) alert("Sva polja moraju biti pravilno popunjena!");
+    return goodInput;
+}
+
+function register() {
+    $(document).on('click', '#rezervisibtn', function () {
+        var id = getUrlParameter('id');
+        var trenutniKorisnik = sessionStorage.getItem('korisnickoime');
+        if (checkAll(['brojKarata'])) {
+            data = {
+                'brojputnika': $('#brojKarata').val(),
+                'letid': id,
+                'korisnik': trenutniKorisnik,
+            };
+
+            $.post('/api/rezervacija', data, function (result) {
+                alert("Uspesno dodana rezervacija ");
+                window.location = '/MyPages/index.html';
+            }).fail(function (xhr, status, err) {
+                alert(xhr.responseJSON.Message);
+            });
+        }
+    });
 }

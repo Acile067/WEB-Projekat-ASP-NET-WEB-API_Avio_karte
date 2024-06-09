@@ -52,6 +52,18 @@ namespace ASP_NET_WEB_API_Avio_Karte.Models
             Recenzije = new List<Recenzija>();
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
 
+            Aviokompanija other = (Aviokompanija)obj;
+            return Id == other.Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return Id.GetHashCode();
+        }
     }
 }

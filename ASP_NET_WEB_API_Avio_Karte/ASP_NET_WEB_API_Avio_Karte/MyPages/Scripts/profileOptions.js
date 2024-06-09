@@ -30,10 +30,19 @@ async function profileOptions() {
                                   <div class="row">
                                     <a href="letAdminControll.html">Letovi</a>
                                   </div>
+                                  <div class="row">
+                                    <a href="rezervacijeAdminControl.html">Rezervacije</a>
+                                  </div>
+                                  <div class="row">
+                                    <a href="recenzijeAdminControl.html">Recenzije</a>
+                                  </div>
                                 `);
         }
         else if (role === "Putnik") {
             $('#options').append(`<div class="row">
+                                    <a href="userRezervacije.html">Rezervacije</a>
+                                  </div>
+                                  <div class="row">
                                     <a href="userReviews.html">Recenzije</a>
                                   </div>
                                 `);
