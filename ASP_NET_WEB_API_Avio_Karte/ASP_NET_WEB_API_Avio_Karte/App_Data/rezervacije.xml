@@ -6,7 +6,7 @@
     <Korisnik>Pera</Korisnik>
     <BrojPutnika>5</BrojPutnika>
     <UkupnaCena>5000</UkupnaCena>
-    <Status>Odobrena</Status>
+    <Status>Otkazana</Status>
   </Rezervacija>
   <Rezervacija>
     <Id>2</Id>
@@ -23,5 +23,13 @@
     <BrojPutnika>3</BrojPutnika>
     <UkupnaCena>3000</UkupnaCena>
     <Status>Otkazana</Status>
+  </Rezervacija>
+  <Rezervacija>
+    <Id>4</Id>
+    <LetId>1</LetId>
+    <Korisnik>Pera</Korisnik>
+    <BrojPutnika>3</BrojPutnika>
+    <UkupnaCena>3000</UkupnaCena>
+    <Status>Zavrsena</Status>
   </Rezervacija>
 </ArrayOfRezervacija>

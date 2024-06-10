@@ -83,7 +83,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             return Ok(odobrene.ToList());
         }
 
-        // GET /api/odobrene
+        // GET /api/zavrseneotkazane
         [HttpGet, Route("api/zavrseneotkazane")]
         public IHttpActionResult GetAllZavrseneOtkazane()
         {
@@ -246,6 +246,31 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             }
 
             return Ok(rezervacija);
+        }
+
+        [HttpGet, Route("api/recenzijeinfo/{korisnickoime}")]
+        public IHttpActionResult GetAllRecenzijeForUser(string korisnickoime)
+        {
+            if (string.IsNullOrEmpty(korisnickoime))
+            {
+                return BadRequest("Korisničko ime nije validno.");
+            }
+
+            var putnik = Data.Putnici.GetList().FirstOrDefault(p => p.KorisnickoIme == korisnickoime);
+
+            if (putnik == null)
+            {
+                return NotFound();
+            }
+
+            var rezervacije = putnik.Rezervacije;
+
+            if (rezervacije == null || !rezervacije.Any())
+            {
+                return NotFound();
+            }
+
+            return Ok(rezervacije.ToList());
         }
     }
 }

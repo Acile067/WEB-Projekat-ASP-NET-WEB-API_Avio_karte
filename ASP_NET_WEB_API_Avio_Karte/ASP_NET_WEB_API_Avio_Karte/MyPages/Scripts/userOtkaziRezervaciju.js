@@ -2,11 +2,6 @@
     getReady();
     loadLet();
     loadRezervacija();
-    
-    $(document).on('click', "#dugmeOdobri", function () {
-        odobriRezervaciju();
-    });
-
     $(document).on('click', "#dugmeOtkazi", function () {
         otkaziRezervaciju();
     });
@@ -14,8 +9,6 @@
 
 function getReady() {
     if (!sessionStorage.getItem('token'))
-        window.location = '/MyPages/index.html';
-    if (sessionStorage.getItem('role') != 'Administrator')
         window.location = '/MyPages/index.html';
 }
 
@@ -36,15 +29,6 @@ function loadLet() {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
             },
             success: function (data) {
-                let statusText = "";
-                if (data.StatusLeta === 0) {
-                    statusText = 'Aktivan';
-                } else if (data.StatusLeta === 1) {
-                    statusText = 'Otkazan';
-                }
-                else if (data.StatusLeta === 2) {
-                    statusText = 'Zavrsen';
-                }
                 var tableRow = `
                     <tr>
                         <td>${data.Aviokompanija}</td>
@@ -57,7 +41,7 @@ function loadLet() {
                         <td>${data.BrojSlobodnihMesta}</td>
                         <td>${data.BrojZauzetihMesta}</td>
                         <td>${data.Cena}</td>
-                        <td>${statusText}</td>
+                        <td>${data.StatusLeta}</td>
                     </tr>`;
                 $('#letoviTable tbody').append(tableRow);
             },
@@ -75,7 +59,7 @@ function loadRezervacija() {
     var id = getUrlParameter('id');
     if (id) {
         $.ajax({
-            url: '/api/neodobrena/' + id,
+            url: '/api/odobrena/' + id,
             type: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
@@ -98,53 +82,6 @@ function loadRezervacija() {
         alert('Ne postoji ID u URL');
     }
 }
-
-function odobriRezervaciju() {
-    var id = getUrlParameter('id');
-    var letid = getUrlParameter('letid');
-
-    // Validacija URL parametara
-    if (!id || isNaN(id)) {
-        alert('Ne postoji ili je neispravan ID u URL-u');
-        return;
-    }
-
-    if (!letid || isNaN(letid)) {
-        alert('Ne postoji ili je neispravan Let ID u URL-u');
-        return;
-    }
-
-    // Priprema podataka za slanje
-    var rezervacija = {
-        Id: parseInt(id, 10),
-        LetId: parseInt(letid, 10),
-    };
-
-    // Slanje AJAX zahteva
-    $.ajax({
-        url: '/api/odobrirezervaciju/' + id,
-        type: 'PUT',
-        headers: {
-            'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
-            'Content-Type': 'application/json'
-        },
-        data: JSON.stringify(rezervacija),
-        success: function (data) {
-            alert('Rezervacija uspešno odobrena');
-            // Osvježavanje ili preusmeravanje stranice po potrebi
-            window.location = '/MyPages/rezervacijeAdminControl.html';
-        },
-        error: function (jqXHR) {
-            console.log(jqXHR);
-            var errorMessage = 'Došlo je do greške!';
-            if (jqXHR.responseJSON && jqXHR.responseJSON.Message) {
-                errorMessage = jqXHR.responseJSON.Message;
-            }
-            alert(errorMessage);
-        }
-    });
-}
-
 
 function otkaziRezervaciju() {
     var id = getUrlParameter('id');
@@ -179,7 +116,7 @@ function otkaziRezervaciju() {
         success: function (data) {
             alert('Rezervacija uspešno otkazana');
             // Osvježavanje ili preusmeravanje stranice po potrebi
-            window.location = '/MyPages/rezervacijeAdminControl.html';
+            window.location = '/MyPages/userRezervacije.html';
         },
         error: function (jqXHR) {
             console.log(jqXHR);

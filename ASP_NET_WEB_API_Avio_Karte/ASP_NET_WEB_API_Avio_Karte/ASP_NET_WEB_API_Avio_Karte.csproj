@@ -221,6 +221,7 @@
     <Content Include="MyPages\letAdminControll.html" />
     <Content Include="MyPages\login.html" />
     <Content Include="MyPages\odobriRezervaciju.html" />
+    <Content Include="MyPages\ostaviRecenziju.html" />
     <Content Include="MyPages\otkaziRezervaciju.html" />
     <Content Include="MyPages\profile.html" />
     <Content Include="MyPages\recenzijeAdminControl.html" />
@@ -242,9 +243,14 @@
     <Content Include="MyPages\Scripts\register.js" />
     <Content Include="MyPages\Scripts\rezervacijeAdminControl.js" />
     <Content Include="MyPages\Scripts\rezervisiLet.js" />
+    <Content Include="MyPages\Scripts\userLetInfo.js" />
+    <Content Include="MyPages\Scripts\userOtkaziRezervaciju.js" />
+    <Content Include="MyPages\Scripts\userRezervacije.js" />
     <Content Include="MyPages\Scripts\usersAdminControll.js" />
     <Content Include="MyPages\style.css" />
     <Content Include="MyPages\templejtForDeliting.html" />
+    <Content Include="MyPages\userLetInfo.html" />
+    <Content Include="MyPages\userOtkaziRezervaciju.html" />
     <Content Include="MyPages\userReviews.html" />
     <Content Include="MyPages\userRezervacije.html" />
     <Content Include="MyPages\usersAdminControll.html" />
