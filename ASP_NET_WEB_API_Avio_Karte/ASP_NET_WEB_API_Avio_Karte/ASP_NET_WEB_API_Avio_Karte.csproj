@@ -169,6 +169,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LetController.cs" />
+    <Compile Include="Controllers\RecenzijaController.cs" />
     <Compile Include="Controllers\RezervacijaController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -191,6 +192,7 @@
     <Content Include="App_Data\aviokompanije.xml" />
     <Content Include="App_Data\letovi.xml" />
     <Content Include="App_Data\putnici.xml" />
+    <Content Include="App_Data\recenzije.xml" />
     <Content Include="App_Data\rezervacije.xml" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -237,9 +239,11 @@
     <Content Include="MyPages\Scripts\letAdminControll.js" />
     <Content Include="MyPages\Scripts\login.js" />
     <Content Include="MyPages\Scripts\odobriRezervaciju.js" />
+    <Content Include="MyPages\Scripts\ostaviRecenziju.js" />
     <Content Include="MyPages\Scripts\otkaziOdobrenuRezervaciju.js" />
     <Content Include="MyPages\Scripts\profile.js" />
     <Content Include="MyPages\Scripts\profileOptions.js" />
+    <Content Include="MyPages\Scripts\recenzijeAdminControl.js" />
     <Content Include="MyPages\Scripts\register.js" />
     <Content Include="MyPages\Scripts\rezervacijeAdminControl.js" />
     <Content Include="MyPages\Scripts\rezervisiLet.js" />
@@ -300,7 +304,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Uploads\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
     <Content Include="Content\bootstrap.rtl.css.map" />

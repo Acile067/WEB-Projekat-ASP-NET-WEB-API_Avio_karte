@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfRecenzija xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Recenzija>
+    <Id>1</Id>
+    <LetId>1</LetId>
+    <Korisnik>Pera</Korisnik>
+    <Aviokompanija>AvioLet</Aviokompanija>
+    <Naslov>Moja Recenzija</Naslov>
+    <Sadrzaj>Lepo</Sadrzaj>
+    <Ocena>3</Ocena>
+    <Slika>../Uploads/1a4451873-62d2-44f2-b54a-1bfc661c0b47.png</Slika>
+    <StatusRecenzije>Odbijena</StatusRecenzije>
+  </Recenzija>
+  <Recenzija>
+    <Id>2</Id>
+    <LetId>1</LetId>
+    <Korisnik>Pera</Korisnik>
+    <Aviokompanija>AvioLet</Aviokompanija>
+    <Naslov>Pouzdan Let</Naslov>
+    <Sadrzaj>Jako samu uzivao na ovom letu. Bilo mi je jako ugodno i udobno i voleo bih da odem i sledeci put.</Sadrzaj>
+    <Ocena>5</Ocena>
+    <Slika>../Uploads/2639715f0-3d32-4969-8ae2-1c064b23ebc8.png</Slika>
+    <StatusRecenzije>Odobrena</StatusRecenzije>
+  </Recenzija>
+  <Recenzija>
+    <Id>3</Id>
+    <LetId>1</LetId>
+    <Korisnik>Pera</Korisnik>
+    <Aviokompanija>AvioLet</Aviokompanija>
+    <Naslov>Ovo Je Moja Druga Recenzija</Naslov>
+    <Sadrzaj>I drugi put kad sam se vozio bilo mi je jako lepo i jedva cekam da se voizm i treci i cetvrti put.</Sadrzaj>
+    <Ocena>5</Ocena>
+    <Slika>../Uploads/3deb3cfa7-3f67-414b-a272-95eb154eb5fc.png</Slika>
+    <StatusRecenzije>Odobrena</StatusRecenzije>
+  </Recenzija>
+  <Recenzija>
+    <Id>4</Id>
+    <LetId>1</LetId>
+    <Korisnik>Pera</Korisnik>
+    <Aviokompanija>AvioLet</Aviokompanija>
+    <Naslov>Moja Treca Recenzija</Naslov>
+    <Sadrzaj>I ovaj put opet ugodlno leteo. Malo je padao sneg malo kisea ali sam sleteo udobno i sigrno.</Sadrzaj>
+    <Ocena>4</Ocena>
+    <Slika>../Uploads/4e4978231-f72d-4082-b74a-e53eb2776f1c.png</Slika>
+    <StatusRecenzije>Odobrena</StatusRecenzije>
+  </Recenzija>
+</ArrayOfRecenzija>

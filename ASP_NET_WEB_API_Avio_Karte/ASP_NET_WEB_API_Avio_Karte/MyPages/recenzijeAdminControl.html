@@ -14,6 +14,7 @@
     <script src="../Scripts/bootstrap.js"></script>
     <script src="Scripts/common.js" type="text/javascript"></script>
     <script src="Scripts/profileOptions.js" type="text/javascript"></script>
+    <script src="Scripts/recenzijeAdminControl.js" type="text/javascript"></script>
 </head>
 <body>
     <!--NavBar-->
@@ -38,11 +39,29 @@
                 </div>
 
             </div>
-            <div class="col-md-10 col-sm-8">
+            <div class="col-md-10 col-sm-8 mb-5">
                 <div class="row justify-content-center text-md-center">
-                    <h3>Admin recenzije:</h3>
+                    <h3>Kreirane recenzije:</h3>
                 </div>
+                <div id="recenzije-sve"></div>
 
+                <div class="row justify-content-center text-md-center mt-5 pt-5">
+                    <h2>Odobrene/Odbijene recenzije:</h2>
+                </div>
+                
+                <div id="carouselExampleControls" class="carousel carousel-dark slide shadow rounded" data-bs-ride="carousel">
+                    <div class="carousel-inner " id="recenzije-odbijene-odobrene">
+                        
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>

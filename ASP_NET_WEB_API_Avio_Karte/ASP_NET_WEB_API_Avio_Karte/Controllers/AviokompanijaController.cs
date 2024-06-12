@@ -112,5 +112,24 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
 
             return Ok(aviokompanije);
         }
+
+        // GET /api/aviokompanijaLetId/{id}
+        [HttpGet, Route("api/aviokompanijaLetId/{letid}")]
+        public IHttpActionResult GetAviokompanijaIzLetId(int letid)
+        {
+            var let = Data.Letovi.Find(p => p.Id == letid);
+            if (let == null || let.Obrisan == "Da")
+            {
+                return NotFound();
+            }
+
+            var aviokompanija = Data.Aviokompanije.Find(p => p.Id == let.AviokompanijaId);
+            if (aviokompanija == null || aviokompanija.Obrisana == "Da")
+            {
+                return NotFound();
+            }
+
+            return Ok(aviokompanija);
+        }
     }
 }
