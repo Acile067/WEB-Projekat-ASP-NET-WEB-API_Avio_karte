@@ -44,4 +44,24 @@
     <Slika>../Uploads/4e4978231-f72d-4082-b74a-e53eb2776f1c.png</Slika>
     <StatusRecenzije>Odobrena</StatusRecenzije>
   </Recenzija>
+  <Recenzija>
+    <Id>5</Id>
+    <LetId>1</LetId>
+    <Korisnik>Pera</Korisnik>
+    <Aviokompanija>AvioLet</Aviokompanija>
+    <Naslov>Ovo je bez slike</Naslov>
+    <Sadrzaj>Bez slike</Sadrzaj>
+    <Ocena>4</Ocena>
+    <StatusRecenzije>Odbijena</StatusRecenzije>
+  </Recenzija>
+  <Recenzija>
+    <Id>6</Id>
+    <LetId>1</LetId>
+    <Korisnik>Pera</Korisnik>
+    <Aviokompanija>AvioLet</Aviokompanija>
+    <Naslov>Bez Slike 2</Naslov>
+    <Sadrzaj>Bez ikakve slike 2</Sadrzaj>
+    <Ocena>4</Ocena>
+    <StatusRecenzije>Odobrena</StatusRecenzije>
+  </Recenzija>
 </ArrayOfRecenzija>

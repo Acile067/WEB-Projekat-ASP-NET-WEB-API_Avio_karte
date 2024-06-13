@@ -213,6 +213,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="MyPages\aviokompanija.html" />
     <Content Include="MyPages\aviokompanije.html" />
     <Content Include="MyPages\dodajIzmeniAviokompaniju.html" />
     <Content Include="MyPages\dodajLet.html" />
@@ -230,6 +231,7 @@
     <Content Include="MyPages\register.html" />
     <Content Include="MyPages\rezervacijeAdminControl.html" />
     <Content Include="MyPages\rezervisiLet.html" />
+    <Content Include="MyPages\Scripts\aviokompanija.js" />
     <Content Include="MyPages\Scripts\aviokompanije.js" />
     <Content Include="MyPages\Scripts\common.js" />
     <Content Include="MyPages\Scripts\dodajAviokompaniju.js" />

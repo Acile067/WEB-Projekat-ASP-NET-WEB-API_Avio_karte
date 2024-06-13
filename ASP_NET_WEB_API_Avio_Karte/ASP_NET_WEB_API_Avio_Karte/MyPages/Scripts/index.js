@@ -36,7 +36,7 @@ function populateLetTable(users) {
         if (statusLetaText == 0) {
             usersTableBody.append(`
             <tr>
-                <td>${user.Aviokompanija}</td>
+                <td><a href="/MyPages/aviokompanija.html?id=${user.AviokompanijaId}">${user.Aviokompanija}</a></td>
                 <td>${user.PolaznaDestinacija}</td>
                 <td>${user.OdredistnaDestinacija}</td>
                 <td>${user.DatumPolaska}</td>

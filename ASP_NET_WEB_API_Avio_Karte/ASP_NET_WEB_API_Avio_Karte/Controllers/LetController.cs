@@ -101,6 +101,20 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             if (let == null || let.Obrisan == "Da")
                 return NotFound();
 
+            if(let.Cena != l.Cena)
+            {
+                foreach (var rezervacija in let.Rezervacije)
+                {
+                    if (rezervacija.Status == Status.Kreirana || rezervacija.Status == Status.Odobrena)
+                    {
+                        return BadRequest("Ne mozete promeniti cenu zato sto ima odobrenih/kreiranih rezervacija.");
+                    }
+                }
+            }
+            
+
+
+
             if (let.AviokompanijaId != l.AviokompanijaId)
             {
                 // Find the old and new Aviokompanija
@@ -159,7 +173,14 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             if (let == null)
                 return NotFound();
 
-            //Treba proveriti listu rezervacija pre brisanja
+            foreach (var rezervacija in let.Rezervacije)
+            {
+                // Ako je status leta "Aktivan", ne dozvoljavamo brisanje
+                if (rezervacija.Status == Status.Kreirana || rezervacija.Status == Status.Odobrena)
+                {
+                    return BadRequest("Aviokompanija ne može biti obrisana jer ima aktivne letove.");
+                }
+            }
 
             let.Obrisan = "Da";
             Data.Letovi.UpdateFile();

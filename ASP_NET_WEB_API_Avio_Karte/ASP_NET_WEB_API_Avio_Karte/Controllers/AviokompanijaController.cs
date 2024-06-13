@@ -94,7 +94,14 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             if (aviokompanija == null)
                 return NotFound();
 
-            //Treba proveriti listu recenzija pre brisanja
+            foreach (var let in aviokompanija.Letovi)
+            {
+                // Ako je status leta "Aktivan", ne dozvoljavamo brisanje
+                if (let.StatusLeta == StatusLeta.Aktivan)
+                {
+                    return BadRequest("Aviokompanija ne može biti obrisana jer ima aktivne letove.");
+                }
+            }
 
             aviokompanija.Obrisana = "Da";
             Data.Aviokompanije.UpdateFile();

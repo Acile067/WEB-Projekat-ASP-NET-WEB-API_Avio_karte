@@ -43,6 +43,22 @@
                 <div class="row justify-content-center text-md-center">
                     <h3>Vaše rezervacije:</h3>
                 </div>
+                <div class="row justify-content-center text-md-center">
+                    <div class="col-lg-4 col-md-8 col-sm-12 mt-1">
+                        <select id="status" class="form-control rounded-pill" style="border-color: black;">
+                            <option value="0">Kreirana</option>
+                            <option value="1">Odobrena</option>
+                            <option value="2">Otkazana</option>
+                            <option value="3">Zavrsena</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4 col-md-8 col-sm-12 mt-1">
+                        <input type="submit" value="Pretrazi" id="pretraziLetovebtn" class="form-control rounded-pill border-black btn-register fw-bold" />
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-10 mt-1">
+                        <input type="submit" value="Osvezi" id="Osvezi" class="form-control rounded-pill border-black btn-register fw-bold" />
+                    </div>
+                </div>
 
                 <table class="table table-hover table-striped mt-2" style="width: 100%;" id="userRezervacijeTable">
                     <thead>

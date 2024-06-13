@@ -30,11 +30,12 @@ function populateKreirane(users) {
     const usersTableBody = $('#recenzije-sve');
     usersTableBody.empty();
     users.forEach(user => {
+        const slika = user.Slika ? `<img src="${user.Slika}" alt="Recenzija slika" style="width: 150px; height: 150px; border-radius: 50%;" class="img-fluid" />` : '';
         usersTableBody.append(`
             <div class="row justify-content-center text-center rounded shadow mb-3 mt-3">
                 <div class="row justify-content-center text-center">
                     <div class="col-sm-12 col-md-8 col-lg-12">
-                        <img src="${user.Slika}" alt="Recenzija slika" style="width: 150px; height: 150px; border-radius: 50%;" />
+                        ${slika}
                     </div>
                 </div>
                 <div class="row justify-content-center text-center">
@@ -128,11 +129,12 @@ function populateOdobreneOdbijene(users) {
     users.forEach((user, index) => {
         let activeClass = index === 0 ? 'active' : '';
         let textStatus = user.StatusRecenzije === 1 ? '<p class="text-success">Odobrena</p>' : '<p class="text-danger">Odbijena</p>'
+        const slika = user.Slika ? `<img src="${user.Slika}" alt="Recenzija slika" style="width: 150px; height: 150px; border-radius: 50%;" class="img-fluid" />` : '';
         usersTableBody.append(`
             <div class="carousel-item ${activeClass}">
                 <div class="row justify-content-center text-center rounded mb-3 mt-3">
                     <div class="col-sm-12 col-md-8 col-lg-12">
-                        <img src="${user.Slika}" alt="Recenzija slika" style="width: 150px; height: 150px; border-radius: 50%;" />
+                        ${slika}
                     </div>
                     <div class="col-12">
                         <p class="fw-bold mb-0 h5">${user.Korisnik}</p>
