@@ -230,6 +230,7 @@
     <Content Include="MyPages\register.html" />
     <Content Include="MyPages\rezervacijeAdminControl.html" />
     <Content Include="MyPages\rezervisiLet.html" />
+    <Content Include="MyPages\Scripts\aviokompanije.js" />
     <Content Include="MyPages\Scripts\common.js" />
     <Content Include="MyPages\Scripts\dodajAviokompaniju.js" />
     <Content Include="MyPages\Scripts\dodajLet.js" />
