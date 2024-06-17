@@ -53,10 +53,18 @@ function loadLet() {
 
 function check(id) {
     let prop = $('#' + id).val();
+
     if (!prop || prop.trim() === '') {
         $('#' + id).css('border-color', 'red');
         return false;
     }
+
+    let num = Number(prop);
+    if (isNaN(num) || !Number.isInteger(num) || num <= 0) {
+        $('#' + id).css('border-color', 'red');
+        return false;
+    }
+
     $('#' + id).css('border-color', 'black');
     return true;
 }

@@ -43,6 +43,9 @@ async function profileOptions() {
                                     <a href="userRezervacije.html">Rezervacije</a>
                                   </div>
                                   <div class="row">
+                                    <a href="userLetovi.html">Letovi</a>
+                                  </div>
+                                  <div class="row">
                                     <a href="userReviews.html">Recenzije</a>
                                   </div>
                                 `);

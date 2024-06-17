@@ -100,6 +100,22 @@
         <UkupnaCena>3000</UkupnaCena>
         <Status>Zavrsena</Status>
       </Rezervacija>
+      <Rezervacija>
+        <Id>6</Id>
+        <LetId>1</LetId>
+        <Korisnik>Pera</Korisnik>
+        <BrojPutnika>4</BrojPutnika>
+        <UkupnaCena>4000</UkupnaCena>
+        <Status>Otkazana</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>7</Id>
+        <LetId>1</LetId>
+        <Korisnik>Pera</Korisnik>
+        <BrojPutnika>4</BrojPutnika>
+        <UkupnaCena>4000</UkupnaCena>
+        <Status>Otkazana</Status>
+      </Rezervacija>
     </Rezervacije>
   </Putnik>
   <Putnik>
@@ -119,6 +135,14 @@
         <Korisnik>Stefan</Korisnik>
         <BrojPutnika>3</BrojPutnika>
         <UkupnaCena>3000</UkupnaCena>
+        <Status>Otkazana</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>5</Id>
+        <LetId>1</LetId>
+        <Korisnik>Stefan</Korisnik>
+        <BrojPutnika>4</BrojPutnika>
+        <UkupnaCena>4000</UkupnaCena>
         <Status>Otkazana</Status>
       </Rezervacija>
     </Rezervacije>

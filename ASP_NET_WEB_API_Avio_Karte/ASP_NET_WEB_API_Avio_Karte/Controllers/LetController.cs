@@ -200,5 +200,32 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
 
             return Ok();
         }
+
+        // GET /api/letovizakorisnika/{korisnik}
+        [HttpGet, Route("api/letovizakorisnika/{korisnik}")]
+        public IHttpActionResult GetAllLetoviZaUsers(string korisnik, string statusleta = null)
+        {
+            var letovi = Data.Letovi.GetList()
+                                    .Where(p => p.Obrisan != "Da" || p.Rezervacije.Any(r => r.Korisnik == korisnik));
+
+            if (!string.IsNullOrEmpty(statusleta))
+            {
+                // Pokušaj da parsiraš status leta
+                if (Enum.TryParse(statusleta, out StatusLeta parsedStatusLeta))
+                {
+                    // Filtriraj letove prema statusu
+                    letovi = letovi.Where(p => p.StatusLeta == parsedStatusLeta);
+                }
+                else
+                {
+                    // Ako status nije validan, možeš vratiti bad request
+                    return BadRequest("Nevalidan status leta.");
+                }
+            }
+
+            return Ok(letovi.ToList());
+        }
+
+
     }
 }

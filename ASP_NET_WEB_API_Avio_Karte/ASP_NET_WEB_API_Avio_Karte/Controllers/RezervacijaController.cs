@@ -187,7 +187,6 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
         }
 
         // PUT /api/otkazirezervaciju/{id}
-
         [HttpPut, Route("api/otkazirezervaciju/{id}")]
         public IHttpActionResult PutOtkaziRezervaciju(int id, Rezervacija rezervacijaZaPromenu)
         {
@@ -199,14 +198,34 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             if (rezervacija == null)
                 return BadRequest($"Rezervacija sa ID {id} nije pronađena.");
 
-            // Ažuriranje statusa rezervacije
-            rezervacija.Status = Status.Otkazana;
-            Data.Rezervacije.Update(rezervacija);
-
             // Pronalaženje leta koji sadrži rezervaciju
             var let = Data.Letovi.Find(l => l.Id == rezervacija.LetId);
             if (let == null)
                 return BadRequest($"Let sa ID {rezervacija.LetId} nije pronađen.");
+
+            // Parsiranje datuma i vremena polaska leta
+            DateTime datumPolaska;
+            DateTime vremePolaska;
+            if (!DateTime.TryParseExact(let.DatumPolaska, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out datumPolaska) ||
+                !DateTime.TryParseExact(let.VremePolaska, "HH:mm", null, System.Globalization.DateTimeStyles.None, out vremePolaska))
+            {
+                return BadRequest("Datum ili vreme polaska leta su u nevažećem formatu.");
+            }
+
+            // Kombinovanje datuma i vremena polaska u jedan DateTime objekat
+            DateTime datumIVremePolaska = new DateTime(
+                datumPolaska.Year, datumPolaska.Month, datumPolaska.Day,
+                vremePolaska.Hour, vremePolaska.Minute, 0);
+
+            // Provera da li je trenutni datum i vreme više od 24 sata pre polaska leta
+            if (datumIVremePolaska - DateTime.Now <= TimeSpan.FromHours(24))
+            {
+                return BadRequest("Rezervaciju je moguće otkazati najkasnije 24 sata pre polaska leta.");
+            }
+
+            // Ažuriranje statusa rezervacije
+            rezervacija.Status = Status.Otkazana;
+            Data.Rezervacije.Update(rezervacija);
 
             // Pronalaženje rezervacije u letovima i ažuriranje statusa
             var rezervacijaLet = let.Rezervacije.FirstOrDefault(r => r.Id == id);
@@ -214,6 +233,10 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
                 return BadRequest($"Rezervacija sa ID {id} nije pronađena u letu sa ID {rezervacija.LetId}.");
 
             rezervacijaLet.Status = Status.Otkazana;
+
+            // Ažuriranje broja mesta na letu
+            let.BrojSlobodnihMesta += rezervacija.BrojPutnika;
+            let.BrojZauzetihMesta -= rezervacija.BrojPutnika;
             Data.Letovi.Update(let);
 
             // Ažuriranje aviokompanije
@@ -248,8 +271,10 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             return Ok(rezervacija);
         }
 
+        //GET api/recenzijeinfo/{korisnickoime}
+
         [HttpGet, Route("api/recenzijeinfo/{korisnickoime}")]
-        public IHttpActionResult GetAllRecenzijeForUser(string korisnickoime)
+        public IHttpActionResult GetAllRecenzijeForUser(string korisnickoime, [FromUri] int? status = null)  // Dodali smo parametar status
         {
             if (string.IsNullOrEmpty(korisnickoime))
             {
@@ -270,7 +295,23 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
                 return NotFound();
             }
 
+            if (status.HasValue)
+            {
+                // Pokušaj konvertovanja int u Status enumeraciju
+                if (Enum.IsDefined(typeof(Status), status.Value))  // Proveravamo da li je vrednost validna za Status
+                {
+                    var statusEnum = (Status)status.Value;  // Konvertovanje int vrednosti u Status
+                    rezervacije = rezervacije.Where(r => r.Status == statusEnum).ToList();  // Filtriranje po Status enumeraciji
+                }
+                else
+                {
+                    return BadRequest("Status nije validan.");
+                }
+            }
+
             return Ok(rezervacije.ToList());
         }
+
+
     }
 }

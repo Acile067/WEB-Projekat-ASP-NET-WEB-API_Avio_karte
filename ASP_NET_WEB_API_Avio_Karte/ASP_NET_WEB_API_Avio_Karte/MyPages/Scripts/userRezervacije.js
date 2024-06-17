@@ -1,6 +1,18 @@
 ﻿$(function () {
     getReady();
-    fetchRecenzije();
+    fetchRecenzije();  // Učitavanje svih recenzija pri inicijalizaciji
+
+    // Dodavanje event listener-a za dugme "Pretraži"
+    $('#pretraziLetovebtn').on('click', function () {
+        let status = $('#status').val();  // Dobijanje izabranog statusa
+        fetchRecenzije(status);  // Pozivanje funkcije sa statusom
+    });
+
+    // Event listener za dugme "Osveži"
+    $('#Osvezi').on('click', function () {
+        $('#status').val('');  // Resetovanje izabranog statusa
+        fetchRecenzije();  // Ponovno učitavanje svih recenzija
+    });
 });
 
 function getReady() {
@@ -8,7 +20,8 @@ function getReady() {
         window.location = '/MyPages/index.html';
 }
 
-async function fetchRecenzije() {
+// Modifikacija fetchRecenzije funkcije da prihvati status
+async function fetchRecenzije(status = '') {  // Podrazumevana vrednost za status je prazan string
     var korisnickoime = sessionStorage.getItem('korisnickoime');
     var token = sessionStorage.getItem('token');
     console.log('Korisničko ime:', korisnickoime);
@@ -30,7 +43,8 @@ async function fetchRecenzije() {
             method: "GET",
             headers: {
                 'Authorization': 'Bearer ' + token  // Ako je potrebna autorizacija
-            }
+            },
+            data: { status: status }  // Slanje statusa kao parametar
         });
 
         if (response && Array.isArray(response)) {
@@ -136,6 +150,5 @@ function sortTable(column, order) {
 }
 
 function getCellValue(row, column) {
-
     return $(row).find('td').eq((column === 'BrojPutnika' || column === 'UkupnaCena' || column === 'Status') ? 2 : 4).text().toUpperCase();
 }
