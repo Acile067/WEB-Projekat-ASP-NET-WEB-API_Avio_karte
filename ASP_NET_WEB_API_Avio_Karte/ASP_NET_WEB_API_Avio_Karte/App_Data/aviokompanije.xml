@@ -4,7 +4,7 @@
     <Id>1</Id>
     <Naziv>AvioLet</Naziv>
     <Adresa>Masarikova, Sabac</Adresa>
-    <Telefon>0677554241</Telefon>
+    <Telefon>553344</Telefon>
     <Email>avio@let.com</Email>
     <Obrisana>Ne</Obrisana>
     <Letovi>
@@ -12,71 +12,66 @@
         <AviokompanijaId>1</AviokompanijaId>
         <Id>1</Id>
         <Aviokompanija>AvioLet</Aviokompanija>
-        <PolaznaDestinacija>Sabac</PolaznaDestinacija>
-        <OdredistnaDestinacija>Beograd</OdredistnaDestinacija>
-        <DatumPolaska>12/12/2024</DatumPolaska>
-        <VremePolaska>10:10</VremePolaska>
-        <DatumDolaska>12/12/2024</DatumDolaska>
-        <VremeDolaska>10:20</VremeDolaska>
-        <BrojSlobodnihMesta>88</BrojSlobodnihMesta>
-        <BrojZauzetihMesta>12</BrojZauzetihMesta>
-        <Cena>1000</Cena>
-        <StatusLeta>Aktivan</StatusLeta>
+        <PolaznaDestinacija>Beograd</PolaznaDestinacija>
+        <OdredistnaDestinacija>Sabac</OdredistnaDestinacija>
+        <DatumPolaska>19/06/2024</DatumPolaska>
+        <VremePolaska>21:35</VremePolaska>
+        <DatumDolaska>19/06/2024</DatumDolaska>
+        <VremeDolaska>21:37</VremeDolaska>
+        <BrojSlobodnihMesta>96</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>4</BrojZauzetihMesta>
+        <Cena>50</Cena>
+        <StatusLeta>Zavrsen</StatusLeta>
         <Rezervacije>
           <Rezervacija>
             <Id>1</Id>
             <LetId>1</LetId>
             <Korisnik>Pera</Korisnik>
-            <BrojPutnika>5</BrojPutnika>
-            <UkupnaCena>5000</UkupnaCena>
-            <Status>Otkazana</Status>
-          </Rezervacija>
-          <Rezervacija>
-            <Id>2</Id>
-            <LetId>1</LetId>
-            <Korisnik>Pera</Korisnik>
-            <BrojPutnika>1</BrojPutnika>
-            <UkupnaCena>1000</UkupnaCena>
-            <Status>Otkazana</Status>
-          </Rezervacija>
-          <Rezervacija>
-            <Id>3</Id>
-            <LetId>1</LetId>
-            <Korisnik>Stefan</Korisnik>
-            <BrojPutnika>3</BrojPutnika>
-            <UkupnaCena>3000</UkupnaCena>
-            <Status>Otkazana</Status>
-          </Rezervacija>
-          <Rezervacija>
-            <Id>4</Id>
-            <LetId>1</LetId>
-            <Korisnik>Pera</Korisnik>
-            <BrojPutnika>3</BrojPutnika>
-            <UkupnaCena>3000</UkupnaCena>
+            <BrojPutnika>4</BrojPutnika>
+            <UkupnaCena>200</UkupnaCena>
             <Status>Zavrsena</Status>
           </Rezervacija>
+        </Rezervacije>
+        <Obrisan>Ne</Obrisan>
+      </Let>
+      <Let>
+        <AviokompanijaId>1</AviokompanijaId>
+        <Id>2</Id>
+        <Aviokompanija>AvioLet</Aviokompanija>
+        <PolaznaDestinacija>Moskva</PolaznaDestinacija>
+        <OdredistnaDestinacija>Beograd</OdredistnaDestinacija>
+        <DatumPolaska>07/07/2024</DatumPolaska>
+        <VremePolaska>12:12</VremePolaska>
+        <DatumDolaska>07/07/2024</DatumDolaska>
+        <VremeDolaska>12:15</VremeDolaska>
+        <BrojSlobodnihMesta>100</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>0</BrojZauzetihMesta>
+        <Cena>1000</Cena>
+        <StatusLeta>Aktivan</StatusLeta>
+        <Rezervacije />
+        <Obrisan>Ne</Obrisan>
+      </Let>
+      <Let>
+        <AviokompanijaId>1</AviokompanijaId>
+        <Id>3</Id>
+        <Aviokompanija>AvioLet</Aviokompanija>
+        <PolaznaDestinacija>Nis</PolaznaDestinacija>
+        <OdredistnaDestinacija>Sabac</OdredistnaDestinacija>
+        <DatumPolaska>15/12/2024</DatumPolaska>
+        <VremePolaska>15:15</VremePolaska>
+        <DatumDolaska>15/12/2024</DatumDolaska>
+        <VremeDolaska>15:20</VremeDolaska>
+        <BrojSlobodnihMesta>95</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>5</BrojZauzetihMesta>
+        <Cena>2000</Cena>
+        <StatusLeta>Aktivan</StatusLeta>
+        <Rezervacije>
           <Rezervacija>
-            <Id>5</Id>
-            <LetId>1</LetId>
-            <Korisnik>Stefan</Korisnik>
-            <BrojPutnika>4</BrojPutnika>
-            <UkupnaCena>4000</UkupnaCena>
-            <Status>Otkazana</Status>
-          </Rezervacija>
-          <Rezervacija>
-            <Id>6</Id>
-            <LetId>1</LetId>
+            <Id>2</Id>
+            <LetId>3</LetId>
             <Korisnik>Pera</Korisnik>
-            <BrojPutnika>4</BrojPutnika>
-            <UkupnaCena>4000</UkupnaCena>
-            <Status>Otkazana</Status>
-          </Rezervacija>
-          <Rezervacija>
-            <Id>7</Id>
-            <LetId>1</LetId>
-            <Korisnik>Pera</Korisnik>
-            <BrojPutnika>4</BrojPutnika>
-            <UkupnaCena>4000</UkupnaCena>
+            <BrojPutnika>5</BrojPutnika>
+            <UkupnaCena>10000</UkupnaCena>
             <Status>Otkazana</Status>
           </Rezervacija>
         </Rezervacije>
@@ -89,75 +84,12 @@
         <LetId>1</LetId>
         <Korisnik>Pera</Korisnik>
         <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>Moja Recenzija</Naslov>
-        <Sadrzaj>Lepo</Sadrzaj>
-        <Ocena>3</Ocena>
-        <Slika>../Uploads/1a4451873-62d2-44f2-b54a-1bfc661c0b47.png</Slika>
-        <StatusRecenzije>Odbijena</StatusRecenzije>
-      </Recenzija>
-      <Recenzija>
-        <Id>2</Id>
-        <LetId>1</LetId>
-        <Korisnik>Pera</Korisnik>
-        <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>Pouzdan Let</Naslov>
-        <Sadrzaj>Jako samu uzivao na ovom letu. Bilo mi je jako ugodno i udobno i voleo bih da odem i sledeci put.</Sadrzaj>
+        <Naslov>Lep Let</Naslov>
+        <Sadrzaj>Lepo sam leteo i uzivao i letenju i volim da letim svaki dan od kad sam se rodio.</Sadrzaj>
         <Ocena>5</Ocena>
-        <Slika>../Uploads/2639715f0-3d32-4969-8ae2-1c064b23ebc8.png</Slika>
-        <StatusRecenzije>Odobrena</StatusRecenzije>
-      </Recenzija>
-      <Recenzija>
-        <Id>3</Id>
-        <LetId>1</LetId>
-        <Korisnik>Pera</Korisnik>
-        <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>Ovo Je Moja Druga Recenzija</Naslov>
-        <Sadrzaj>I drugi put kad sam se vozio bilo mi je jako lepo i jedva cekam da se voizm i treci i cetvrti put.</Sadrzaj>
-        <Ocena>5</Ocena>
-        <Slika>../Uploads/3deb3cfa7-3f67-414b-a272-95eb154eb5fc.png</Slika>
-        <StatusRecenzije>Odobrena</StatusRecenzije>
-      </Recenzija>
-      <Recenzija>
-        <Id>4</Id>
-        <LetId>1</LetId>
-        <Korisnik>Pera</Korisnik>
-        <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>Moja Treca Recenzija</Naslov>
-        <Sadrzaj>I ovaj put opet ugodlno leteo. Malo je padao sneg malo kisea ali sam sleteo udobno i sigrno.</Sadrzaj>
-        <Ocena>4</Ocena>
-        <Slika>../Uploads/4e4978231-f72d-4082-b74a-e53eb2776f1c.png</Slika>
-        <StatusRecenzije>Odobrena</StatusRecenzije>
-      </Recenzija>
-      <Recenzija>
-        <Id>5</Id>
-        <LetId>1</LetId>
-        <Korisnik>Pera</Korisnik>
-        <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>Ovo je bez slike</Naslov>
-        <Sadrzaj>Bez slike</Sadrzaj>
-        <Ocena>4</Ocena>
-        <StatusRecenzije>Odbijena</StatusRecenzije>
-      </Recenzija>
-      <Recenzija>
-        <Id>6</Id>
-        <LetId>1</LetId>
-        <Korisnik>Pera</Korisnik>
-        <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>Bez Slike 2</Naslov>
-        <Sadrzaj>Bez ikakve slike 2</Sadrzaj>
-        <Ocena>4</Ocena>
+        <Slika>../Uploads/17aaf5e9a-b85d-49b6-8c1d-b8faf87a4953.png</Slika>
         <StatusRecenzije>Odobrena</StatusRecenzije>
       </Recenzija>
     </Recenzije>
-  </Aviokompanija>
-  <Aviokompanija>
-    <Id>2</Id>
-    <Naziv>StefanLet</Naziv>
-    <Adresa>Bajic, Novi Sad</Adresa>
-    <Telefon>555333</Telefon>
-    <Email>stefan@let.com</Email>
-    <Obrisana>Ne</Obrisana>
-    <Letovi />
-    <Recenzije />
   </Aviokompanija>
 </ArrayOfAviokompanija>

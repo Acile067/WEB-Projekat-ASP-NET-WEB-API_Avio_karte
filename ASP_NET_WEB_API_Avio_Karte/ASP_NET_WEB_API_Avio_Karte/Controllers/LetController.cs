@@ -206,7 +206,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
         public IHttpActionResult GetAllLetoviZaUsers(string korisnik, string statusleta = null)
         {
             var letovi = Data.Letovi.GetList()
-                                    .Where(p => p.Obrisan != "Da" || p.Rezervacije.Any(r => r.Korisnik == korisnik));
+                                    .Where(p => p.Obrisan != "Da" && p.Rezervacije.Any(r => r.Korisnik == korisnik));
 
             if (!string.IsNullOrEmpty(statusleta))
             {
