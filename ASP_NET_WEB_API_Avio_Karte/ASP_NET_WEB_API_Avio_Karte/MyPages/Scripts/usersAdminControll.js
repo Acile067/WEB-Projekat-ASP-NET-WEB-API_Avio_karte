@@ -20,11 +20,13 @@ async function fetchUsers() {
         const datumOd = $('#datumOdPretraga').val();
         const datumDo = $('#datumDoPretraga').val();
 
+        const autorizacija = sessionStorage.getItem('token');
+
         try {
             const response = await $.ajax({
                 url: '/api/users',
                 method: "GET",
-                data: { ime: ime, prezime: prezime, datumOd: datumOd, datumDo: datumDo }
+                data: { ime: ime, prezime: prezime, datumOd: datumOd, datumDo: datumDo, autorizacija: autorizacija }
             });
             populateUserTable(response);
             initializeSorting();

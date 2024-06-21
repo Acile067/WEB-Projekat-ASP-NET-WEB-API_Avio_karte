@@ -16,4 +16,12 @@
     <UkupnaCena>10000</UkupnaCena>
     <Status>Otkazana</Status>
   </Rezervacija>
+  <Rezervacija>
+    <Id>3</Id>
+    <LetId>2</LetId>
+    <Korisnik>Maja</Korisnik>
+    <BrojPutnika>6</BrojPutnika>
+    <UkupnaCena>6000</UkupnaCena>
+    <Status>Kreirana</Status>
+  </Rezervacija>
 </ArrayOfRezervacija>

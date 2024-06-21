@@ -11,4 +11,15 @@
     <Slika>../Uploads/17aaf5e9a-b85d-49b6-8c1d-b8faf87a4953.png</Slika>
     <StatusRecenzije>Odobrena</StatusRecenzije>
   </Recenzija>
+  <Recenzija>
+    <Id>2</Id>
+    <LetId>1</LetId>
+    <Korisnik>Pera</Korisnik>
+    <Aviokompanija>AvioLet</Aviokompanija>
+    <Naslov>Nista ne valja</Naslov>
+    <Sadrzaj>sdhjsafjh ajhsdgfjhasdgf jhsgdfhjgsadfh jahvdshjsvdfhjahsdfjhSADG ASHJGDHJsgfh havsdh</Sadrzaj>
+    <Ocena>1</Ocena>
+    <Slika>../Uploads/2aa67e3c1-0986-4033-a6bc-95a7773f9284.png</Slika>
+    <StatusRecenzije>Odobrena</StatusRecenzije>
+  </Recenzija>
 </ArrayOfRecenzija>

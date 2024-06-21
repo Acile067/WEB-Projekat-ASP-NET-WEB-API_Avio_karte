@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Helpers;
@@ -21,7 +22,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Models
         public Korisnik()
         {
         }
-
+       
         public string KorisnickoIme { get; set; }
         public string Lozinka { get; set; }
         public string Ime {  get; set; }

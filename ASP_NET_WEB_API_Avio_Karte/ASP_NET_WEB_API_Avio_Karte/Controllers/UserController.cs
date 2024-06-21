@@ -21,6 +21,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
         //POST /api/user REGISTRATION
         public IHttpActionResult Post(Korisnik k)
         {
+
             k.TipKorisnika = TipKorisnika.Putnik;
             DateTime dateTime;
             if (DateTime.TryParse(k.DatumRodjenja, out dateTime))
@@ -121,30 +122,61 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
 
         // GET /api/users
         [HttpGet, Route("api/users")]
-        public IHttpActionResult GetAllUsers(string ime = null, string prezime = null, string datumOd = null, string datumDo = null)
+        public IHttpActionResult GetAllUsers(string ime = null, string prezime = null, string datumOd = null, string datumDo = null, string autorizacija = null)
         {
+            // Provera autorizacije
+            if (!Data.LoggedWithToken.ContainsKey(autorizacija))
+            {
+                return BadRequest("Morate biti ulogovani");
+            }
+
+            var korisnik = Data.LoggedWithToken[autorizacija];
+            if (korisnik.TipKorisnika != TipKorisnika.Administrator)
+            {
+                return BadRequest("Morate biti administrator");
+            }
+
+            // Uzimanje liste putnika i administratora
             var putnici = Data.Putnici.GetList().Select(p => (Korisnik)p);
+            var administratori = Data.Administratori.GetList().Select(p => (Korisnik)p);
+
+            // Spajanje svih korisnika u jednu listu
+            var sviKorisnici = putnici.Concat(administratori).ToList();
 
             // Filtriranje korisnika prema unetim parametrima pretrage
             if (!string.IsNullOrWhiteSpace(ime))
-                putnici = putnici.Where(p => p.Ime.ToLower().Contains(ime.ToLower()));
+            {
+                sviKorisnici = sviKorisnici.Where(p => p.Ime.ToLower().Contains(ime.ToLower())).ToList();
+            }
             if (!string.IsNullOrWhiteSpace(prezime))
-                putnici = putnici.Where(p => p.Prezime.ToLower().Contains(prezime.ToLower()));
+            {
+                sviKorisnici = sviKorisnici.Where(p => p.Prezime.ToLower().Contains(prezime.ToLower())).ToList();
+            }
             if (!string.IsNullOrWhiteSpace(datumOd))
             {
                 DateTime datumOdDate;
-                if (DateTime.TryParse(datumOd, out datumOdDate))
-                    putnici = putnici.Where(p => DateTime.ParseExact(p.DatumRodjenja, "dd/MM/yyyy", CultureInfo.InvariantCulture) >= datumOdDate);
+                if (DateTime.TryParseExact(datumOd, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out datumOdDate))
+                {
+                    sviKorisnici = sviKorisnici
+                        .Where(p => DateTime.ParseExact(p.DatumRodjenja, "dd/MM/yyyy", CultureInfo.InvariantCulture) >= datumOdDate)
+                        .ToList();
+                }
             }
             if (!string.IsNullOrWhiteSpace(datumDo))
             {
                 DateTime datumDoDate;
-                if (DateTime.TryParse(datumDo, out datumDoDate))
-                    putnici = putnici.Where(p => DateTime.ParseExact(p.DatumRodjenja, "dd/MM/yyyy", CultureInfo.InvariantCulture) <= datumDoDate);
+                if (DateTime.TryParseExact(datumDo, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out datumDoDate))
+                {
+                    sviKorisnici = sviKorisnici
+                        .Where(p => DateTime.ParseExact(p.DatumRodjenja, "dd/MM/yyyy", CultureInfo.InvariantCulture) <= datumDoDate)
+                        .ToList();
+                }
             }
 
-            return Ok(putnici.ToList());
+            // Vraćanje filtriranih korisnika
+            return Ok(sviKorisnici);
         }
+
 
 
     }

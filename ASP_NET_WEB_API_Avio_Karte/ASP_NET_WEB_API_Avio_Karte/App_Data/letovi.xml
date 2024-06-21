@@ -36,11 +36,20 @@
     <VremePolaska>12:12</VremePolaska>
     <DatumDolaska>07/07/2024</DatumDolaska>
     <VremeDolaska>12:15</VremeDolaska>
-    <BrojSlobodnihMesta>100</BrojSlobodnihMesta>
-    <BrojZauzetihMesta>0</BrojZauzetihMesta>
+    <BrojSlobodnihMesta>94</BrojSlobodnihMesta>
+    <BrojZauzetihMesta>6</BrojZauzetihMesta>
     <Cena>1000</Cena>
     <StatusLeta>Aktivan</StatusLeta>
-    <Rezervacije />
+    <Rezervacije>
+      <Rezervacija>
+        <Id>3</Id>
+        <LetId>2</LetId>
+        <Korisnik>Maja</Korisnik>
+        <BrojPutnika>6</BrojPutnika>
+        <UkupnaCena>6000</UkupnaCena>
+        <Status>Kreirana</Status>
+      </Rezervacija>
+    </Rezervacije>
     <Obrisan>Ne</Obrisan>
   </Let>
   <Let>
