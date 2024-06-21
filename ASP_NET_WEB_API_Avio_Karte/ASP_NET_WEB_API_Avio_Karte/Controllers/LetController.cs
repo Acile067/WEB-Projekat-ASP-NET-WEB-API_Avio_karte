@@ -3,14 +3,37 @@ using System.Globalization;
 using System;
 using System.Linq;
 using System.Web.Http;
+using System.Web;
 
 namespace ASP_NET_WEB_API_Avio_Karte.Controllers
 {
     public class LetController : ApiController
     {
         // POST /api/let REGISTRATION
+        [HttpPost, Route("api/let")]
         public IHttpActionResult Post(Let l)
         {
+            var request = HttpContext.Current.Request;
+            var authorization = request.Headers["Authorization"];
+
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            var user = Data.LoggedWithToken[token];
+            if (user.TipKorisnika != TipKorisnika.Administrator)
+            {
+                return BadRequest("Morate biti administrator");
+            }
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -35,7 +58,6 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             // Postavljanje naziva aviokompanije
             l.Aviokompanija = aviokompanija.Naziv;
             l.Obrisan = "Ne";
-            
 
             // Dodavanje leta u listu letova aviokompanije
             aviokompanija.Letovi.Add(l);
@@ -45,6 +67,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
 
             return Created("Let", l.Id);
         }
+
 
         // GET /api/letovi
         [HttpGet, Route("api/letovi")]
@@ -81,6 +104,30 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
         [HttpGet, Route("api/let/{id}")]
         public IHttpActionResult GetAviokompanija(int id)
         {
+            var request = HttpContext.Current.Request;
+            var authorization = request.Headers["Authorization"];
+
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var user = Data.LoggedWithToken[token];
+            if (user == null)
+            {
+                return BadRequest("Neovlašćen pristup");
+            }
+
+            // Dodatna provera: možete ovde implementirati dodatne provere pristupa
+
             var let = Data.Letovi.Find(p => p.Id == id);
             if (let == null || let.Obrisan == "Da")
             {
@@ -90,10 +137,32 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             return Ok(let);
         }
 
+
         // PUT /api/let/{id}
         [HttpPut, Route("api/let/{id}")]
         public IHttpActionResult PutLet(int id, Let l)
         {
+            var request = HttpContext.Current.Request;
+            var authorization = request.Headers["Authorization"];
+
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            var user = Data.LoggedWithToken[token];
+            if (user.TipKorisnika != TipKorisnika.Administrator)
+            {
+                return BadRequest("Morate biti administrator");
+            }
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -101,7 +170,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             if (let == null || let.Obrisan == "Da")
                 return NotFound();
 
-            if(let.Cena != l.Cena)
+            if (let.Cena != l.Cena)
             {
                 foreach (var rezervacija in let.Rezervacije)
                 {
@@ -111,20 +180,15 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
                     }
                 }
             }
-            
-
-
 
             if (let.AviokompanijaId != l.AviokompanijaId)
             {
-                // Find the old and new Aviokompanija
                 var oldAviokompanija = Data.Aviokompanije.GetList().FirstOrDefault(a => a.Id == let.AviokompanijaId);
                 var newAviokompanija = Data.Aviokompanije.GetList().FirstOrDefault(a => a.Id == l.AviokompanijaId);
 
                 if (newAviokompanija == null)
-                    return BadRequest("New Aviokompanija does not exist");
+                    return BadRequest("Nova Aviokompanija ne postoji");
 
-                // Remove the Let from the old Aviokompanija
                 if (oldAviokompanija != null)
                 {
                     var letToRemove = oldAviokompanija.Letovi.FirstOrDefault(f => f.Id == let.Id);
@@ -135,16 +199,13 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
                     }
                 }
 
-                // Update the AviokompanijaId and Aviokompanija fields
                 let.AviokompanijaId = l.AviokompanijaId;
                 let.Aviokompanija = newAviokompanija.Naziv;
 
-                // Add the Let to the new Aviokompanija
                 newAviokompanija.Letovi.Add(let);
                 Data.Aviokompanije.Update(newAviokompanija);
             }
 
-            // Convert and update the date fields
             DateTime dateTimePolaska;
             if (DateTime.TryParse(l.DatumPolaska, out dateTimePolaska))
                 let.DatumPolaska = dateTimePolaska.ToString("dd/MM/yyyy");
@@ -165,20 +226,41 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             return Ok(let);
         }
 
+
         // DELETE /api/let/{id}
         [HttpDelete, Route("api/let/{id}")]
         public IHttpActionResult DeleteLet(int id)
         {
+            var request = HttpContext.Current.Request;
+            var authorization = request.Headers["Authorization"];
+
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            var user = Data.LoggedWithToken[token];
+            if (user.TipKorisnika != TipKorisnika.Administrator)
+            {
+                return BadRequest("Morate biti administrator");
+            }
+
             var let = Data.Letovi.Find(p => p.Id == id);
             if (let == null)
                 return NotFound();
 
             foreach (var rezervacija in let.Rezervacije)
             {
-                // Ako je status leta "Aktivan", ne dozvoljavamo brisanje
                 if (rezervacija.Status == Status.Kreirana || rezervacija.Status == Status.Odobrena)
                 {
-                    return BadRequest("Aviokompanija ne može biti obrisana jer ima aktivne letove.");
+                    return BadRequest("Let ne može biti obrisan jer ima aktivne rezervacije.");
                 }
             }
 
@@ -188,7 +270,6 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             var aviokompanija = Data.Aviokompanije.GetList().FirstOrDefault(a => a.Id == let.AviokompanijaId);
             if (aviokompanija != null)
             {
-                // Find and update the Let in the Aviokompanija's Letovi list
                 var letInAviokompanija = aviokompanija.Letovi.FirstOrDefault(l => l.Id == let.Id);
                 if (letInAviokompanija != null)
                 {
@@ -197,14 +278,42 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
                 }
             }
 
-
             return Ok();
         }
+
 
         // GET /api/letovizakorisnika/{korisnik}
         [HttpGet, Route("api/letovizakorisnika/{korisnik}")]
         public IHttpActionResult GetAllLetoviZaUsers(string korisnik, string statusleta = null)
         {
+            var request = HttpContext.Current.Request;
+            var authorization = request.Headers["Authorization"];
+
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var user = Data.LoggedWithToken[token];
+            if (user == null)
+            {
+                return BadRequest("Neovlašćen pristup");
+            }
+
+            // Dodatna provera: da li je korisničko ime u URL-u isto kao i korisnik povezan sa tokenom
+            if (user.KorisnickoIme != korisnik)
+            {
+                return Unauthorized();
+            }
+
             var letovi = Data.Letovi.GetList()
                                     .Where(p => p.Obrisan != "Da" && p.Rezervacije.Any(r => r.Korisnik == korisnik));
 
@@ -225,6 +334,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
 
             return Ok(letovi.ToList());
         }
+
 
 
     }

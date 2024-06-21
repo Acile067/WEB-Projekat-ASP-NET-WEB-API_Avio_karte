@@ -21,7 +21,7 @@ function getReady() {
 }
 
 // Modifikacija fetchRecenzije funkcije da prihvati status
-async function fetchRecenzije(status = '') {  // Podrazumevana vrednost za status je prazan string
+async function fetchRecenzije(status = '') {
     var korisnickoime = sessionStorage.getItem('korisnickoime');
     var token = sessionStorage.getItem('token');
     console.log('Korisničko ime:', korisnickoime);
@@ -62,6 +62,7 @@ async function fetchRecenzije(status = '') {  // Podrazumevana vrednost za statu
         }
     }
 }
+
 
 function populateRecenzije(users) {
     const usersTableBody = $('#userRezervacijeTable tbody');

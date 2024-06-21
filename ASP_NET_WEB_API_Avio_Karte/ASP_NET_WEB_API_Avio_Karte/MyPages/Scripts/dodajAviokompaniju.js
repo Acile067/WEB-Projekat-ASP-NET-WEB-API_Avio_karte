@@ -35,9 +35,10 @@ function checkAll(list) {
 }
 
 function register() {
+    let autorizacija = sessionStorage.getItem('token');
     $(document).on('click', '#dodajkompaniju', function () {
         if (checkAll(['naziv', 'adresa', 'telefon', 'email'])) {
-            data = {
+            let data = {
                 'naziv': $('#naziv').val(),
                 'adresa': $('#adresa').val(),
                 'telefon': $('#telefon').val(),
@@ -48,15 +49,27 @@ function register() {
                 alert("Nevalidno unesena email adresa");
                 return;
             }
-            $.post('/api/aviokompanija', data, function (result) {
-                alert("Uspesno dodana aviokompanija " + data.naziv);
-                window.location = '/MyPages/dodajIzmeniAviokompaniju.html';
-            }).fail(function (xhr, status, err) {
-                alert(xhr.responseJSON.Message);
+
+            $.ajax({
+                url: '/api/aviokompanija',
+                type: 'POST',
+                headers: {
+                    'Authorization': 'Bearer ' + autorizacija
+                },
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                success: function (result) {
+                    alert("Uspesno dodana aviokompanija " + data.naziv);
+                    window.location = '/MyPages/dodajIzmeniAviokompaniju.html';
+                },
+                error: function (xhr, status, err) {
+                    alert(xhr.responseJSON.Message);
+                }
             });
         }
     });
 }
+
 
 
 

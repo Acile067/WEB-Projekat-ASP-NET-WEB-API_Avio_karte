@@ -91,17 +91,19 @@ function updateAviokompanija() {
             },
             data: JSON.stringify(aviokompanija),
             success: function (data) {
-                alert('Aviokompanija uspesno promenjena');
+                alert('Aviokompanija uspešno promenjena');
+                window.location = '/MyPages/dodajIzmeniAviokompaniju.html';
             },
             error: function (error) {
                 console.log(error);
-                alert('Aviokompanija nije promenjena GRESKA!');
+                alert('Aviokompanija nije promenjena, greška!');
             }
         });
     } else {
         alert('Ne postoji ID u URL');
     }
 }
+
 
 
 function deleteAviokompanija() {

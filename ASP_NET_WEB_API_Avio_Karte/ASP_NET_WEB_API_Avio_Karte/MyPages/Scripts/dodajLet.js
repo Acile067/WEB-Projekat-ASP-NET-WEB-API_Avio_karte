@@ -51,11 +51,22 @@ function register() {
                 'brojslobodnihmesta': $('#mesta').val(),
                 'cena': $('#cena').val(),
             };
-            $.post('/api/let', data, function (result) {
-                alert("Uspesno dodan let ");
-                window.location = '/MyPages/letAdminControll.html';
-            }).fail(function (xhr, status, err) {
-                alert(xhr.responseJSON.Message);
+
+            $.ajax({
+                url: '/api/let',
+                type: 'POST',
+                headers: {
+                    'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+                    'Content-Type': 'application/json'
+                },
+                data: JSON.stringify(data),
+                success: function (result) {
+                    alert("Uspesno dodan let");
+                    window.location = '/MyPages/letAdminControll.html';
+                },
+                error: function (xhr, status, err) {
+                    alert(xhr.responseJSON.Message);
+                }
             });
         }
     });

@@ -78,7 +78,8 @@ function loadRezervacija() {
             url: '/api/neodobrena/' + id,
             type: 'GET',
             headers: {
-                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+                'Content-Type': 'application/json'
             },
             success: function (data) {
                 var tableRow = `
@@ -98,6 +99,7 @@ function loadRezervacija() {
         alert('Ne postoji ID u URL');
     }
 }
+
 
 function odobriRezervaciju() {
     var id = getUrlParameter('id');

@@ -18,6 +18,10 @@ async function fetchNeodobrene() {
             const response = await $.ajax({
                 url: '/api/neodobrene',
                 method: "GET",
+                headers: {
+                    'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+                    'Content-Type': 'application/json'
+                }
             });
             populateNeodobrene(response);
             initializeSorting();
@@ -25,6 +29,8 @@ async function fetchNeodobrene() {
             console.log(error);
             alert("Greška pri učitavanju aviokompanija");
         }
+    } else {
+        alert("Nema tokena za autorizaciju");
     }
 }
 
@@ -102,15 +108,22 @@ async function fetchOdobrene() {
             const response = await $.ajax({
                 url: '/api/odobrene',
                 method: "GET",
+                headers: {
+                    'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+                    'Content-Type': 'application/json'
+                }
             });
             populateOdobrene(response);
             initializeSorting2();
         } catch (error) {
             console.log(error);
-            alert("Greška pri učitavanju odobreenih");
+            alert("Greška pri učitavanju odobrenih");
         }
+    } else {
+        alert("Nema tokena za autorizaciju");
     }
 }
+
 
 function initializeSorting2() {
     let sortOrder = {
@@ -187,15 +200,22 @@ async function fetchZavrseneOtkazane() {
             const response = await $.ajax({
                 url: '/api/zavrseneotkazane',
                 method: "GET",
+                headers: {
+                    'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+                    'Content-Type': 'application/json'
+                }
             });
             populateZavrseneOtkazane(response);
             initializeSorting3();
         } catch (error) {
             console.log(error);
-            alert("Greška pri učitavanju zavrsenih/otkazanih");
+            alert("Greška pri učitavanju završenih/otkazanih");
         }
+    } else {
+        alert("Nema tokena za autorizaciju");
     }
 }
+
 
 function populateZavrseneOtkazane(users) {
     const usersTableBody = $('#otkazaneZavrseneTable tbody');

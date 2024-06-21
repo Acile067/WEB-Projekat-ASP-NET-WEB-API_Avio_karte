@@ -4,7 +4,7 @@
     <Id>1</Id>
     <Naziv>AvioLet</Naziv>
     <Adresa>Masarikova, Sabac</Adresa>
-    <Telefon>553344</Telefon>
+    <Telefon>55334459</Telefon>
     <Email>avio@let.com</Email>
     <Obrisana>Ne</Obrisana>
     <Letovi>
@@ -55,6 +55,14 @@
             <Korisnik>Maja</Korisnik>
             <BrojPutnika>6</BrojPutnika>
             <UkupnaCena>6000</UkupnaCena>
+            <Status>Otkazana</Status>
+          </Rezervacija>
+          <Rezervacija>
+            <Id>6</Id>
+            <LetId>2</LetId>
+            <Korisnik>Pera</Korisnik>
+            <BrojPutnika>6</BrojPutnika>
+            <UkupnaCena>6000</UkupnaCena>
             <Status>Kreirana</Status>
           </Rezervacija>
         </Rezervacije>
@@ -70,8 +78,8 @@
         <VremePolaska>15:15</VremePolaska>
         <DatumDolaska>15/12/2024</DatumDolaska>
         <VremeDolaska>15:20</VremeDolaska>
-        <BrojSlobodnihMesta>95</BrojSlobodnihMesta>
-        <BrojZauzetihMesta>5</BrojZauzetihMesta>
+        <BrojSlobodnihMesta>90</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>10</BrojZauzetihMesta>
         <Cena>2000</Cena>
         <StatusLeta>Aktivan</StatusLeta>
         <Rezervacije>
@@ -83,8 +91,41 @@
             <UkupnaCena>10000</UkupnaCena>
             <Status>Otkazana</Status>
           </Rezervacija>
+          <Rezervacija>
+            <Id>4</Id>
+            <LetId>3</LetId>
+            <Korisnik>Pera</Korisnik>
+            <BrojPutnika>5</BrojPutnika>
+            <UkupnaCena>10000</UkupnaCena>
+            <Status>Otkazana</Status>
+          </Rezervacija>
+          <Rezervacija>
+            <Id>5</Id>
+            <LetId>3</LetId>
+            <Korisnik>Pera</Korisnik>
+            <BrojPutnika>5</BrojPutnika>
+            <UkupnaCena>10000</UkupnaCena>
+            <Status>Odobrena</Status>
+          </Rezervacija>
         </Rezervacije>
         <Obrisan>Ne</Obrisan>
+      </Let>
+      <Let>
+        <AviokompanijaId>1</AviokompanijaId>
+        <Id>4</Id>
+        <Aviokompanija>AvioLet</Aviokompanija>
+        <PolaznaDestinacija>Kragujevac</PolaznaDestinacija>
+        <OdredistnaDestinacija>Sabac</OdredistnaDestinacija>
+        <DatumPolaska>12/12/2024</DatumPolaska>
+        <VremePolaska>12:12</VremePolaska>
+        <DatumDolaska>12/12/2024</DatumDolaska>
+        <VremeDolaska>12:15</VremeDolaska>
+        <BrojSlobodnihMesta>12</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>0</BrojZauzetihMesta>
+        <Cena>1212</Cena>
+        <StatusLeta>Aktivan</StatusLeta>
+        <Rezervacije />
+        <Obrisan>Da</Obrisan>
       </Let>
     </Letovi>
     <Recenzije>
@@ -110,6 +151,16 @@
         <Slika>../Uploads/2aa67e3c1-0986-4033-a6bc-95a7773f9284.png</Slika>
         <StatusRecenzije>Odobrena</StatusRecenzije>
       </Recenzija>
+      <Recenzija>
+        <Id>3</Id>
+        <LetId>1</LetId>
+        <Korisnik>Pera</Korisnik>
+        <Aviokompanija>AvioLet</Aviokompanija>
+        <Naslov>Treca Recenzija</Naslov>
+        <Sadrzaj>Moja Treca Recenzija</Sadrzaj>
+        <Ocena>3</Ocena>
+        <StatusRecenzije>Odbijena</StatusRecenzije>
+      </Recenzija>
     </Recenzije>
   </Aviokompanija>
   <Aviokompanija>
@@ -118,6 +169,16 @@
     <Adresa>Bajic, Novi Sad</Adresa>
     <Telefon>124124</Telefon>
     <Email>maja@majalet.com</Email>
+    <Obrisana>Ne</Obrisana>
+    <Letovi />
+    <Recenzije />
+  </Aviokompanija>
+  <Aviokompanija>
+    <Id>3</Id>
+    <Naziv>StefanLet</Naziv>
+    <Adresa>Bajiceva, Novi Sad</Adresa>
+    <Telefon>444555333</Telefon>
+    <Email>stefan@let.com</Email>
     <Obrisana>Ne</Obrisana>
     <Letovi />
     <Recenzije />

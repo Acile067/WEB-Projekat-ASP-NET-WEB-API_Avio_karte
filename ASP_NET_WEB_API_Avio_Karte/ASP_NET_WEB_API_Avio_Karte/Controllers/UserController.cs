@@ -124,6 +124,10 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
         [HttpGet, Route("api/users")]
         public IHttpActionResult GetAllUsers(string ime = null, string prezime = null, string datumOd = null, string datumDo = null, string autorizacija = null)
         {
+            if(autorizacija == null)
+            {
+                return BadRequest("Ne mozete direktno pristupiti");
+            }
             // Provera autorizacije
             if (!Data.LoggedWithToken.ContainsKey(autorizacija))
             {

@@ -138,8 +138,11 @@ function register() {
                 data: formData,
                 processData: false,
                 contentType: false,
+                headers: {
+                    'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                },
                 success: function (result) {
-                    alert("Uspesno dodana recenzija " + $('#naslov').val());
+                    alert("Uspešno dodana recenzija " + $('#naslov').val());
                     window.location = '/MyPages/userRezervacije.html';
                 },
                 error: function (xhr) {

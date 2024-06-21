@@ -85,6 +85,7 @@ function loadRezervacija() {
     }
 }
 
+
 function otkaziRezervaciju() {
     var id = getUrlParameter('id');
     var letid = getUrlParameter('letid');

@@ -18,6 +18,25 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
         public IHttpActionResult Post()
         {
             var httpRequest = HttpContext.Current.Request;
+            var authorization = httpRequest.Headers["Authorization"];
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var korisnickoIme = Data.LoggedWithToken[token];
+            if (korisnickoIme == null)
+            {
+                return BadRequest("Neovlašćen pristup");
+            }
 
             var maxId = Data.Recenzije.GetList().Count > 0 ? Data.Recenzije.GetList().Max(x => x.Id) : 0;
             var maxIdand1 = maxId + 1;
@@ -88,18 +107,57 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
         [HttpGet, Route("api/kreiranerecenzije")]
         public IHttpActionResult GetAllKreirane()
         {
+            var authorization = HttpContext.Current.Request.Headers["Authorization"];
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var korisnickoIme = Data.LoggedWithToken[token];
+            if (korisnickoIme == null || korisnickoIme.TipKorisnika != TipKorisnika.Administrator)
+            {
+                return BadRequest("Neovlašćen pristup");
+            }
+
             var kreirane = Data.Recenzije.GetList()
                             .Where(p => p.StatusRecenzije == StatusRecenzije.Kreirana)
                             .Select(p => (Recenzija)p);
 
-
             return Ok(kreirane.ToList());
         }
 
-        // GET /api/kreiranerecenzije
+
+        // GET /api/odobreneodbijenerecenzije
         [HttpGet, Route("api/odobreneodbijenerecenzije")]
         public IHttpActionResult GetAllOdobreneOdbijene()
         {
+            var authorization = HttpContext.Current.Request.Headers["Authorization"];
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var korisnickoIme = Data.LoggedWithToken[token];
+            if (korisnickoIme == null || korisnickoIme.TipKorisnika != TipKorisnika.Administrator)
+            {
+                return BadRequest("Neovlašćen pristup");
+            }
             var kreirane = Data.Recenzije.GetList()
                             .Where(p => p.StatusRecenzije == StatusRecenzije.Odobrena || p.StatusRecenzije == StatusRecenzije.Odbijena)
                             .Select(p => (Recenzija)p);
@@ -112,6 +170,26 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
         [HttpPut, Route("api/recenzija/{id}/status")]
         public IHttpActionResult UpdateStatus(int id, [FromBody] StatusUpdateRequest request)
         {
+            var httpRequest = HttpContext.Current.Request;
+            var authorization = httpRequest.Headers["Authorization"];
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var korisnickoIme = Data.LoggedWithToken[token];
+            if (korisnickoIme == null || korisnickoIme.TipKorisnika != TipKorisnika.Administrator)
+            {
+                return BadRequest("Neovlašćen pristup");
+            }
             // Validacija statusa
             if (!Enum.TryParse(request.Status, out StatusRecenzije newStatus))
             {

@@ -90,11 +90,21 @@ function register() {
                 'korisnik': trenutniKorisnik,
             };
 
-            $.post('/api/rezervacija', data, function (result) {
-                alert("Uspesno dodana rezervacija ");
-                window.location = '/MyPages/index.html';
-            }).fail(function (xhr, status, err) {
-                alert(xhr.responseJSON.Message);
+            $.ajax({
+                url: '/api/rezervacija',
+                type: 'POST',
+                headers: {
+                    'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+                    'Content-Type': 'application/json'
+                },
+                data: JSON.stringify(data),
+                success: function (result) {
+                    alert("Uspešna rezervacija");
+                    window.location = '/MyPages/index.html';
+                },
+                error: function (xhr, status, err) {
+                    alert(xhr.responseJSON.Message);
+                }
             });
         }
     });

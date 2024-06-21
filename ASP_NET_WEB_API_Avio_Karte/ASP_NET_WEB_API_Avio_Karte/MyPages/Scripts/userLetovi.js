@@ -26,6 +26,9 @@ async function fetchLetove() {
             const response = await $.ajax({
                 url: `/api/letovizakorisnika/${korisnik}`,
                 method: "GET",
+                headers: {
+                    'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                },
                 data: { statusleta: statusleta }
             });
             populateLetTable(response);
@@ -36,6 +39,7 @@ async function fetchLetove() {
         }
     }
 }
+
 
 
 function populateLetTable(users) {

@@ -7,12 +7,12 @@
     <PolaznaDestinacija>Beograd</PolaznaDestinacija>
     <OdredistnaDestinacija>Sabac</OdredistnaDestinacija>
     <DatumPolaska>19/06/2024</DatumPolaska>
-    <VremePolaska>21:35</VremePolaska>
+    <VremePolaska>21:36</VremePolaska>
     <DatumDolaska>19/06/2024</DatumDolaska>
     <VremeDolaska>21:37</VremeDolaska>
     <BrojSlobodnihMesta>96</BrojSlobodnihMesta>
     <BrojZauzetihMesta>4</BrojZauzetihMesta>
-    <Cena>50</Cena>
+    <Cena>500</Cena>
     <StatusLeta>Zavrsen</StatusLeta>
     <Rezervacije>
       <Rezervacija>
@@ -47,6 +47,14 @@
         <Korisnik>Maja</Korisnik>
         <BrojPutnika>6</BrojPutnika>
         <UkupnaCena>6000</UkupnaCena>
+        <Status>Otkazana</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>6</Id>
+        <LetId>2</LetId>
+        <Korisnik>Pera</Korisnik>
+        <BrojPutnika>6</BrojPutnika>
+        <UkupnaCena>6000</UkupnaCena>
         <Status>Kreirana</Status>
       </Rezervacija>
     </Rezervacije>
@@ -62,8 +70,8 @@
     <VremePolaska>15:15</VremePolaska>
     <DatumDolaska>15/12/2024</DatumDolaska>
     <VremeDolaska>15:20</VremeDolaska>
-    <BrojSlobodnihMesta>100</BrojSlobodnihMesta>
-    <BrojZauzetihMesta>0</BrojZauzetihMesta>
+    <BrojSlobodnihMesta>95</BrojSlobodnihMesta>
+    <BrojZauzetihMesta>5</BrojZauzetihMesta>
     <Cena>2000</Cena>
     <StatusLeta>Aktivan</StatusLeta>
     <Rezervacije>
@@ -75,7 +83,40 @@
         <UkupnaCena>10000</UkupnaCena>
         <Status>Otkazana</Status>
       </Rezervacija>
+      <Rezervacija>
+        <Id>4</Id>
+        <LetId>3</LetId>
+        <Korisnik>Pera</Korisnik>
+        <BrojPutnika>5</BrojPutnika>
+        <UkupnaCena>10000</UkupnaCena>
+        <Status>Otkazana</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>5</Id>
+        <LetId>3</LetId>
+        <Korisnik>Pera</Korisnik>
+        <BrojPutnika>5</BrojPutnika>
+        <UkupnaCena>10000</UkupnaCena>
+        <Status>Odobrena</Status>
+      </Rezervacija>
     </Rezervacije>
     <Obrisan>Ne</Obrisan>
+  </Let>
+  <Let>
+    <AviokompanijaId>1</AviokompanijaId>
+    <Id>4</Id>
+    <Aviokompanija>AvioLet</Aviokompanija>
+    <PolaznaDestinacija>Kragujevac</PolaznaDestinacija>
+    <OdredistnaDestinacija>Sabac</OdredistnaDestinacija>
+    <DatumPolaska>12/12/2024</DatumPolaska>
+    <VremePolaska>12:12</VremePolaska>
+    <DatumDolaska>12/12/2024</DatumDolaska>
+    <VremeDolaska>12:15</VremeDolaska>
+    <BrojSlobodnihMesta>12</BrojSlobodnihMesta>
+    <BrojZauzetihMesta>0</BrojZauzetihMesta>
+    <Cena>1213</Cena>
+    <StatusLeta>Aktivan</StatusLeta>
+    <Rezervacije />
+    <Obrisan>Da</Obrisan>
   </Let>
 </ArrayOfLet>

@@ -17,6 +17,9 @@ async function fetchKreirane() {
             const response = await $.ajax({
                 url: '/api/kreiranerecenzije',
                 method: "GET",
+                headers: {
+                    'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                }
             });
             populateKreirane(response);
         } catch (error) {
@@ -25,6 +28,7 @@ async function fetchKreirane() {
         }
     }
 }
+
 
 function populateKreirane(users) {
     const usersTableBody = $('#recenzije-sve');
@@ -95,10 +99,16 @@ async function updateStatusRecenzije(recenzijaId, status) {
                 headers: {
                     'Authorization': `Bearer ${sessionStorage.getItem('token')}`
                 },
+                success: function (data) {
+                    alert('Status recenzije je uspešno ažuriran.');
+                    fetchKreirane(); // Osvježavanje liste nakon promene statusa
+                    fetchOdobreneOdbijene();
+                },
+                error: function (xhr) {
+                    console.error('Greška pri ažuriranju statusa:', xhr.responseText);
+                    alert('Došlo je do greške pri ažuriranju statusa.');
+                }
             });
-            alert('Status recenzije je uspešno ažuriran.');
-            fetchKreirane(); // Osvježavanje liste nakon promene statusa
-            fetchOdobreneOdbijene();
         } catch (error) {
             console.error('Greška pri ažuriranju statusa:', error);
             alert('Došlo je do greške pri ažuriranju statusa.');
@@ -107,12 +117,16 @@ async function updateStatusRecenzije(recenzijaId, status) {
 }
 
 
+
 async function fetchOdobreneOdbijene() {
     if (sessionStorage.getItem('token')) {
         try {
             const response = await $.ajax({
                 url: '/api/odobreneodbijenerecenzije',
                 method: "GET",
+                headers: {
+                    'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                }
             });
             populateOdobreneOdbijene(response);
         } catch (error) {

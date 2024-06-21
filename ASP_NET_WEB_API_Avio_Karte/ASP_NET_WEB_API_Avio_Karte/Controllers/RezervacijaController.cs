@@ -12,9 +12,32 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
     public class RezervacijaController : ApiController
     {
 
-        //POST /api/rezervacija REGISTRATION
+        // POST /api/rezervacija REGISTRATION
+        [HttpPost, Route("api/rezervacija")]
         public IHttpActionResult Post(Rezervacija r)
         {
+            var request = HttpContext.Current.Request;
+            var authorization = request.Headers["Authorization"];
+
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var user = Data.LoggedWithToken[token];
+            if (user == null || user.KorisnickoIme != r.Korisnik)
+            {
+                return BadRequest("Neovlašćeni korisnik");
+            }
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -26,8 +49,6 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
 
             r.UkupnaCena = let.Cena * r.BrojPutnika;
             r.Status = Status.Kreirana;
-
-            
 
             // Pronalaženje korisnika po korisničkom imenu
             var korisnik = Data.Putnici.GetList().FirstOrDefault(k => k.KorisnickoIme == r.Korisnik);
@@ -60,47 +81,137 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             return Created("Rezervacija", r.Id);
         }
 
+
         // GET /api/neodobrene
         [HttpGet, Route("api/neodobrene")]
         public IHttpActionResult GetAllNeodobrene()
         {
+            var request = HttpContext.Current.Request;
+            var authorization = request.Headers["Authorization"];
+
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var user = Data.LoggedWithToken[token];
+            if (user == null || user.TipKorisnika != TipKorisnika.Administrator)
+            {
+                return BadRequest("Neovlašćen pristup");
+            }
+
             var neodobrene = Data.Rezervacije.GetList()
                             .Where(p => p.Status == Status.Kreirana)
                             .Select(p => (Rezervacija)p);
 
-
             return Ok(neodobrene.ToList());
         }
+
         // GET /api/odobrene
         [HttpGet, Route("api/odobrene")]
         public IHttpActionResult GetAllOdobrene()
         {
+            var request = HttpContext.Current.Request;
+            var authorization = request.Headers["Authorization"];
+
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var user = Data.LoggedWithToken[token];
+            if (user == null || user.TipKorisnika != TipKorisnika.Administrator)
+            {
+                return BadRequest("Neovlašćen pristup");
+            }
+
             var odobrene = Data.Rezervacije.GetList()
                             .Where(p => p.Status == Status.Odobrena)
                             .Select(p => (Rezervacija)p);
 
-
             return Ok(odobrene.ToList());
         }
+
 
         // GET /api/zavrseneotkazane
         [HttpGet, Route("api/zavrseneotkazane")]
         public IHttpActionResult GetAllZavrseneOtkazane()
         {
-            var zavrseneotkazane = Data.Rezervacije.GetList()
-                            .Where(p => p.Status == Status.Otkazana || p.Status == Status.Zavrsena)
-                            .Select(p => (Rezervacija)p);
+            var request = HttpContext.Current.Request;
+            var authorization = request.Headers["Authorization"];
+
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var user = Data.LoggedWithToken[token];
+            if (user == null || user.TipKorisnika != TipKorisnika.Administrator)
+            {
+                return BadRequest("Neovlašćen pristup");
+            }
 
 
-            return Ok(zavrseneotkazane.ToList());
+            var zavrseneOtkazane = Data.Rezervacije.GetList()
+                                    .Where(p => p.Status == Status.Otkazana || p.Status == Status.Zavrsena)
+                                    .Select(p => (Rezervacija)p);
+
+            return Ok(zavrseneOtkazane.ToList());
         }
+
 
         // GET /api/neodobrena/{id}
         [HttpGet, Route("api/neodobrena/{id}")]
         public IHttpActionResult GetNeodobrena(int id)
         {
+            var request = HttpContext.Current.Request;
+            var authorization = request.Headers["Authorization"];
+
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var user = Data.LoggedWithToken[token];
+            if (user == null || user.TipKorisnika != TipKorisnika.Administrator)
+            {
+                return BadRequest("Neovlašćen pristup");
+            }
+
             var neodobrena = Data.Rezervacije.Find(p => p.Id == id);
-            if (neodobrena == null || neodobrena.Status != 0)
+            if (neodobrena == null || neodobrena.Status != Status.Kreirana)
             {
                 return NotFound();
             }
@@ -108,10 +219,35 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             return Ok(neodobrena);
         }
 
+
         // GET /api/odobrena/{id}
         [HttpGet, Route("api/odobrena/{id}")]
         public IHttpActionResult GetOdobrena(int id)
         {
+            var request = HttpContext.Current.Request;
+            var authorization = request.Headers["Authorization"];
+
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var user = Data.LoggedWithToken[token];
+            if (user == null || user.TipKorisnika != TipKorisnika.Administrator)
+            {
+                return BadRequest("Neovlašćen pristup");
+            }
+
+            // Dodatna provera: možete ovde implementirati dodatne provere pristupa
+
             var odobrena = Data.Rezervacije.Find(p => p.Id == id);
             if (odobrena == null)
             {
@@ -121,11 +257,33 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             return Ok(odobrena);
         }
 
-        // PUT /api/odobrirezervaciju/{id}
 
+        // PUT /api/odobrirezervaciju/{id}
         [HttpPut, Route("api/odobrirezervaciju/{id}")]
         public IHttpActionResult PutOdobriRezervaciju(int id, Rezervacija rezervacijaZaPromenu)
         {
+            var request = HttpContext.Current.Request;
+            var authorization = request.Headers["Authorization"];
+
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var user = Data.LoggedWithToken[token];
+            if (user == null || user.TipKorisnika != TipKorisnika.Administrator)
+            {
+                return BadRequest("Neovlašćen pristup");
+            }
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -186,10 +344,33 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             return Ok(rezervacija);
         }
 
+
         // PUT /api/otkazirezervaciju/{id}
         [HttpPut, Route("api/otkazirezervaciju/{id}")]
         public IHttpActionResult PutOtkaziRezervaciju(int id, Rezervacija rezervacijaZaPromenu)
         {
+            var request = HttpContext.Current.Request;
+            var authorization = request.Headers["Authorization"];
+
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
+            {
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var user = Data.LoggedWithToken[token];
+            if (user == null)
+            {
+                return BadRequest("Neovlašćen pristup");
+            }
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -271,14 +452,37 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             return Ok(rezervacija);
         }
 
-        //GET api/recenzijeinfo/{korisnickoime}
 
+        // GET api/recenzijeinfo/{korisnickoime}
         [HttpGet, Route("api/recenzijeinfo/{korisnickoime}")]
-        public IHttpActionResult GetAllRecenzijeForUser(string korisnickoime, [FromUri] int? status = null)  // Dodali smo parametar status
+        public IHttpActionResult GetAllRecenzijeForUser(string korisnickoime, [FromUri] int? status = null)
         {
-            if (string.IsNullOrEmpty(korisnickoime))
+            var request = HttpContext.Current.Request;
+            var authorization = request.Headers["Authorization"];
+
+            if (string.IsNullOrEmpty(authorization) || !authorization.StartsWith("Bearer "))
             {
-                return BadRequest("Korisničko ime nije validno.");
+                return BadRequest("Autorizacija je obavezna");
+            }
+
+            string token = authorization.Substring("Bearer ".Length).Trim();
+
+            if (!Data.LoggedWithToken.ContainsKey(token))
+            {
+                return BadRequest("Neispravan token");
+            }
+
+            // Provera da li je token važeći
+            var user = Data.LoggedWithToken[token];
+            if (user == null)
+            {
+                return BadRequest("Neovlašćen pristup");
+            }
+
+            // Dodatna provera: da li je korisničko ime u URL-u isto kao i korisnik povezan sa tokenom
+            if (user.KorisnickoIme != korisnickoime)
+            {
+                return Unauthorized();
             }
 
             var putnik = Data.Putnici.GetList().FirstOrDefault(p => p.KorisnickoIme == korisnickoime);
@@ -311,6 +515,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
 
             return Ok(rezervacije.ToList());
         }
+
 
 
     }

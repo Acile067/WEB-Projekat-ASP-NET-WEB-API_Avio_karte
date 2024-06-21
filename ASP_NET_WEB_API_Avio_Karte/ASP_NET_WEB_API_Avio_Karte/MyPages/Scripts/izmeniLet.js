@@ -81,10 +81,11 @@ function loadAviokompanije() {
         },
         error: function (error) {
             console.log(error);
-            alert('Neuspelo ucitavanje aviokompanija');
+            alert('Neuspelo učitavanje aviokompanija');
         }
     });
 }
+
 
 function loadLet() {
     var id = getUrlParameter('id');
@@ -151,18 +152,19 @@ function updateLet() {
             },
             data: JSON.stringify(let),
             success: function (data) {
-                alert('Let uspesno promenjena');
+                alert('Let uspešno promenjen');
                 window.location = '/MyPages/letAdminControll.html';
             },
             error: function (error) {
                 console.log(error);
-                alert('Let nije promenjena GRESKA!');
+                alert('Let nije promenjen GRESKA!');
             }
         });
     } else {
         alert('Ne postoji ID u URL');
     }
 }
+
 
 function deleteLet() {
     var id = getUrlParameter('id');
@@ -174,12 +176,12 @@ function deleteLet() {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('token')
             },
             success: function () {
-                alert('Let uspesno obrisana');
+                alert('Let uspešno obrisan');
                 window.location = '/MyPages/letAdminControll.html';
             },
             error: function (error) {
                 console.log(error);
-                alert('Nisam uspeo da obrisem let GRESKA!');
+                alert('Nisam uspeo da obrišem let GRESKA!');
             }
         });
     } else {
