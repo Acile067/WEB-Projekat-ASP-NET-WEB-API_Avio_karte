@@ -122,12 +122,29 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             if (aviokompanija == null || aviokompanija.Obrisana == "Da")
                 return NotFound();
 
+            var letovi = Data.Letovi.FindAll(p => p.AviokompanijaId == id);
+
+            if(letovi != null && letovi.Count > 0)
+            {
+                foreach(var let in letovi)
+                {
+                    let.Aviokompanija = a.Naziv;
+                }
+            }
+
             aviokompanija.Naziv = a.Naziv;
             aviokompanija.Adresa = a.Adresa;
             aviokompanija.Telefon = a.Telefon;
             aviokompanija.Email = a.Email;
 
+            foreach(var let in aviokompanija.Letovi)
+            {
+                let.Aviokompanija = a.Naziv;
+            }
+
             Data.Aviokompanije.Update(aviokompanija);
+
+            Data.Letovi.UpdateFile();
 
             return Ok(aviokompanija);
         }

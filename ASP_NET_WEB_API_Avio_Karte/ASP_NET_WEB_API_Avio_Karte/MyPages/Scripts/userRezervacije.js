@@ -110,10 +110,11 @@ function populateRecenzije(users) {
 
 function initializeSorting() {
     let sortOrder = {
-        'Korisnik': true,  // true for ascending, false for descending
-        'BrojPutnika': true,
+        'BrojPutnika': true,  // true for ascending, false for descending
         'UkupnaCena': true,
+        'Status': true,
     };
+
     $(document).on('click', '#userRezervacijeTable th.sortable', function () {
         const column = $(this).data('column');
         const order = sortOrder[column] ? 'asc' : 'desc';
@@ -136,13 +137,18 @@ function sortTable(column, order) {
         const A = getCellValue(a, column);
         const B = getCellValue(b, column);
 
-        if (A < B) {
-            return order === 'asc' ? -1 : 1;
+        if (typeof A === 'number' && typeof B === 'number') {
+            return (order === 'asc' ? A - B : B - A);
+        } else {
+            // Fallback to string comparison if not numeric
+            if (A < B) {
+                return order === 'asc' ? -1 : 1;
+            }
+            if (A > B) {
+                return order === 'asc' ? 1 : -1;
+            }
+            return 0;
         }
-        if (A > B) {
-            return order === 'asc' ? 1 : -1;
-        }
-        return 0;
     });
 
     $.each(rows, function (index, row) {
@@ -151,5 +157,25 @@ function sortTable(column, order) {
 }
 
 function getCellValue(row, column) {
-    return $(row).find('td').eq((column === 'BrojPutnika' || column === 'UkupnaCena' || column === 'Status') ? 2 : 4).text().toUpperCase();
+    switch (column) {
+        case 'BrojPutnika':
+            return parseInt($(row).find('td').eq(1).text(), 10);
+        case 'UkupnaCena':
+            return parseFloat($(row).find('td').eq(2).text());
+        case 'Status':
+            return $(row).find('td').eq(3).text().toUpperCase();
+        default:
+            return $(row).find('td').eq(columnIndex(column)).text().toUpperCase();
+    }
+}
+
+// Funkcija koja vraća indeks kolone na osnovu njenog imena
+function columnIndex(columnName) {
+    const columns = {
+        'BrojPutnika': 1,
+        'UkupnaCena': 2,
+        'Status': 3
+        // Dodaj ostale kolone po potrebi
+    };
+    return columns[columnName];
 }

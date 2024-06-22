@@ -63,6 +63,8 @@ function initializeSorting() {
         'Ime': true,  // true for ascending, false for descending
         'DatumRodjenja': true
     };
+
+    // Event listener za klik na zaglavlje kolone
     $(document).on('click', '#usersTable th.sortable', function () {
         const column = $(this).data('column');
         const order = sortOrder[column] ? 'asc' : 'desc';
@@ -70,10 +72,10 @@ function initializeSorting() {
 
         sortTable(column, order);
 
-        // Remove sorting classes from all headers
+        // Uklanja sve klase sortiranja iz zaglavlja
         $('#usersTable th.sortable').removeClass('asc desc');
 
-        // Add sorting class to the clicked header
+        // Dodaje klasu za trenutni redosled u zaglavlje na koje je kliknuto
         $(this).addClass(order);
     });
 }
@@ -85,6 +87,7 @@ function sortTable(column, order) {
         const A = getCellValue(a, column);
         const B = getCellValue(b, column);
 
+        // Poređenje vrednosti
         if (A < B) {
             return order === 'asc' ? -1 : 1;
         }
@@ -94,6 +97,7 @@ function sortTable(column, order) {
         return 0;
     });
 
+    // Ponovno dodavanje sortiranih redova u tbody
     $.each(rows, function (index, row) {
         $('#usersTable tbody').append(row);
     });
@@ -101,8 +105,13 @@ function sortTable(column, order) {
 
 function getCellValue(row, column) {
     if (column === 'DatumRodjenja') {
-        // Convert date string to Date object for proper comparison
-        return new Date($(row).find('td').eq(4).text());
+        return parseDate($(row).find('td').eq(4).text());
     }
     return $(row).find('td').eq(column === 'Ime' ? 1 : 4).text().toUpperCase();
+}
+
+// Funkcija za parsiranje datuma u formatu DD/MM/YYYY
+function parseDate(dateStr) {
+    const [day, month, year] = dateStr.split('/');
+    return new Date(year, month - 1, day);  // Mesecevi brojevi u Date objektu idu od 0 do 11
 }

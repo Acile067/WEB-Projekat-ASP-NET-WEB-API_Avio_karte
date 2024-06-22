@@ -61,23 +61,26 @@ function populateUserTable(users) {
 }
 
 function initializeSorting() {
+    // Održava trenutni redosled sortiranja za svaku kolonu
     let sortOrder = {
-        'Naziv': true,  // true for ascending, false for descending
+        'Naziv': true,   // true for ascending, false for descending
         'Adresa': true,
         'Telefon': true,
         'Email': true
     };
+
+    // Postavlja event listener za klik na zaglavlja kolona
     $(document).on('click', '#aviokompanijeTable th.sortable', function () {
         const column = $(this).data('column');
         const order = sortOrder[column] ? 'asc' : 'desc';
-        sortOrder[column] = !sortOrder[column];
+        sortOrder[column] = !sortOrder[column];  // Invertuje redosled za sledeći klik
 
         sortTable(column, order);
 
-        // Remove sorting classes from all headers
+        // Uklanja sve klase sortiranja iz zaglavlja
         $('#aviokompanijeTable th.sortable').removeClass('asc desc');
 
-        // Add sorting class to the clicked header
+        // Dodaje klasu za trenutni redosled u zaglavlje na koje je kliknuto
         $(this).addClass(order);
     });
 }
@@ -89,24 +92,36 @@ function sortTable(column, order) {
         const A = getCellValue(a, column);
         const B = getCellValue(b, column);
 
-        if (A < B) {
-            return order === 'asc' ? -1 : 1;
+        // Koristi localeCompare za poređenje tekstualnih vrednosti
+        if (order === 'asc') {
+            return A.localeCompare(B);
+        } else {
+            return B.localeCompare(A);
         }
-        if (A > B) {
-            return order === 'asc' ? 1 : -1;
-        }
-        return 0;
     });
 
+    // Dodaje sortirane redove nazad u tbody
     $.each(rows, function (index, row) {
         $('#aviokompanijeTable tbody').append(row);
     });
 }
 
 function getCellValue(row, column) {
-
-    return $(row).find('td').eq((column === 'Naziv' || column === 'Adresa' || column === 'Telefon' || column === 'Email') ? 1 : 4).text().toUpperCase();
+    const columnIndex = getColumnIndex(column);
+    return $(row).find('td').eq(columnIndex).text().trim().toUpperCase();
 }
+
+function getColumnIndex(columnName) {
+    // Vraća indeks kolone na osnovu njenog imena
+    const columns = {
+        'Naziv': 0,
+        'Adresa': 1,
+        'Telefon': 2,
+        'Email': 3
+    };
+    return columns[columnName];
+}
+
 
 
 async function fetchLetove() {
@@ -173,6 +188,8 @@ function populateLetTable(users) {
     });
 }
 
+
+
 function initializeSortingLet() {
     let sortOrder = {
         'Kompanija': true,  // true for ascending, false for descending
@@ -206,8 +223,45 @@ function sortTableLet(column, order) {
     const rows = $('#letoviTable tbody tr').get();
 
     rows.sort(function (a, b) {
-        const A = getCellValueLet(a, column);
-        const B = getCellValueLet(b, column);
+        let A, B;
+        switch (column) {
+            case 'Poletanje':
+                A = parseDateTime($(a).find('td').eq(3).text(), $(a).find('td').eq(4).text());
+                B = parseDateTime($(b).find('td').eq(3).text(), $(b).find('td').eq(4).text());
+                break;
+            case 'Sletanje':
+                A = parseDateTime($(a).find('td').eq(5).text(), $(a).find('td').eq(6).text());
+                B = parseDateTime($(b).find('td').eq(5).text(), $(b).find('td').eq(6).text());
+                break;
+            case 'VremePoletanja':
+                A = parseTime($(a).find('td').eq(4).text());
+                B = parseTime($(b).find('td').eq(4).text());
+                break;
+            case 'VremeSletanja':
+                A = parseTime($(a).find('td').eq(6).text());
+                B = parseTime($(b).find('td').eq(6).text());
+                break;
+            case 'Cena':
+                A = parseFloat($(a).find('td').eq(9).text());
+                B = parseFloat($(b).find('td').eq(9).text());
+                break;
+            case 'Slobodnih':
+                A = parseInt($(a).find('td').eq(7).text(), 10);
+                B = parseInt($(b).find('td').eq(7).text(), 10);
+                break;
+            case 'Zauzetih':
+                A = parseInt($(a).find('td').eq(8).text(), 10);
+                B = parseInt($(b).find('td').eq(8).text(), 10);
+                break;
+            default:
+                A = $(a).find('td').eq(columnIndex(column)).text().toUpperCase();
+                B = $(b).find('td').eq(columnIndex(column)).text().toUpperCase();
+                break;
+        }
+
+        if (column === 'Kompanija' || column === 'Polazak' || column === 'Odrediste' || column === 'Status') {
+            return A.localeCompare(B) * (order === 'asc' ? 1 : -1);
+        }
 
         if (A < B) {
             return order === 'asc' ? -1 : 1;
@@ -223,7 +277,62 @@ function sortTableLet(column, order) {
     });
 }
 
+// Funkcija za parsiranje vremena
+function parseTime(timeStr) {
+    const [hours, minutes] = timeStr.split(':');
+    return new Date(1970, 0, 1, hours, minutes);
+}
+
+// Funkcija za parsiranje datuma i vremena
+function parseDateTime(dateStr, timeStr) {
+    const [day, month, year] = dateStr.split('/');
+    const [hours, minutes] = timeStr.split(':');
+    return new Date(year, month - 1, day, hours, minutes);
+}
+
+// Funkcija koja vraća indeks kolone na osnovu njenog imena
+function columnIndex(columnName) {
+    const columns = {
+        'Kompanija': 0,
+        'Polazak': 1,
+        'Odrediste': 2,
+        'Poletanje': 3,
+        'VremePoletanja': 4,
+        'Sletanje': 5,
+        'VremeSletanja': 6,
+        'Slobodnih': 7,
+        'Zauzetih': 8,
+        'Cena': 9,
+        'Status' : 10
+    };
+    return columns[columnName];
+}
+
+
 function getCellValueLet(row, column) {
 
-    return $(row).find('td').eq((column === 'Kompanija' || column === 'Polazak' || column === 'Odrediste' || column === 'Poletanje' || column === 'VremePoletanja' || column === 'Sletanje' || column === 'VremeSletanja' || column === 'Slobodnih' || column === 'Zauzetih' || column === 'Cena' || column === 'Status') ? 1 : 11).text().toUpperCase();
+    switch (column) {
+        case 'Kompanija':
+            return $(row).find('td').eq(0).text();
+        case 'Polazak':
+            return $(row).find('td').eq(1).text();
+        case 'Odrediste':
+            return $(row).find('td').eq(2).text();
+        case 'Poletanje':
+            return parseDateTime($(row).find('td').eq(3).text(), $(row).find('td').eq(4).text());
+        case 'VremePoletanja':
+            return $(row).find('td').eq(4).text();
+        case 'Sletanje':
+            return parseDateTime($(row).find('td').eq(5).text(), $(row).find('td').eq(6).text());
+        case 'VremeSletanja':
+            return $(row).find('td').eq(6).text();
+        case 'Slobodnih':
+            return parseInt($(row).find('td').eq(7).text(), 10);
+        case 'Zauzetih':
+            return parseInt($(row).find('td').eq(8).text(), 10);
+        case 'Cena':
+            return parseFloat($(row).find('td').eq(9).text()); // Parsiraj kao decimalan broj
+        default:
+            return $(row).find('td').eq(0).text();
+    }
 }

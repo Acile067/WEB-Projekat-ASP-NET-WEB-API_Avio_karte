@@ -241,7 +241,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
 
             // Provera da li je token važeći
             var user = Data.LoggedWithToken[token];
-            if (user == null || user.TipKorisnika != TipKorisnika.Administrator)
+            if (user == null)
             {
                 return BadRequest("Neovlašćen pristup");
             }

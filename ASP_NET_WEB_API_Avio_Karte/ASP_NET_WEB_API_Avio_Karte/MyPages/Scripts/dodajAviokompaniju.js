@@ -117,23 +117,26 @@ function populateUserTable(users) {
 }
 
 function initializeSorting() {
+    // Održava trenutni redosled sortiranja za svaku kolonu
     let sortOrder = {
-        'Naziv': true,  // true for ascending, false for descending
+        'Naziv': true,   // true for ascending, false for descending
         'Adresa': true,
         'Telefon': true,
         'Email': true
     };
+
+    // Postavlja event listener za klik na zaglavlja kolona
     $(document).on('click', '#aviokompanijeTable th.sortable', function () {
         const column = $(this).data('column');
         const order = sortOrder[column] ? 'asc' : 'desc';
-        sortOrder[column] = !sortOrder[column];
+        sortOrder[column] = !sortOrder[column];  // Invertuje redosled za sledeći klik
 
         sortTable(column, order);
 
-        // Remove sorting classes from all headers
+        // Uklanja sve klase sortiranja iz zaglavlja
         $('#aviokompanijeTable th.sortable').removeClass('asc desc');
 
-        // Add sorting class to the clicked header
+        // Dodaje klasu za trenutni redosled u zaglavlje na koje je kliknuto
         $(this).addClass(order);
     });
 }
@@ -145,21 +148,32 @@ function sortTable(column, order) {
         const A = getCellValue(a, column);
         const B = getCellValue(b, column);
 
-        if (A < B) {
-            return order === 'asc' ? -1 : 1;
+        // Koristi localeCompare za poređenje tekstualnih vrednosti
+        if (order === 'asc') {
+            return A.localeCompare(B);
+        } else {
+            return B.localeCompare(A);
         }
-        if (A > B) {
-            return order === 'asc' ? 1 : -1;
-        }
-        return 0;
     });
 
+    // Dodaje sortirane redove nazad u tbody
     $.each(rows, function (index, row) {
         $('#aviokompanijeTable tbody').append(row);
     });
 }
 
 function getCellValue(row, column) {
-    
-    return $(row).find('td').eq((column === 'Naziv' || column === 'Adresa' || column === 'Telefon' || column === 'Email') ? 1 : 4).text().toUpperCase();
+    const columnIndex = getColumnIndex(column);
+    return $(row).find('td').eq(columnIndex).text().trim().toUpperCase();
+}
+
+function getColumnIndex(columnName) {
+    // Vraća indeks kolone na osnovu njenog imena
+    const columns = {
+        'Naziv': 0,
+        'Adresa': 1,
+        'Telefon': 2,
+        'Email': 3
+    };
+    return columns[columnName];
 }

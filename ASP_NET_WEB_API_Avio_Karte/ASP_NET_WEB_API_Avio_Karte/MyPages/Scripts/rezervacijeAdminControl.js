@@ -83,13 +83,18 @@ function sortTable(column, order) {
         const A = getCellValue(a, column);
         const B = getCellValue(b, column);
 
-        if (A < B) {
-            return order === 'asc' ? -1 : 1;
+        if (typeof A === 'number' && typeof B === 'number') {
+            return (order === 'asc' ? A - B : B - A);
+        } else {
+            // Fallback to string comparison if not numeric
+            if (A < B) {
+                return order === 'asc' ? -1 : 1;
+            }
+            if (A > B) {
+                return order === 'asc' ? 1 : -1;
+            }
+            return 0;
         }
-        if (A > B) {
-            return order === 'asc' ? 1 : -1;
-        }
-        return 0;
     });
 
     $.each(rows, function (index, row) {
@@ -98,9 +103,29 @@ function sortTable(column, order) {
 }
 
 function getCellValue(row, column) {
-
-    return $(row).find('td').eq((column === 'Korisnik' || column === 'BrojPutnika' || column === 'UkupnaCena') ? 1 : 3).text().toUpperCase();
+    switch (column) {
+        case 'Korisnik':
+            return $(row).find('td').eq(0).text().toUpperCase();
+        case 'BrojPutnika':
+            return parseInt($(row).find('td').eq(1).text(), 10);
+        case 'UkupnaCena':
+            return parseFloat($(row).find('td').eq(2).text());
+        default:
+            return $(row).find('td').eq(columnIndex(column)).text().toUpperCase();
+    }
 }
+
+// Funkcija koja vraća indeks kolone na osnovu njenog imena
+function columnIndex(columnName) {
+    const columns = {
+        'Korisnik': 0,
+        'BrojPutnika': 1,
+        'UkupnaCena': 2
+        // Dodaj ostale kolone po potrebi
+    };
+    return columns[columnName];
+}
+
 
 async function fetchOdobrene() {
     if (sessionStorage.getItem('token')) {
@@ -153,13 +178,18 @@ function sortTable2(column, order) {
         const A = getCellValue2(a, column);
         const B = getCellValue2(b, column);
 
-        if (A < B) {
-            return order === 'asc' ? -1 : 1;
+        if (typeof A === 'number' && typeof B === 'number') {
+            return (order === 'asc' ? A - B : B - A);
+        } else {
+            // Fallback to string comparison if not numeric
+            if (A < B) {
+                return order === 'asc' ? -1 : 1;
+            }
+            if (A > B) {
+                return order === 'asc' ? 1 : -1;
+            }
+            return 0;
         }
-        if (A > B) {
-            return order === 'asc' ? 1 : -1;
-        }
-        return 0;
     });
 
     $.each(rows, function (index, row) {
@@ -168,9 +198,29 @@ function sortTable2(column, order) {
 }
 
 function getCellValue2(row, column) {
-
-    return $(row).find('td').eq((column === 'Korisnik' || column === 'BrojPutnika' || column === 'UkupnaCena') ? 1 : 3).text().toUpperCase();
+    switch (column) {
+        case 'Korisnik':
+            return $(row).find('td').eq(0).text().toUpperCase();
+        case 'BrojPutnika':
+            return parseInt($(row).find('td').eq(1).text(), 10);
+        case 'UkupnaCena':
+            return parseFloat($(row).find('td').eq(2).text());
+        default:
+            return $(row).find('td').eq(columnIndex2(column)).text().toUpperCase();
+    }
 }
+
+// Funkcija koja vraća indeks kolone na osnovu njenog imena
+function columnIndex2(columnName) {
+    const columns = {
+        'Korisnik': 0,
+        'BrojPutnika': 1,
+        'UkupnaCena': 2
+        // Dodaj ostale kolone po potrebi
+    };
+    return columns[columnName];
+}
+
 
 function populateOdobrene(users) {
     const usersTableBody = $('#odobreneTable tbody');
@@ -271,13 +321,18 @@ function sortTable3(column, order) {
         const A = getCellValue3(a, column);
         const B = getCellValue3(b, column);
 
-        if (A < B) {
-            return order === 'asc' ? -1 : 1;
+        if (typeof A === 'number' && typeof B === 'number') {
+            return (order === 'asc' ? A - B : B - A);
+        } else {
+            // Fallback to string comparison if not numeric
+            if (A < B) {
+                return order === 'asc' ? -1 : 1;
+            }
+            if (A > B) {
+                return order === 'asc' ? 1 : -1;
+            }
+            return 0;
         }
-        if (A > B) {
-            return order === 'asc' ? 1 : -1;
-        }
-        return 0;
     });
 
     $.each(rows, function (index, row) {
@@ -286,6 +341,25 @@ function sortTable3(column, order) {
 }
 
 function getCellValue3(row, column) {
+    switch (column) {
+        case 'Korisnik':
+            return $(row).find('td').eq(0).text().toUpperCase();
+        case 'BrojPutnika':
+            return parseInt($(row).find('td').eq(1).text(), 10);
+        case 'UkupnaCena':
+            return parseFloat($(row).find('td').eq(2).text());
+        default:
+            return $(row).find('td').eq(columnIndex3(column)).text().toUpperCase();
+    }
+}
 
-    return $(row).find('td').eq((column === 'Korisnik' || column === 'BrojPutnika' || column === 'UkupnaCena') ? 1 : 3).text().toUpperCase();
+// Funkcija koja vraća indeks kolone na osnovu njenog imena
+function columnIndex3(columnName) {
+    const columns = {
+        'Korisnik': 0,
+        'BrojPutnika': 1,
+        'UkupnaCena': 2
+        // Dodaj ostale kolone po potrebi
+    };
+    return columns[columnName];
 }

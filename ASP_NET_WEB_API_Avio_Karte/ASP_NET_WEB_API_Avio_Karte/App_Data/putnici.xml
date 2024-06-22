@@ -3,120 +3,42 @@
   <Putnik>
     <KorisnickoIme>Pera</KorisnickoIme>
     <Lozinka>Pera</Lozinka>
-    <Ime>Pera1</Ime>
+    <Ime>Pera</Ime>
     <Prezime>Pera</Prezime>
     <Email>pera@pera.com</Email>
     <DatumRodjenja>01/01/2001</DatumRodjenja>
     <Pol>Musko</Pol>
     <TipKorisnika>Putnik</TipKorisnika>
-    <Recenzije>
-      <Recenzija>
-        <Id>1</Id>
-        <LetId>1</LetId>
-        <Korisnik>Pera</Korisnik>
-        <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>Lep Let</Naslov>
-        <Sadrzaj>Lepo sam leteo i uzivao i letenju i volim da letim svaki dan od kad sam se rodio.</Sadrzaj>
-        <Ocena>5</Ocena>
-        <Slika>../Uploads/17aaf5e9a-b85d-49b6-8c1d-b8faf87a4953.png</Slika>
-        <StatusRecenzije>Odobrena</StatusRecenzije>
-      </Recenzija>
-      <Recenzija>
-        <Id>2</Id>
-        <LetId>1</LetId>
-        <Korisnik>Pera</Korisnik>
-        <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>Nista ne valja</Naslov>
-        <Sadrzaj>sdhjsafjh ajhsdgfjhasdgf jhsgdfhjgsadfh jahvdshjsvdfhjahsdfjhSADG ASHJGDHJsgfh havsdh</Sadrzaj>
-        <Ocena>1</Ocena>
-        <Slika>../Uploads/2aa67e3c1-0986-4033-a6bc-95a7773f9284.png</Slika>
-        <StatusRecenzije>Odobrena</StatusRecenzije>
-      </Recenzija>
-      <Recenzija>
-        <Id>3</Id>
-        <LetId>1</LetId>
-        <Korisnik>Pera</Korisnik>
-        <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>Treca Recenzija</Naslov>
-        <Sadrzaj>Moja Treca Recenzija</Sadrzaj>
-        <Ocena>3</Ocena>
-        <StatusRecenzije>Odbijena</StatusRecenzije>
-      </Recenzija>
-    </Recenzije>
+    <Recenzije />
     <Rezervacije>
       <Rezervacija>
         <Id>1</Id>
         <LetId>1</LetId>
         <Korisnik>Pera</Korisnik>
-        <BrojPutnika>4</BrojPutnika>
-        <UkupnaCena>200</UkupnaCena>
-        <Status>Zavrsena</Status>
+        <BrojPutnika>5</BrojPutnika>
+        <UkupnaCena>5000</UkupnaCena>
+        <Status>Otkazana</Status>
       </Rezervacija>
       <Rezervacija>
         <Id>2</Id>
-        <LetId>3</LetId>
+        <LetId>1</LetId>
         <Korisnik>Pera</Korisnik>
-        <BrojPutnika>5</BrojPutnika>
-        <UkupnaCena>10000</UkupnaCena>
-        <Status>Otkazana</Status>
-      </Rezervacija>
-      <Rezervacija>
-        <Id>4</Id>
-        <LetId>3</LetId>
-        <Korisnik>Pera</Korisnik>
-        <BrojPutnika>5</BrojPutnika>
-        <UkupnaCena>10000</UkupnaCena>
-        <Status>Otkazana</Status>
-      </Rezervacija>
-      <Rezervacija>
-        <Id>5</Id>
-        <LetId>3</LetId>
-        <Korisnik>Pera</Korisnik>
-        <BrojPutnika>5</BrojPutnika>
-        <UkupnaCena>10000</UkupnaCena>
+        <BrojPutnika>7</BrojPutnika>
+        <UkupnaCena>7000</UkupnaCena>
         <Status>Odobrena</Status>
-      </Rezervacija>
-      <Rezervacija>
-        <Id>6</Id>
-        <LetId>2</LetId>
-        <Korisnik>Pera</Korisnik>
-        <BrojPutnika>6</BrojPutnika>
-        <UkupnaCena>6000</UkupnaCena>
-        <Status>Kreirana</Status>
       </Rezervacija>
     </Rezervacije>
   </Putnik>
   <Putnik>
-    <KorisnickoIme>Stefan</KorisnickoIme>
-    <Lozinka>Stefan</Lozinka>
-    <Ime>Stefan</Ime>
-    <Prezime>Cvjetkovic</Prezime>
-    <Email>stefan@stefan.com</Email>
-    <DatumRodjenja>03/03/2002</DatumRodjenja>
+    <KorisnickoIme>dugala</KorisnickoIme>
+    <Lozinka>voyo123</Lozinka>
+    <Ime>Milan</Ime>
+    <Prezime>Dugalic</Prezime>
+    <Email>milan@gmail.com</Email>
+    <DatumRodjenja>01/03/2002</DatumRodjenja>
     <Pol>Musko</Pol>
     <TipKorisnika>Putnik</TipKorisnika>
     <Recenzije />
     <Rezervacije />
-  </Putnik>
-  <Putnik>
-    <KorisnickoIme>Maja</KorisnickoIme>
-    <Lozinka>Maja</Lozinka>
-    <Ime>Maja</Ime>
-    <Prezime>Pavic</Prezime>
-    <Email>maja@maja.com</Email>
-    <DatumRodjenja>28/05/2002</DatumRodjenja>
-    <Pol>Musko</Pol>
-    <TipKorisnika>Putnik</TipKorisnika>
-    <Recenzije />
-    <Rezervacije>
-      <Rezervacija>
-        <Id>3</Id>
-        <LetId>2</LetId>
-        <Korisnik>Maja</Korisnik>
-        <BrojPutnika>6</BrojPutnika>
-        <UkupnaCena>6000</UkupnaCena>
-        <Status>Otkazana</Status>
-      </Rezervacija>
-    </Rezervacije>
   </Putnik>
 </ArrayOfPutnik>
