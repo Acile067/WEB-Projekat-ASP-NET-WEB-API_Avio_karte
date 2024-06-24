@@ -36,24 +36,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             if (korisnickoIme == null)
             {
                 return BadRequest("Neovlašćen pristup");
-            }
-
-            var maxId = Data.Recenzije.GetList().Count > 0 ? Data.Recenzije.GetList().Max(x => x.Id) : 0;
-            var maxIdand1 = maxId + 1;
-            // Proverite da li postoje fajlovi u zahtevu
-            string slikaPath = null;
-            if (httpRequest.Files.Count > 0)
-            {
-                var postedFile = httpRequest.Files[0];
-                if (postedFile != null && postedFile.ContentLength > 0)
-                {
-                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(postedFile.FileName); // Jedinstveno ime za fajl
-                    string filePath = HttpContext.Current.Server.MapPath("~/Uploads/") + maxIdand1 + fileName;
-                    postedFile.SaveAs(filePath);
-                    slikaPath = "../Uploads/" + maxIdand1 + fileName ; // Relativna putanja za čuvanje u bazi
-                }
-            }
-
+            }           
             // Čitajte ostale podatke iz forme
             int letId = int.Parse(httpRequest.Form["letid"]);
             string korisnik = httpRequest.Form["korisnik"];
@@ -73,6 +56,54 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
                 return NotFound();
             }
 
+            bool nepostojiLetUAviokompaniji = true;
+            foreach(var nekiLet in aviokompanija.Letovi)
+            {
+                if(nekiLet.Id == letId)
+                {
+                    nepostojiLetUAviokompaniji = false;
+                    break;
+                }               
+            }
+
+            if (nepostojiLetUAviokompaniji)
+            {
+                return BadRequest("Nema taj LetId u toj avikompaniji");
+            }
+
+            bool nisteBiliNaLetu = true;
+            foreach (var letZaKorisnika in aviokompanija.Letovi)
+            {
+                foreach(var rezervacijaZaKorisnika in letZaKorisnika.Rezervacije)
+                {
+                    if(rezervacijaZaKorisnika.Korisnik == korisnik)
+                    {
+                        nisteBiliNaLetu = false;
+                        break;
+                    }
+                }
+            }
+
+            if (nisteBiliNaLetu)
+            {
+                return BadRequest("Niste bili na tom letu");
+            }
+
+            var maxId = Data.Recenzije.GetList().Count > 0 ? Data.Recenzije.GetList().Max(x => x.Id) : 0;
+            var maxIdand1 = maxId + 1;
+            // Proverite da li postoje fajlovi u zahtevu
+            string slikaPath = null;
+            if (httpRequest.Files.Count > 0)
+            {
+                var postedFile = httpRequest.Files[0];
+                if (postedFile != null && postedFile.ContentLength > 0)
+                {
+                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(postedFile.FileName); // Jedinstveno ime za fajl
+                    string filePath = HttpContext.Current.Server.MapPath("~/Uploads/") + maxIdand1 + fileName;
+                    postedFile.SaveAs(filePath);
+                    slikaPath = "../Uploads/" + maxIdand1 + fileName; // Relativna putanja za čuvanje u bazi
+                }
+            }
 
             var recenzija = new Recenzija
             {

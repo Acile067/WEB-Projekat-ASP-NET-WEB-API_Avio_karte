@@ -2,18 +2,18 @@
 <ArrayOfRezervacija xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Rezervacija>
     <Id>1</Id>
-    <LetId>1</LetId>
+    <LetId>5</LetId>
     <Korisnik>Pera</Korisnik>
     <BrojPutnika>5</BrojPutnika>
-    <UkupnaCena>5000</UkupnaCena>
-    <Status>Otkazana</Status>
+    <UkupnaCena>10000</UkupnaCena>
+    <Status>Zavrsena</Status>
   </Rezervacija>
   <Rezervacija>
     <Id>2</Id>
-    <LetId>1</LetId>
-    <Korisnik>Pera</Korisnik>
-    <BrojPutnika>7</BrojPutnika>
-    <UkupnaCena>7000</UkupnaCena>
-    <Status>Zavrsena</Status>
+    <LetId>3</LetId>
+    <Korisnik>Stefan</Korisnik>
+    <BrojPutnika>4</BrojPutnika>
+    <UkupnaCena>16000</UkupnaCena>
+    <Status>Kreirana</Status>
   </Rezervacija>
 </ArrayOfRezervacija>

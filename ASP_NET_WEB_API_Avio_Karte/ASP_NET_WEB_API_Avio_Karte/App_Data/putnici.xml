@@ -9,36 +9,69 @@
     <DatumRodjenja>01/01/2001</DatumRodjenja>
     <Pol>Musko</Pol>
     <TipKorisnika>Putnik</TipKorisnika>
-    <Recenzije />
+    <Recenzije>
+      <Recenzija>
+        <Id>1</Id>
+        <LetId>5</LetId>
+        <Korisnik>Pera</Korisnik>
+        <Aviokompanija>AvioLet</Aviokompanija>
+        <Naslov>Moja Prva Recenzija</Naslov>
+        <Sadrzaj>Ovo je moja prva recenzija, jako je dobra</Sadrzaj>
+        <Ocena>5</Ocena>
+        <Slika>../Uploads/1b29562e4-c4ff-499d-bba9-540fc878a99f.png</Slika>
+        <StatusRecenzije>Odobrena</StatusRecenzije>
+      </Recenzija>
+      <Recenzija>
+        <Id>2</Id>
+        <LetId>5</LetId>
+        <Korisnik>Pera</Korisnik>
+        <Aviokompanija>AvioLet</Aviokompanija>
+        <Naslov>Moja druga recenzija</Naslov>
+        <Sadrzaj>Dobeo je</Sadrzaj>
+        <Ocena>5</Ocena>
+        <StatusRecenzije>Odbijena</StatusRecenzije>
+      </Recenzija>
+      <Recenzija>
+        <Id>3</Id>
+        <LetId>5</LetId>
+        <Korisnik>Pera</Korisnik>
+        <Aviokompanija>AvioLet</Aviokompanija>
+        <Naslov>wer</Naslov>
+        <Sadrzaj>wer</Sadrzaj>
+        <Ocena>1</Ocena>
+        <StatusRecenzije>Odbijena</StatusRecenzije>
+      </Recenzija>
+    </Recenzije>
     <Rezervacije>
       <Rezervacija>
         <Id>1</Id>
-        <LetId>1</LetId>
+        <LetId>5</LetId>
         <Korisnik>Pera</Korisnik>
         <BrojPutnika>5</BrojPutnika>
-        <UkupnaCena>5000</UkupnaCena>
-        <Status>Otkazana</Status>
-      </Rezervacija>
-      <Rezervacija>
-        <Id>2</Id>
-        <LetId>1</LetId>
-        <Korisnik>Pera</Korisnik>
-        <BrojPutnika>7</BrojPutnika>
-        <UkupnaCena>7000</UkupnaCena>
-        <Status>Odobrena</Status>
+        <UkupnaCena>10000</UkupnaCena>
+        <Status>Zavrsena</Status>
       </Rezervacija>
     </Rezervacije>
   </Putnik>
   <Putnik>
-    <KorisnickoIme>dugala</KorisnickoIme>
-    <Lozinka>voyo123</Lozinka>
-    <Ime>Milan</Ime>
-    <Prezime>Dugalic</Prezime>
-    <Email>milan@gmail.com</Email>
-    <DatumRodjenja>01/03/2002</DatumRodjenja>
+    <KorisnickoIme>Stefan</KorisnickoIme>
+    <Lozinka>Stefan</Lozinka>
+    <Ime>Stefan</Ime>
+    <Prezime>Stefan</Prezime>
+    <Email>stefan@stefan.com</Email>
+    <DatumRodjenja>03/03/2002</DatumRodjenja>
     <Pol>Musko</Pol>
     <TipKorisnika>Putnik</TipKorisnika>
     <Recenzije />
-    <Rezervacije />
+    <Rezervacije>
+      <Rezervacija>
+        <Id>2</Id>
+        <LetId>3</LetId>
+        <Korisnik>Stefan</Korisnik>
+        <BrojPutnika>4</BrojPutnika>
+        <UkupnaCena>16000</UkupnaCena>
+        <Status>Kreirana</Status>
+      </Rezervacija>
+    </Rezervacije>
   </Putnik>
 </ArrayOfPutnik>

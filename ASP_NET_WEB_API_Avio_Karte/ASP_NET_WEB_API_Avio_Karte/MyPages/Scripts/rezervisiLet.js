@@ -5,10 +5,13 @@
 });
 
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!sessionStorage.getItem('token')) {
         window.location = '/MyPages/login.html';
-    if (sessionStorage.getItem('role') != 'Putnik')
+    }
+    else if (sessionStorage.getItem('role') != 'Putnik') {
         window.location = '/MyPages/index.html';
+    }
+        
 }
 
 function getUrlParameter(name) {

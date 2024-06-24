@@ -42,9 +42,24 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
                 return BadRequest(ModelState);
 
             var let = Data.Letovi.Find(l => l.Id == r.LetId);
-            if (let == null)
+            if (let == null || let.Obrisan == "Da")
             {
                 return BadRequest("Invalid LetId");
+            }
+
+            if(let.BrojSlobodnihMesta < r.BrojPutnika)
+            {
+                return BadRequest("Ne mozete rezervisati vise mesta nego sto ima slobodnih mesta");
+            }
+
+            if(let.BrojSlobodnihMesta == 0)
+            {
+                return BadRequest("Nema vise slobodnih mesta");
+            }
+
+            if(let.StatusLeta != StatusLeta.Aktivan)
+            {
+                return BadRequest("Ovo nije aktivan let");
             }
 
             r.UkupnaCena = let.Cena * r.BrojPutnika;
@@ -376,13 +391,29 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
 
             // Pronalaženje rezervacije u memoriji ili bazi podataka
             var rezervacija = Data.Rezervacije.Find(p => p.Id == id);
-            if (rezervacija == null)
+            if (rezervacija == null || rezervacija.Status != Status.Odobrena)
                 return BadRequest($"Rezervacija sa ID {id} nije pronađena.");
 
             // Pronalaženje leta koji sadrži rezervaciju
             var let = Data.Letovi.Find(l => l.Id == rezervacija.LetId);
-            if (let == null)
+            if (let == null || let.Obrisan == "Da")
                 return BadRequest($"Let sa ID {rezervacija.LetId} nije pronađen.");
+
+            bool nijeVasaRezervacija = true;
+            if(user.TipKorisnika != TipKorisnika.Administrator)
+            {
+                if(rezervacija.Korisnik == user.KorisnickoIme)
+                {
+                    nijeVasaRezervacija = false;
+
+                }
+
+                if (nijeVasaRezervacija)
+                {
+                    return BadRequest($"Nije vasa rezervacija ne mozete da je otkazete");
+                }
+            }
+            
 
             // Parsiranje datuma i vremena polaska leta
             DateTime datumPolaska;

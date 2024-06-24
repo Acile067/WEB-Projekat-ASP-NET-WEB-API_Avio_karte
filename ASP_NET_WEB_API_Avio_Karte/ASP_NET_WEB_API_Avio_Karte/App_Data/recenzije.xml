@@ -1,2 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfRecenzija xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+<ArrayOfRecenzija xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Recenzija>
+    <Id>1</Id>
+    <LetId>5</LetId>
+    <Korisnik>Pera</Korisnik>
+    <Aviokompanija>AvioLet</Aviokompanija>
+    <Naslov>Moja Prva Recenzija</Naslov>
+    <Sadrzaj>Ovo je moja prva recenzija, jako je dobra</Sadrzaj>
+    <Ocena>5</Ocena>
+    <Slika>../Uploads/1b29562e4-c4ff-499d-bba9-540fc878a99f.png</Slika>
+    <StatusRecenzije>Odobrena</StatusRecenzije>
+  </Recenzija>
+  <Recenzija>
+    <Id>2</Id>
+    <LetId>5</LetId>
+    <Korisnik>Pera</Korisnik>
+    <Aviokompanija>AvioLet</Aviokompanija>
+    <Naslov>Moja druga recenzija</Naslov>
+    <Sadrzaj>Dobeo je</Sadrzaj>
+    <Ocena>5</Ocena>
+    <StatusRecenzije>Odbijena</StatusRecenzije>
+  </Recenzija>
+  <Recenzija>
+    <Id>3</Id>
+    <LetId>5</LetId>
+    <Korisnik>Pera</Korisnik>
+    <Aviokompanija>AvioLet</Aviokompanija>
+    <Naslov>wer</Naslov>
+    <Sadrzaj>wer</Sadrzaj>
+    <Ocena>1</Ocena>
+    <StatusRecenzije>Odbijena</StatusRecenzije>
+  </Recenzija>
+</ArrayOfRecenzija>
