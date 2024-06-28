@@ -52,7 +52,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             // Pronalaženje aviokompanije po ID-u
             var aviokompanija = Data.Aviokompanije.GetList().FirstOrDefault(a => a.Id == l.AviokompanijaId);
 
-            if (aviokompanija == null)
+            if (aviokompanija == null || aviokompanija.Obrisana == "Da")
                 return BadRequest("Aviokompanija ne postoji");
 
             // Postavljanje naziva aviokompanije
@@ -206,13 +206,34 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
                 Data.Aviokompanije.Update(newAviokompanija);
             }
 
+            var aviokompanija = Data.Aviokompanije.GetList().FirstOrDefault(a => a.Id == l.AviokompanijaId);
+
+            if ( aviokompanija == null || aviokompanija.Obrisana == "Da")
+            {
+                return BadRequest("Ne postoji aviokompanija");
+            }
+
+            var letuaviokompaniji = aviokompanija.Letovi.Find(a => a.Id == l.Id);
+            if(letuaviokompaniji == null || letuaviokompaniji.Obrisan == "Da")
+            {
+                return NotFound();
+            }
+
             DateTime dateTimePolaska;
             if (DateTime.TryParse(l.DatumPolaska, out dateTimePolaska))
+            {
                 let.DatumPolaska = dateTimePolaska.ToString("dd/MM/yyyy");
+                letuaviokompaniji.DatumPolaska = dateTimePolaska.ToString("dd/MM/yyyy");
+            }
+                
 
             DateTime dateTimeDolaska;
             if (DateTime.TryParse(l.DatumDolaska, out dateTimeDolaska))
+            {
                 let.DatumDolaska = dateTimeDolaska.ToString("dd/MM/yyyy");
+                letuaviokompaniji.DatumDolaska = dateTimeDolaska.ToString("dd/MM/yyyy");
+            }
+                
 
             let.VremePolaska = l.VremePolaska;
             let.VremeDolaska = l.VremeDolaska;
@@ -221,7 +242,66 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             let.Cena = l.Cena;
             let.StatusLeta = l.StatusLeta;
 
+            letuaviokompaniji.VremePolaska = l.VremePolaska;
+            letuaviokompaniji.VremeDolaska = l.VremeDolaska;
+            letuaviokompaniji.BrojSlobodnihMesta = l.BrojSlobodnihMesta;
+            letuaviokompaniji.BrojZauzetihMesta = l.BrojZauzetihMesta;
+            letuaviokompaniji.Cena = l.Cena;
+            letuaviokompaniji.StatusLeta = l.StatusLeta;
+
+            if(l.StatusLeta == StatusLeta.Zavrsen)
+            {
+                
+
+                foreach (var rezervacija in let.Rezervacije)
+                {
+                    rezervacija.Status = Status.Zavrsena;
+                    var putnik = Data.Putnici.Find(p => p.KorisnickoIme == rezervacija.Korisnik);
+                    foreach (var rez in putnik.Rezervacije)
+                    {
+                        if (rez.Id == rezervacija.Id)
+                        {
+                            var rezervacijaufajlu = Data.Rezervacije.Find(p => p.LetId == l.Id || p.Id == rezervacija.Id);
+                            rezervacijaufajlu.Status = Status.Zavrsena;
+                            rez.Status = Status.Zavrsena;
+                            Data.Rezervacije.Update(rezervacijaufajlu);
+                        }
+                    }
+                    Data.Putnici.Update(putnik);
+                }
+                foreach(var rezervacija in letuaviokompaniji.Rezervacije)
+                {
+                    rezervacija .Status = Status.Zavrsena;
+                }
+            }
+            else if(l.StatusLeta == StatusLeta.Otkazan)
+            {
+                foreach (var rezervacija in let.Rezervacije)
+                {
+                    rezervacija.Status = Status.Otkazana;
+                    var putnik = Data.Putnici.Find(p => p.KorisnickoIme == rezervacija.Korisnik);
+                    foreach(var rez in putnik.Rezervacije)
+                    {
+                        if(rez.Id == rezervacija.Id)
+                        {
+                            var rezervacijaufajlu = Data.Rezervacije.Find(p => p.LetId == l.Id || p.Id == rezervacija.Id);
+                            rezervacijaufajlu.Status = Status.Otkazana;
+                            rez.Status = Status.Otkazana;
+                            Data.Rezervacije.Update(rezervacijaufajlu);
+                        }
+                    }
+                    Data.Putnici.Update(putnik);
+                }
+                foreach (var rezervacija in letuaviokompaniji.Rezervacije)
+                {
+                    rezervacija.Status = Status.Otkazana;
+                }
+            }
+
+
+
             Data.Letovi.Update(let);
+            Data.Aviokompanije.Update(aviokompanija);
 
             return Ok(let);
         }
@@ -253,7 +333,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
             }
 
             var let = Data.Letovi.Find(p => p.Id == id);
-            if (let == null)
+            if (let == null || let.Obrisan  == "Da")
                 return NotFound();
 
             foreach (var rezervacija in let.Rezervacije)

@@ -391,7 +391,7 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
 
             // Pronalaženje rezervacije u memoriji ili bazi podataka
             var rezervacija = Data.Rezervacije.Find(p => p.Id == id);
-            if (rezervacija == null || rezervacija.Status != Status.Odobrena)
+            if (rezervacija == null)
                 return BadRequest($"Rezervacija sa ID {id} nije pronađena.");
 
             // Pronalaženje leta koji sadrži rezervaciju
@@ -530,13 +530,22 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
                 return NotFound();
             }
 
+            // Filtriramo rezervacije čiji su letovi obrisani
+            rezervacije = rezervacije
+                .Where(r =>
+                {
+                    var let = Data.Letovi.Find(l => l.Id == r.LetId);
+                    return let != null && let.Obrisan != "Da";
+                })
+                .ToList();
+
+            // Ako imamo specifikovan status, filtriramo po statusu
             if (status.HasValue)
             {
-                // Pokušaj konvertovanja int u Status enumeraciju
-                if (Enum.IsDefined(typeof(Status), status.Value))  // Proveravamo da li je vrednost validna za Status
+                if (Enum.IsDefined(typeof(Status), status.Value))
                 {
-                    var statusEnum = (Status)status.Value;  // Konvertovanje int vrednosti u Status
-                    rezervacije = rezervacije.Where(r => r.Status == statusEnum).ToList();  // Filtriranje po Status enumeraciji
+                    var statusEnum = (Status)status.Value;
+                    rezervacije = rezervacije.Where(r => r.Status == statusEnum).ToList();
                 }
                 else
                 {
@@ -544,8 +553,9 @@ namespace ASP_NET_WEB_API_Avio_Karte.Controllers
                 }
             }
 
-            return Ok(rezervacije.ToList());
+            return Ok(rezervacije);
         }
+
 
 
 

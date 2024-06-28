@@ -12,6 +12,10 @@
     color: white;
 }
 
+.table th {
+    vertical-align: baseline; /* Poravnanje po dnu */
+}
+
 #logout:hover{
     cursor: pointer;
 }
@@ -78,7 +82,7 @@ body {
     }
 }
 
-@media (max-width:992px) {
+@media (max-width:1400px) {
     /* removing table display */
     .table, .table thead, .table th, .table tbody, .table tr, .table td {
         display: block;

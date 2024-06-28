@@ -3,66 +3,83 @@
   <Aviokompanija>
     <Id>1</Id>
     <Naziv>AvioLet</Naziv>
-    <Adresa>Masarikova, Sabac</Adresa>
-    <Telefon>0611112233</Telefon>
+    <Adresa>Beograd</Adresa>
+    <Telefon>0611554241</Telefon>
     <Email>avio@let.com</Email>
     <Obrisana>Ne</Obrisana>
     <Letovi>
       <Let>
         <AviokompanijaId>1</AviokompanijaId>
-        <Id>1</Id>
+        <Id>6</Id>
         <Aviokompanija>AvioLet</Aviokompanija>
         <PolaznaDestinacija>Beograd</PolaznaDestinacija>
-        <OdredistnaDestinacija>Sabac</OdredistnaDestinacija>
-        <DatumPolaska>08/08/2024</DatumPolaska>
-        <VremePolaska>21:36</VremePolaska>
-        <DatumDolaska>08/08/2024</DatumDolaska>
-        <VremeDolaska>21:40</VremeDolaska>
-        <BrojSlobodnihMesta>100</BrojSlobodnihMesta>
+        <OdredistnaDestinacija>London</OdredistnaDestinacija>
+        <DatumPolaska>07/07/2024</DatumPolaska>
+        <VremePolaska>12:15</VremePolaska>
+        <DatumDolaska>07/07/2024</DatumDolaska>
+        <VremeDolaska>13:00</VremeDolaska>
+        <BrojSlobodnihMesta>60</BrojSlobodnihMesta>
         <BrojZauzetihMesta>0</BrojZauzetihMesta>
-        <Cena>1000</Cena>
-        <StatusLeta>Aktivan</StatusLeta>
-        <Rezervacije />
-        <Obrisan>Da</Obrisan>
-      </Let>
-      <Let>
-        <AviokompanijaId>1</AviokompanijaId>
-        <Id>2</Id>
-        <Aviokompanija>AvioLet</Aviokompanija>
-        <PolaznaDestinacija>Nis</PolaznaDestinacija>
-        <OdredistnaDestinacija>Beograd</OdredistnaDestinacija>
-        <DatumPolaska>12/12/2024</DatumPolaska>
-        <VremePolaska>21:21</VremePolaska>
-        <DatumDolaska>12/12/2024</DatumDolaska>
-        <VremeDolaska>21:25</VremeDolaska>
-        <BrojSlobodnihMesta>40</BrojSlobodnihMesta>
-        <BrojZauzetihMesta>0</BrojZauzetihMesta>
-        <Cena>1500</Cena>
+        <Cena>6900</Cena>
         <StatusLeta>Aktivan</StatusLeta>
         <Rezervacije />
         <Obrisan>Ne</Obrisan>
       </Let>
       <Let>
         <AviokompanijaId>1</AviokompanijaId>
-        <Id>5</Id>
+        <Id>1</Id>
         <Aviokompanija>AvioLet</Aviokompanija>
-        <PolaznaDestinacija>Kragujevac</PolaznaDestinacija>
-        <OdredistnaDestinacija>Sabac</OdredistnaDestinacija>
-        <DatumPolaska>24/06/2024</DatumPolaska>
-        <VremePolaska>21:41</VremePolaska>
-        <DatumDolaska>24/06/2024</DatumDolaska>
-        <VremeDolaska>21:43</VremeDolaska>
-        <BrojSlobodnihMesta>45</BrojSlobodnihMesta>
-        <BrojZauzetihMesta>5</BrojZauzetihMesta>
-        <Cena>2000</Cena>
-        <StatusLeta>Zavrsen</StatusLeta>
+        <PolaznaDestinacija>Beograd</PolaznaDestinacija>
+        <OdredistnaDestinacija>Madrid</OdredistnaDestinacija>
+        <DatumPolaska>12/12/2050</DatumPolaska>
+        <VremePolaska>15:10</VremePolaska>
+        <DatumDolaska>12/12/2050</DatumDolaska>
+        <VremeDolaska>15:35</VremeDolaska>
+        <BrojSlobodnihMesta>69</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>1</BrojZauzetihMesta>
+        <Cena>4500</Cena>
+        <StatusLeta>Otkazan</StatusLeta>
         <Rezervacije>
           <Rezervacija>
             <Id>1</Id>
-            <LetId>5</LetId>
+            <LetId>1</LetId>
             <Korisnik>Pera</Korisnik>
-            <BrojPutnika>5</BrojPutnika>
-            <UkupnaCena>10000</UkupnaCena>
+            <BrojPutnika>1</BrojPutnika>
+            <UkupnaCena>4500</UkupnaCena>
+            <Status>Otkazana</Status>
+          </Rezervacija>
+        </Rezervacije>
+        <Obrisan>Ne</Obrisan>
+      </Let>
+      <Let>
+        <AviokompanijaId>1</AviokompanijaId>
+        <Id>11</Id>
+        <Aviokompanija>AvioLet</Aviokompanija>
+        <PolaznaDestinacija>Beograd</PolaznaDestinacija>
+        <OdredistnaDestinacija>Loznica</OdredistnaDestinacija>
+        <DatumPolaska>20/06/2024</DatumPolaska>
+        <VremePolaska>10:27</VremePolaska>
+        <DatumDolaska>20/06/2024</DatumDolaska>
+        <VremeDolaska>10:29</VremeDolaska>
+        <BrojSlobodnihMesta>37</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>13</BrojZauzetihMesta>
+        <Cena>6000</Cena>
+        <StatusLeta>Zavrsen</StatusLeta>
+        <Rezervacije>
+          <Rezervacija>
+            <Id>7</Id>
+            <LetId>11</LetId>
+            <Korisnik>Stefan</Korisnik>
+            <BrojPutnika>7</BrojPutnika>
+            <UkupnaCena>42000</UkupnaCena>
+            <Status>Zavrsena</Status>
+          </Rezervacija>
+          <Rezervacija>
+            <Id>8</Id>
+            <LetId>11</LetId>
+            <Korisnik>Sanja</Korisnik>
+            <BrojPutnika>6</BrojPutnika>
+            <UkupnaCena>36000</UkupnaCena>
             <Status>Zavrsena</Status>
           </Rezervacija>
         </Rezervacije>
@@ -72,87 +89,408 @@
     <Recenzije>
       <Recenzija>
         <Id>1</Id>
-        <LetId>5</LetId>
-        <Korisnik>Pera</Korisnik>
+        <LetId>11</LetId>
+        <Korisnik>Sanja</Korisnik>
         <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>Moja Prva Recenzija</Naslov>
-        <Sadrzaj>Ovo je moja prva recenzija, jako je dobra</Sadrzaj>
-        <Ocena>5</Ocena>
-        <Slika>../Uploads/1b29562e4-c4ff-499d-bba9-540fc878a99f.png</Slika>
+        <Naslov>Super Let</Naslov>
+        <Sadrzaj>Ovaj let je bas super, veoma dobar.</Sadrzaj>
+        <Ocena>4</Ocena>
         <StatusRecenzije>Odobrena</StatusRecenzije>
       </Recenzija>
       <Recenzija>
         <Id>2</Id>
-        <LetId>5</LetId>
-        <Korisnik>Pera</Korisnik>
+        <LetId>11</LetId>
+        <Korisnik>Stefan</Korisnik>
         <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>Moja druga recenzija</Naslov>
-        <Sadrzaj>Dobeo je</Sadrzaj>
+        <Naslov>Odlican Let</Naslov>
+        <Sadrzaj>Na ovom letu mi je bilo bas super. Jedva cekam da letim opet!</Sadrzaj>
         <Ocena>5</Ocena>
-        <StatusRecenzije>Odbijena</StatusRecenzije>
-      </Recenzija>
-      <Recenzija>
-        <Id>3</Id>
-        <LetId>5</LetId>
-        <Korisnik>Pera</Korisnik>
-        <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>wer</Naslov>
-        <Sadrzaj>wer</Sadrzaj>
-        <Ocena>1</Ocena>
-        <StatusRecenzije>Odbijena</StatusRecenzije>
+        <Slika>../Uploads/250adbb99-9cbe-4e9e-bc69-94d6a784181a.png</Slika>
+        <StatusRecenzije>Odobrena</StatusRecenzije>
       </Recenzija>
     </Recenzije>
   </Aviokompanija>
   <Aviokompanija>
     <Id>2</Id>
-    <Naziv>SanjaLet</Naziv>
-    <Adresa>Sajam, Novi Sad</Adresa>
-    <Telefon>06555788</Telefon>
-    <Email>sanja@let.com</Email>
+    <Naziv>Eckener</Naziv>
+    <Adresa>Frankfurt</Adresa>
+    <Telefon>0998897766</Telefon>
+    <Email>frankfurt@let.com</Email>
     <Obrisana>Ne</Obrisana>
     <Letovi>
       <Let>
         <AviokompanijaId>2</AviokompanijaId>
-        <Id>3</Id>
-        <Aviokompanija>SanjaLet</Aviokompanija>
-        <PolaznaDestinacija>Foca</PolaznaDestinacija>
+        <Id>4</Id>
+        <Aviokompanija>Eckener</Aviokompanija>
+        <PolaznaDestinacija>Frankfurt</PolaznaDestinacija>
         <OdredistnaDestinacija>Novi Sad</OdredistnaDestinacija>
-        <DatumPolaska>15/08/2024</DatumPolaska>
-        <VremePolaska>16:40</VremePolaska>
-        <DatumDolaska>15/08/2024</DatumDolaska>
+        <DatumPolaska>03/03/2025</DatumPolaska>
+        <VremePolaska>10:10</VremePolaska>
+        <DatumDolaska>03/03/2025</DatumDolaska>
+        <VremeDolaska>10:30</VremeDolaska>
+        <BrojSlobodnihMesta>120</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>0</BrojZauzetihMesta>
+        <Cena>6500</Cena>
+        <StatusLeta>Aktivan</StatusLeta>
+        <Rezervacije />
+        <Obrisan>Ne</Obrisan>
+      </Let>
+      <Let>
+        <AviokompanijaId>2</AviokompanijaId>
+        <Id>7</Id>
+        <Aviokompanija>Eckener</Aviokompanija>
+        <PolaznaDestinacija>Frankfurt</PolaznaDestinacija>
+        <OdredistnaDestinacija>Valencia</OdredistnaDestinacija>
+        <DatumPolaska>08/01/2030</DatumPolaska>
+        <VremePolaska>16:30</VremePolaska>
+        <DatumDolaska>08/01/2030</DatumDolaska>
         <VremeDolaska>17:00</VremeDolaska>
-        <BrojSlobodnihMesta>46</BrojSlobodnihMesta>
-        <BrojZauzetihMesta>4</BrojZauzetihMesta>
-        <Cena>4000</Cena>
+        <BrojSlobodnihMesta>113</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>7</BrojZauzetihMesta>
+        <Cena>8000</Cena>
+        <StatusLeta>Aktivan</StatusLeta>
+        <Rezervacije>
+          <Rezervacija>
+            <Id>4</Id>
+            <LetId>7</LetId>
+            <Korisnik>Sanja</Korisnik>
+            <BrojPutnika>7</BrojPutnika>
+            <UkupnaCena>56000</UkupnaCena>
+            <Status>Kreirana</Status>
+          </Rezervacija>
+        </Rezervacije>
+        <Obrisan>Ne</Obrisan>
+      </Let>
+    </Letovi>
+    <Recenzije />
+  </Aviokompanija>
+  <Aviokompanija>
+    <Id>3</Id>
+    <Naziv>Brandenburg</Naziv>
+    <Adresa>Berlin </Adresa>
+    <Telefon>7899667733</Telefon>
+    <Email>berlin@brandenburg.com</Email>
+    <Obrisana>Ne</Obrisana>
+    <Letovi>
+      <Let>
+        <AviokompanijaId>3</AviokompanijaId>
+        <Id>5</Id>
+        <Aviokompanija>Brandenburg</Aviokompanija>
+        <PolaznaDestinacija>Berlin</PolaznaDestinacija>
+        <OdredistnaDestinacija>Beograd</OdredistnaDestinacija>
+        <DatumPolaska>09/09/2024</DatumPolaska>
+        <VremePolaska>17:20</VremePolaska>
+        <DatumDolaska>09/09/2024</DatumDolaska>
+        <VremeDolaska>17:20</VremeDolaska>
+        <BrojSlobodnihMesta>72</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>3</BrojZauzetihMesta>
+        <Cena>7000</Cena>
+        <StatusLeta>Aktivan</StatusLeta>
+        <Rezervacije>
+          <Rezervacija>
+            <Id>3</Id>
+            <LetId>5</LetId>
+            <Korisnik>Sanja</Korisnik>
+            <BrojPutnika>3</BrojPutnika>
+            <UkupnaCena>21000</UkupnaCena>
+            <Status>Otkazana</Status>
+          </Rezervacija>
+        </Rezervacije>
+        <Obrisan>Ne</Obrisan>
+      </Let>
+      <Let>
+        <AviokompanijaId>3</AviokompanijaId>
+        <Id>9</Id>
+        <Aviokompanija>Brandenburg</Aviokompanija>
+        <PolaznaDestinacija>Berlin</PolaznaDestinacija>
+        <OdredistnaDestinacija>Bristol</OdredistnaDestinacija>
+        <DatumPolaska>17/02/2030</DatumPolaska>
+        <VremePolaska>18:25</VremePolaska>
+        <DatumDolaska>17/02/2030</DatumDolaska>
+        <VremeDolaska>19:00</VremeDolaska>
+        <BrojSlobodnihMesta>95</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>5</BrojZauzetihMesta>
+        <Cena>1500</Cena>
         <StatusLeta>Aktivan</StatusLeta>
         <Rezervacije>
           <Rezervacija>
             <Id>2</Id>
-            <LetId>3</LetId>
-            <Korisnik>Stefan</Korisnik>
-            <BrojPutnika>4</BrojPutnika>
-            <UkupnaCena>16000</UkupnaCena>
+            <LetId>9</LetId>
+            <Korisnik>Pera</Korisnik>
+            <BrojPutnika>5</BrojPutnika>
+            <UkupnaCena>7500</UkupnaCena>
             <Status>Kreirana</Status>
           </Rezervacija>
         </Rezervacije>
         <Obrisan>Ne</Obrisan>
       </Let>
       <Let>
-        <AviokompanijaId>2</AviokompanijaId>
-        <Id>4</Id>
-        <Aviokompanija>SanjaLet</Aviokompanija>
-        <PolaznaDestinacija>Leskovac</PolaznaDestinacija>
-        <OdredistnaDestinacija>Kragujevac</OdredistnaDestinacija>
-        <DatumPolaska>12/09/2024</DatumPolaska>
-        <VremePolaska>19:19</VremePolaska>
-        <DatumDolaska>12/06/2024</DatumDolaska>
-        <VremeDolaska>19:35</VremeDolaska>
-        <BrojSlobodnihMesta>80</BrojSlobodnihMesta>
-        <BrojZauzetihMesta>0</BrojZauzetihMesta>
-        <Cena>3000</Cena>
+        <AviokompanijaId>3</AviokompanijaId>
+        <Id>13</Id>
+        <Aviokompanija>Brandenburg</Aviokompanija>
+        <PolaznaDestinacija>Berlin</PolaznaDestinacija>
+        <OdredistnaDestinacija>Rim</OdredistnaDestinacija>
+        <DatumPolaska>28/06/2024</DatumPolaska>
+        <VremePolaska>10:57</VremePolaska>
+        <DatumDolaska>28/06/2024</DatumDolaska>
+        <VremeDolaska>10:59</VremeDolaska>
+        <BrojSlobodnihMesta>48</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>12</BrojZauzetihMesta>
+        <Cena>4000</Cena>
         <StatusLeta>Zavrsen</StatusLeta>
+        <Rezervacije>
+          <Rezervacija>
+            <Id>10</Id>
+            <LetId>13</LetId>
+            <Korisnik>Pera</Korisnik>
+            <BrojPutnika>3</BrojPutnika>
+            <UkupnaCena>12000</UkupnaCena>
+            <Status>Zavrsena</Status>
+          </Rezervacija>
+          <Rezervacija>
+            <Id>11</Id>
+            <LetId>13</LetId>
+            <Korisnik>Marko</Korisnik>
+            <BrojPutnika>4</BrojPutnika>
+            <UkupnaCena>16000</UkupnaCena>
+            <Status>Zavrsena</Status>
+          </Rezervacija>
+          <Rezervacija>
+            <Id>12</Id>
+            <LetId>13</LetId>
+            <Korisnik>Sanja</Korisnik>
+            <BrojPutnika>5</BrojPutnika>
+            <UkupnaCena>20000</UkupnaCena>
+            <Status>Zavrsena</Status>
+          </Rezervacija>
+        </Rezervacije>
+        <Obrisan>Ne</Obrisan>
+      </Let>
+    </Letovi>
+    <Recenzije>
+      <Recenzija>
+        <Id>3</Id>
+        <LetId>13</LetId>
+        <Korisnik>Sanja</Korisnik>
+        <Aviokompanija>Brandenburg</Aviokompanija>
+        <Naslov>Pouzdana Kompanija</Naslov>
+        <Sadrzaj>Svaki put kad sam putovala ovom kompanijom bilo mi je bas dobro i lepo.</Sadrzaj>
+        <Ocena>5</Ocena>
+        <StatusRecenzije>Kreirana</StatusRecenzije>
+      </Recenzija>
+      <Recenzija>
+        <Id>4</Id>
+        <LetId>13</LetId>
+        <Korisnik>Sanja</Korisnik>
+        <Aviokompanija>Brandenburg</Aviokompanija>
+        <Naslov>dfsdfs</Naslov>
+        <Sadrzaj> sdfsdf sdfsd</Sadrzaj>
+        <Ocena>1</Ocena>
+        <StatusRecenzije>Kreirana</StatusRecenzije>
+      </Recenzija>
+      <Recenzija>
+        <Id>5</Id>
+        <LetId>13</LetId>
+        <Korisnik>Marko</Korisnik>
+        <Aviokompanija>Brandenburg</Aviokompanija>
+        <Naslov>Bas Super</Naslov>
+        <Sadrzaj>Ovaj Let i kompanija su bas super. Svaka cast ljudi!</Sadrzaj>
+        <Ocena>1</Ocena>
+        <Slika>../Uploads/561a03d04-59b0-4a87-af16-2e5bb8e96916.png</Slika>
+        <StatusRecenzije>Odobrena</StatusRecenzije>
+      </Recenzija>
+      <Recenzija>
+        <Id>6</Id>
+        <LetId>13</LetId>
+        <Korisnik>Marko</Korisnik>
+        <Aviokompanija>Brandenburg</Aviokompanija>
+        <Naslov>asfds</Naslov>
+        <Sadrzaj> asdasd</Sadrzaj>
+        <Ocena>1</Ocena>
+        <Slika>../Uploads/6cdc130e6-ace9-475e-8b70-95a2e2df8c99.png</Slika>
+        <StatusRecenzije>Odbijena</StatusRecenzije>
+      </Recenzija>
+      <Recenzija>
+        <Id>7</Id>
+        <LetId>13</LetId>
+        <Korisnik>Pera</Korisnik>
+        <Aviokompanija>Brandenburg</Aviokompanija>
+        <Naslov>Dobro je</Naslov>
+        <Sadrzaj>Sve je bas dobro i super</Sadrzaj>
+        <Ocena>4</Ocena>
+        <Slika>../Uploads/719278419-3743-4a8c-aff0-82e022afe308.png</Slika>
+        <StatusRecenzije>Odobrena</StatusRecenzije>
+      </Recenzija>
+    </Recenzije>
+  </Aviokompanija>
+  <Aviokompanija>
+    <Id>4</Id>
+    <Naziv>Heathrow</Naziv>
+    <Adresa>London</Adresa>
+    <Telefon>6764455533</Telefon>
+    <Email>heathrow@london.com</Email>
+    <Obrisana>Ne</Obrisana>
+    <Letovi>
+      <Let>
+        <AviokompanijaId>4</AviokompanijaId>
+        <Id>3</Id>
+        <Aviokompanija>Heathrow</Aviokompanija>
+        <PolaznaDestinacija>London</PolaznaDestinacija>
+        <OdredistnaDestinacija>Nis</OdredistnaDestinacija>
+        <DatumPolaska>20/10/2024</DatumPolaska>
+        <VremePolaska>18:35</VremePolaska>
+        <DatumDolaska>20/10/2024</DatumDolaska>
+        <VremeDolaska>18:50</VremeDolaska>
+        <BrojSlobodnihMesta>76</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>4</BrojZauzetihMesta>
+        <Cena>5000</Cena>
+        <StatusLeta>Aktivan</StatusLeta>
+        <Rezervacije>
+          <Rezervacija>
+            <Id>6</Id>
+            <LetId>3</LetId>
+            <Korisnik>Stefan</Korisnik>
+            <BrojPutnika>4</BrojPutnika>
+            <UkupnaCena>20000</UkupnaCena>
+            <Status>Kreirana</Status>
+          </Rezervacija>
+        </Rezervacije>
+        <Obrisan>Ne</Obrisan>
+      </Let>
+      <Let>
+        <AviokompanijaId>4</AviokompanijaId>
+        <Id>8</Id>
+        <Aviokompanija>Heathrow</Aviokompanija>
+        <PolaznaDestinacija>London</PolaznaDestinacija>
+        <OdredistnaDestinacija>Sabac</OdredistnaDestinacija>
+        <DatumPolaska>19/10/2024</DatumPolaska>
+        <VremePolaska>01:30</VremePolaska>
+        <DatumDolaska>19/10/2024</DatumDolaska>
+        <VremeDolaska>02:00</VremeDolaska>
+        <BrojSlobodnihMesta>87</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>3</BrojZauzetihMesta>
+        <Cena>5600</Cena>
+        <StatusLeta>Aktivan</StatusLeta>
+        <Rezervacije>
+          <Rezervacija>
+            <Id>5</Id>
+            <LetId>8</LetId>
+            <Korisnik>Stefan</Korisnik>
+            <BrojPutnika>3</BrojPutnika>
+            <UkupnaCena>16800</UkupnaCena>
+            <Status>Odobrena</Status>
+          </Rezervacija>
+        </Rezervacije>
+        <Obrisan>Ne</Obrisan>
+      </Let>
+      <Let>
+        <AviokompanijaId>4</AviokompanijaId>
+        <Id>14</Id>
+        <Aviokompanija>Heathrow</Aviokompanija>
+        <PolaznaDestinacija>London</PolaznaDestinacija>
+        <OdredistnaDestinacija>Moskva</OdredistnaDestinacija>
+        <DatumPolaska>28/06/2024</DatumPolaska>
+        <VremePolaska>11:06</VremePolaska>
+        <DatumDolaska>28/06/2024</DatumDolaska>
+        <VremeDolaska>11:08</VremeDolaska>
+        <BrojSlobodnihMesta>24</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>6</BrojZauzetihMesta>
+        <Cena>4900</Cena>
+        <StatusLeta>Zavrsen</StatusLeta>
+        <Rezervacije>
+          <Rezervacija>
+            <Id>13</Id>
+            <LetId>14</LetId>
+            <Korisnik>Stefan</Korisnik>
+            <BrojPutnika>6</BrojPutnika>
+            <UkupnaCena>29400</UkupnaCena>
+            <Status>Zavrsena</Status>
+          </Rezervacija>
+        </Rezervacije>
+        <Obrisan>Ne</Obrisan>
+      </Let>
+    </Letovi>
+    <Recenzije>
+      <Recenzija>
+        <Id>8</Id>
+        <LetId>14</LetId>
+        <Korisnik>Stefan</Korisnik>
+        <Aviokompanija>Heathrow</Aviokompanija>
+        <Naslov>Jaka Firma</Naslov>
+        <Sadrzaj>Mnogo jaka firma, mnogo jake egzibicije, jaka firma.</Sadrzaj>
+        <Ocena>5</Ocena>
+        <Slika>../Uploads/8fa3093f5-c51f-4494-a03a-202833b547d0.png</Slika>
+        <StatusRecenzije>Odobrena</StatusRecenzije>
+      </Recenzija>
+    </Recenzije>
+  </Aviokompanija>
+  <Aviokompanija>
+    <Id>5</Id>
+    <Naziv>Barcelona-El</Naziv>
+    <Adresa>Barcelona</Adresa>
+    <Telefon>3345556677</Telefon>
+    <Email>barcelona@el.com</Email>
+    <Obrisana>Ne</Obrisana>
+    <Letovi>
+      <Let>
+        <AviokompanijaId>5</AviokompanijaId>
+        <Id>2</Id>
+        <Aviokompanija>Barcelona-El</Aviokompanija>
+        <PolaznaDestinacija>Barcelona</PolaznaDestinacija>
+        <OdredistnaDestinacija>London</OdredistnaDestinacija>
+        <DatumPolaska>08/08/2024</DatumPolaska>
+        <VremePolaska>20:20</VremePolaska>
+        <DatumDolaska>08/08/2024</DatumDolaska>
+        <VremeDolaska>20:40</VremeDolaska>
+        <BrojSlobodnihMesta>130</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>0</BrojZauzetihMesta>
+        <Cena>7800</Cena>
+        <StatusLeta>Aktivan</StatusLeta>
         <Rezervacije />
         <Obrisan>Ne</Obrisan>
+      </Let>
+      <Let>
+        <AviokompanijaId>5</AviokompanijaId>
+        <Id>10</Id>
+        <Aviokompanija>Barcelona-El</Aviokompanija>
+        <PolaznaDestinacija>Barcelona</PolaznaDestinacija>
+        <OdredistnaDestinacija>Munich</OdredistnaDestinacija>
+        <DatumPolaska>15/10/2024</DatumPolaska>
+        <VremePolaska>21:20</VremePolaska>
+        <DatumDolaska>15/10/2024</DatumDolaska>
+        <VremeDolaska>22:00</VremeDolaska>
+        <BrojSlobodnihMesta>95</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>0</BrojZauzetihMesta>
+        <Cena>6300</Cena>
+        <StatusLeta>Aktivan</StatusLeta>
+        <Rezervacije />
+        <Obrisan>Ne</Obrisan>
+      </Let>
+      <Let>
+        <AviokompanijaId>5</AviokompanijaId>
+        <Id>12</Id>
+        <Aviokompanija>Barcelona-El</Aviokompanija>
+        <PolaznaDestinacija>Barcelona</PolaznaDestinacija>
+        <OdredistnaDestinacija>Nis</OdredistnaDestinacija>
+        <DatumPolaska>20/06/2024</DatumPolaska>
+        <VremePolaska>10:39</VremePolaska>
+        <DatumDolaska>20/06/2024</DatumDolaska>
+        <VremeDolaska>10:41</VremeDolaska>
+        <BrojSlobodnihMesta>65</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>5</BrojZauzetihMesta>
+        <Cena>3000</Cena>
+        <StatusLeta>Zavrsen</StatusLeta>
+        <Rezervacije>
+          <Rezervacija>
+            <Id>9</Id>
+            <LetId>12</LetId>
+            <Korisnik>Sanja</Korisnik>
+            <BrojPutnika>5</BrojPutnika>
+            <UkupnaCena>15000</UkupnaCena>
+            <Status>Zavrsena</Status>
+          </Rezervacija>
+        </Rezervacije>
+        <Obrisan>Da</Obrisan>
       </Let>
     </Letovi>
     <Recenzije />

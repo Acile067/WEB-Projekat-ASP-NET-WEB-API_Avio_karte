@@ -2,33 +2,87 @@
 <ArrayOfRecenzija xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Recenzija>
     <Id>1</Id>
-    <LetId>5</LetId>
-    <Korisnik>Pera</Korisnik>
+    <LetId>11</LetId>
+    <Korisnik>Sanja</Korisnik>
     <Aviokompanija>AvioLet</Aviokompanija>
-    <Naslov>Moja Prva Recenzija</Naslov>
-    <Sadrzaj>Ovo je moja prva recenzija, jako je dobra</Sadrzaj>
-    <Ocena>5</Ocena>
-    <Slika>../Uploads/1b29562e4-c4ff-499d-bba9-540fc878a99f.png</Slika>
+    <Naslov>Super Let</Naslov>
+    <Sadrzaj>Ovaj let je bas super, veoma dobar.</Sadrzaj>
+    <Ocena>4</Ocena>
     <StatusRecenzije>Odobrena</StatusRecenzije>
   </Recenzija>
   <Recenzija>
     <Id>2</Id>
-    <LetId>5</LetId>
-    <Korisnik>Pera</Korisnik>
+    <LetId>11</LetId>
+    <Korisnik>Stefan</Korisnik>
     <Aviokompanija>AvioLet</Aviokompanija>
-    <Naslov>Moja druga recenzija</Naslov>
-    <Sadrzaj>Dobeo je</Sadrzaj>
+    <Naslov>Odlican Let</Naslov>
+    <Sadrzaj>Na ovom letu mi je bilo bas super. Jedva cekam da letim opet!</Sadrzaj>
     <Ocena>5</Ocena>
-    <StatusRecenzije>Odbijena</StatusRecenzije>
+    <Slika>../Uploads/250adbb99-9cbe-4e9e-bc69-94d6a784181a.png</Slika>
+    <StatusRecenzije>Odobrena</StatusRecenzije>
   </Recenzija>
   <Recenzija>
     <Id>3</Id>
-    <LetId>5</LetId>
-    <Korisnik>Pera</Korisnik>
-    <Aviokompanija>AvioLet</Aviokompanija>
-    <Naslov>wer</Naslov>
-    <Sadrzaj>wer</Sadrzaj>
+    <LetId>13</LetId>
+    <Korisnik>Sanja</Korisnik>
+    <Aviokompanija>Brandenburg</Aviokompanija>
+    <Naslov>Pouzdana Kompanija</Naslov>
+    <Sadrzaj>Svaki put kad sam putovala ovom kompanijom bilo mi je bas dobro i lepo.</Sadrzaj>
+    <Ocena>5</Ocena>
+    <StatusRecenzije>Kreirana</StatusRecenzije>
+  </Recenzija>
+  <Recenzija>
+    <Id>4</Id>
+    <LetId>13</LetId>
+    <Korisnik>Sanja</Korisnik>
+    <Aviokompanija>Brandenburg</Aviokompanija>
+    <Naslov>dfsdfs</Naslov>
+    <Sadrzaj> sdfsdf sdfsd</Sadrzaj>
     <Ocena>1</Ocena>
+    <StatusRecenzije>Kreirana</StatusRecenzije>
+  </Recenzija>
+  <Recenzija>
+    <Id>5</Id>
+    <LetId>13</LetId>
+    <Korisnik>Marko</Korisnik>
+    <Aviokompanija>Brandenburg</Aviokompanija>
+    <Naslov>Bas Super</Naslov>
+    <Sadrzaj>Ovaj Let i kompanija su bas super. Svaka cast ljudi!</Sadrzaj>
+    <Ocena>1</Ocena>
+    <Slika>../Uploads/561a03d04-59b0-4a87-af16-2e5bb8e96916.png</Slika>
+    <StatusRecenzije>Odobrena</StatusRecenzije>
+  </Recenzija>
+  <Recenzija>
+    <Id>6</Id>
+    <LetId>13</LetId>
+    <Korisnik>Marko</Korisnik>
+    <Aviokompanija>Brandenburg</Aviokompanija>
+    <Naslov>asfds</Naslov>
+    <Sadrzaj> asdasd</Sadrzaj>
+    <Ocena>1</Ocena>
+    <Slika>../Uploads/6cdc130e6-ace9-475e-8b70-95a2e2df8c99.png</Slika>
     <StatusRecenzije>Odbijena</StatusRecenzije>
+  </Recenzija>
+  <Recenzija>
+    <Id>7</Id>
+    <LetId>13</LetId>
+    <Korisnik>Pera</Korisnik>
+    <Aviokompanija>Brandenburg</Aviokompanija>
+    <Naslov>Dobro je</Naslov>
+    <Sadrzaj>Sve je bas dobro i super</Sadrzaj>
+    <Ocena>4</Ocena>
+    <Slika>../Uploads/719278419-3743-4a8c-aff0-82e022afe308.png</Slika>
+    <StatusRecenzije>Odobrena</StatusRecenzije>
+  </Recenzija>
+  <Recenzija>
+    <Id>8</Id>
+    <LetId>14</LetId>
+    <Korisnik>Stefan</Korisnik>
+    <Aviokompanija>Heathrow</Aviokompanija>
+    <Naslov>Jaka Firma</Naslov>
+    <Sadrzaj>Mnogo jaka firma, mnogo jake egzibicije, jaka firma.</Sadrzaj>
+    <Ocena>5</Ocena>
+    <Slika>../Uploads/8fa3093f5-c51f-4494-a03a-202833b547d0.png</Slika>
+    <StatusRecenzije>Odobrena</StatusRecenzije>
   </Recenzija>
 </ArrayOfRecenzija>

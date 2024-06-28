@@ -19,10 +19,8 @@ function fillBlanks() {
                 $('#korisnickoime').val(data.KorisnickoIme);
                 $('#email').val(data.Email);
                 $('#lozinka').val(data.Lozinka);
-                if (data.Pol == 0)
-                    $('#pol').val("Muško");
-                else if (data.Pol == 1)
-                    $('#pol').val("Žensko");
+
+                $('#pol').val(data.Pol.toString());
                 
                 let date = data.DatumRodjenja;
                 const splited = date.split("/");
@@ -66,7 +64,7 @@ function change() {
                         'korisnickoime': $('#korisnickoime').val(),
                         'email': $('#email').val(),
                         'lozinka': $('#lozinka').val(),
-                        'pol': $('#pol').val(),
+                        'pol': parseInt($('#pol').val()),
                         'datumrodjenja': $('#datumrodjenja').val()
                     },
                     success: (result) => { alert("Uspesno izmenjeni podaci"); },

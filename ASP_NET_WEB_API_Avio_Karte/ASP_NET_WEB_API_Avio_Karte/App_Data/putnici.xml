@@ -4,51 +4,131 @@
     <KorisnickoIme>Pera</KorisnickoIme>
     <Lozinka>Pera</Lozinka>
     <Ime>Pera</Ime>
-    <Prezime>Pera</Prezime>
+    <Prezime>Peric</Prezime>
     <Email>pera@pera.com</Email>
     <DatumRodjenja>01/01/2001</DatumRodjenja>
     <Pol>Musko</Pol>
     <TipKorisnika>Putnik</TipKorisnika>
     <Recenzije>
       <Recenzija>
-        <Id>1</Id>
-        <LetId>5</LetId>
+        <Id>7</Id>
+        <LetId>13</LetId>
         <Korisnik>Pera</Korisnik>
-        <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>Moja Prva Recenzija</Naslov>
-        <Sadrzaj>Ovo je moja prva recenzija, jako je dobra</Sadrzaj>
-        <Ocena>5</Ocena>
-        <Slika>../Uploads/1b29562e4-c4ff-499d-bba9-540fc878a99f.png</Slika>
+        <Aviokompanija>Brandenburg</Aviokompanija>
+        <Naslov>Dobro je</Naslov>
+        <Sadrzaj>Sve je bas dobro i super</Sadrzaj>
+        <Ocena>4</Ocena>
+        <Slika>../Uploads/719278419-3743-4a8c-aff0-82e022afe308.png</Slika>
         <StatusRecenzije>Odobrena</StatusRecenzije>
-      </Recenzija>
-      <Recenzija>
-        <Id>2</Id>
-        <LetId>5</LetId>
-        <Korisnik>Pera</Korisnik>
-        <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>Moja druga recenzija</Naslov>
-        <Sadrzaj>Dobeo je</Sadrzaj>
-        <Ocena>5</Ocena>
-        <StatusRecenzije>Odbijena</StatusRecenzije>
-      </Recenzija>
-      <Recenzija>
-        <Id>3</Id>
-        <LetId>5</LetId>
-        <Korisnik>Pera</Korisnik>
-        <Aviokompanija>AvioLet</Aviokompanija>
-        <Naslov>wer</Naslov>
-        <Sadrzaj>wer</Sadrzaj>
-        <Ocena>1</Ocena>
-        <StatusRecenzije>Odbijena</StatusRecenzije>
       </Recenzija>
     </Recenzije>
     <Rezervacije>
       <Rezervacija>
         <Id>1</Id>
-        <LetId>5</LetId>
+        <LetId>1</LetId>
+        <Korisnik>Pera</Korisnik>
+        <BrojPutnika>1</BrojPutnika>
+        <UkupnaCena>4500</UkupnaCena>
+        <Status>Otkazana</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>2</Id>
+        <LetId>9</LetId>
         <Korisnik>Pera</Korisnik>
         <BrojPutnika>5</BrojPutnika>
-        <UkupnaCena>10000</UkupnaCena>
+        <UkupnaCena>7500</UkupnaCena>
+        <Status>Kreirana</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>10</Id>
+        <LetId>13</LetId>
+        <Korisnik>Pera</Korisnik>
+        <BrojPutnika>3</BrojPutnika>
+        <UkupnaCena>12000</UkupnaCena>
+        <Status>Zavrsena</Status>
+      </Rezervacija>
+    </Rezervacije>
+  </Putnik>
+  <Putnik>
+    <KorisnickoIme>Sanja</KorisnickoIme>
+    <Lozinka>Sanja</Lozinka>
+    <Ime>Sanja</Ime>
+    <Prezime>Simic</Prezime>
+    <Email>sanja@sanja.com</Email>
+    <DatumRodjenja>05/03/2002</DatumRodjenja>
+    <Pol>Zensko</Pol>
+    <TipKorisnika>Putnik</TipKorisnika>
+    <Recenzije>
+      <Recenzija>
+        <Id>1</Id>
+        <LetId>11</LetId>
+        <Korisnik>Sanja</Korisnik>
+        <Aviokompanija>AvioLet</Aviokompanija>
+        <Naslov>Super Let</Naslov>
+        <Sadrzaj>Ovaj let je bas super, veoma dobar.</Sadrzaj>
+        <Ocena>4</Ocena>
+        <StatusRecenzije>Odobrena</StatusRecenzije>
+      </Recenzija>
+      <Recenzija>
+        <Id>3</Id>
+        <LetId>13</LetId>
+        <Korisnik>Sanja</Korisnik>
+        <Aviokompanija>Brandenburg</Aviokompanija>
+        <Naslov>Pouzdana Kompanija</Naslov>
+        <Sadrzaj>Svaki put kad sam putovala ovom kompanijom bilo mi je bas dobro i lepo.</Sadrzaj>
+        <Ocena>5</Ocena>
+        <StatusRecenzije>Kreirana</StatusRecenzije>
+      </Recenzija>
+      <Recenzija>
+        <Id>4</Id>
+        <LetId>13</LetId>
+        <Korisnik>Sanja</Korisnik>
+        <Aviokompanija>Brandenburg</Aviokompanija>
+        <Naslov>dfsdfs</Naslov>
+        <Sadrzaj> sdfsdf sdfsd</Sadrzaj>
+        <Ocena>1</Ocena>
+        <StatusRecenzije>Kreirana</StatusRecenzije>
+      </Recenzija>
+    </Recenzije>
+    <Rezervacije>
+      <Rezervacija>
+        <Id>3</Id>
+        <LetId>5</LetId>
+        <Korisnik>Sanja</Korisnik>
+        <BrojPutnika>3</BrojPutnika>
+        <UkupnaCena>21000</UkupnaCena>
+        <Status>Otkazana</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>4</Id>
+        <LetId>7</LetId>
+        <Korisnik>Sanja</Korisnik>
+        <BrojPutnika>7</BrojPutnika>
+        <UkupnaCena>56000</UkupnaCena>
+        <Status>Kreirana</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>8</Id>
+        <LetId>11</LetId>
+        <Korisnik>Sanja</Korisnik>
+        <BrojPutnika>6</BrojPutnika>
+        <UkupnaCena>36000</UkupnaCena>
+        <Status>Zavrsena</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>9</Id>
+        <LetId>12</LetId>
+        <Korisnik>Sanja</Korisnik>
+        <BrojPutnika>5</BrojPutnika>
+        <UkupnaCena>15000</UkupnaCena>
+        <Status>Zavrsena</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>12</Id>
+        <LetId>13</LetId>
+        <Korisnik>Sanja</Korisnik>
+        <BrojPutnika>5</BrojPutnika>
+        <UkupnaCena>20000</UkupnaCena>
         <Status>Zavrsena</Status>
       </Rezervacija>
     </Rezervacije>
@@ -57,20 +137,111 @@
     <KorisnickoIme>Stefan</KorisnickoIme>
     <Lozinka>Stefan</Lozinka>
     <Ime>Stefan</Ime>
-    <Prezime>Stefan</Prezime>
+    <Prezime>Cvjetkovic</Prezime>
     <Email>stefan@stefan.com</Email>
     <DatumRodjenja>03/03/2002</DatumRodjenja>
     <Pol>Musko</Pol>
     <TipKorisnika>Putnik</TipKorisnika>
-    <Recenzije />
+    <Recenzije>
+      <Recenzija>
+        <Id>2</Id>
+        <LetId>11</LetId>
+        <Korisnik>Stefan</Korisnik>
+        <Aviokompanija>AvioLet</Aviokompanija>
+        <Naslov>Odlican Let</Naslov>
+        <Sadrzaj>Na ovom letu mi je bilo bas super. Jedva cekam da letim opet!</Sadrzaj>
+        <Ocena>5</Ocena>
+        <Slika>../Uploads/250adbb99-9cbe-4e9e-bc69-94d6a784181a.png</Slika>
+        <StatusRecenzije>Odobrena</StatusRecenzije>
+      </Recenzija>
+      <Recenzija>
+        <Id>8</Id>
+        <LetId>14</LetId>
+        <Korisnik>Stefan</Korisnik>
+        <Aviokompanija>Heathrow</Aviokompanija>
+        <Naslov>Jaka Firma</Naslov>
+        <Sadrzaj>Mnogo jaka firma, mnogo jake egzibicije, jaka firma.</Sadrzaj>
+        <Ocena>5</Ocena>
+        <Slika>../Uploads/8fa3093f5-c51f-4494-a03a-202833b547d0.png</Slika>
+        <StatusRecenzije>Odobrena</StatusRecenzije>
+      </Recenzija>
+    </Recenzije>
     <Rezervacije>
       <Rezervacija>
-        <Id>2</Id>
+        <Id>5</Id>
+        <LetId>8</LetId>
+        <Korisnik>Stefan</Korisnik>
+        <BrojPutnika>3</BrojPutnika>
+        <UkupnaCena>16800</UkupnaCena>
+        <Status>Odobrena</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>6</Id>
         <LetId>3</LetId>
         <Korisnik>Stefan</Korisnik>
         <BrojPutnika>4</BrojPutnika>
-        <UkupnaCena>16000</UkupnaCena>
+        <UkupnaCena>20000</UkupnaCena>
         <Status>Kreirana</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>7</Id>
+        <LetId>11</LetId>
+        <Korisnik>Stefan</Korisnik>
+        <BrojPutnika>7</BrojPutnika>
+        <UkupnaCena>42000</UkupnaCena>
+        <Status>Zavrsena</Status>
+      </Rezervacija>
+      <Rezervacija>
+        <Id>13</Id>
+        <LetId>14</LetId>
+        <Korisnik>Stefan</Korisnik>
+        <BrojPutnika>6</BrojPutnika>
+        <UkupnaCena>29400</UkupnaCena>
+        <Status>Zavrsena</Status>
+      </Rezervacija>
+    </Rezervacije>
+  </Putnik>
+  <Putnik>
+    <KorisnickoIme>Marko</KorisnickoIme>
+    <Lozinka>Marko</Lozinka>
+    <Ime>Marko</Ime>
+    <Prezime>Markovic</Prezime>
+    <Email>marko@marko.com</Email>
+    <DatumRodjenja>07/07/2000</DatumRodjenja>
+    <Pol>Musko</Pol>
+    <TipKorisnika>Putnik</TipKorisnika>
+    <Recenzije>
+      <Recenzija>
+        <Id>5</Id>
+        <LetId>13</LetId>
+        <Korisnik>Marko</Korisnik>
+        <Aviokompanija>Brandenburg</Aviokompanija>
+        <Naslov>Bas Super</Naslov>
+        <Sadrzaj>Ovaj Let i kompanija su bas super. Svaka cast ljudi!</Sadrzaj>
+        <Ocena>1</Ocena>
+        <Slika>../Uploads/561a03d04-59b0-4a87-af16-2e5bb8e96916.png</Slika>
+        <StatusRecenzije>Odobrena</StatusRecenzije>
+      </Recenzija>
+      <Recenzija>
+        <Id>6</Id>
+        <LetId>13</LetId>
+        <Korisnik>Marko</Korisnik>
+        <Aviokompanija>Brandenburg</Aviokompanija>
+        <Naslov>asfds</Naslov>
+        <Sadrzaj> asdasd</Sadrzaj>
+        <Ocena>1</Ocena>
+        <Slika>../Uploads/6cdc130e6-ace9-475e-8b70-95a2e2df8c99.png</Slika>
+        <StatusRecenzije>Odbijena</StatusRecenzije>
+      </Recenzija>
+    </Recenzije>
+    <Rezervacije>
+      <Rezervacija>
+        <Id>11</Id>
+        <LetId>13</LetId>
+        <Korisnik>Marko</Korisnik>
+        <BrojPutnika>4</BrojPutnika>
+        <UkupnaCena>16000</UkupnaCena>
+        <Status>Zavrsena</Status>
       </Rezervacija>
     </Rezervacije>
   </Putnik>
