@@ -11,14 +11,14 @@
 });
 
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!localStorage.getItem('token'))
         window.location = '/MyPages/index.html';
-    if (sessionStorage.getItem('role') != 'Administrator')
+    if (localStorage.getItem('role') != 'Administrator')
         window.location = '/MyPages/index.html';
 }
 
 async function fetchKompanije() {
-    if (sessionStorage.getItem('token')) {
+    if (localStorage.getItem('token')) {
         const naziv = $('#nazivPretraga').val();
         const adresa = $('#adresaPretraga').val();
         const telefon = $('#telefonPretraga').val();
@@ -125,7 +125,7 @@ function getColumnIndex(columnName) {
 
 
 async function fetchLetove() {
-    if (sessionStorage.getItem('token')) {
+    if (localStorage.getItem('token')) {
         const polaznadestinacija = $('#polaznaPretraga').val();
         const odredistnadestinacija = $('#odredisnaPretraga').val();
         const datumpolaska = $('#datumpolaskaPretraga').val();

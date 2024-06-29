@@ -4,22 +4,22 @@
 })
 
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!localStorage.getItem('token'))
         window.location = '/MyPages/index.html';
 }
 
 async function profileOptions() {
     
-    if (sessionStorage.getItem('token')) {
-        if (!sessionStorage.getItem('role')) {
+    if (localStorage.getItem('token')) {
+        if (!localStorage.getItem('role')) {
             await $.ajax({
-                url: '/api/role/' + sessionStorage.getItem('token'),
+                url: '/api/role/' + localStorage.getItem('token'),
                 method: "GET",
-                success: function (data, status) { sessionStorage.setItem('role', data) },
+                success: function (data, status) { localStorage.setItem('role', data) },
                 error: (xhr) => { console.log(xhr.responseText); }
             });
         }
-        var role = sessionStorage.getItem('role');
+        var role = localStorage.getItem('role');
         if (role === "Administrator") {
             $('#options').append(`<div class="row">
                                     <a href="usersAdminControll.html">Korisnici</a>

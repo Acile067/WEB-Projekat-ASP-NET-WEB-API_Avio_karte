@@ -4,7 +4,7 @@
 });
 
 function getReady() {
-    if (sessionStorage.getItem('token'))
+    if (localStorage.getItem('token'))
         window.location = '/MyPages/index.html';  
 }
 

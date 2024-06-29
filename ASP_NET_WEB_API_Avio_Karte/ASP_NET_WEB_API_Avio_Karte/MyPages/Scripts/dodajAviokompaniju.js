@@ -8,9 +8,9 @@
 });
 
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!localStorage.getItem('token'))
         window.location = '/MyPages/index.html';
-    if (sessionStorage.getItem('role') != 'Administrator')
+    if (localStorage.getItem('role') != 'Administrator')
         window.location = '/MyPages/index.html';
 }
 
@@ -35,7 +35,7 @@ function checkAll(list) {
 }
 
 function register() {
-    let autorizacija = sessionStorage.getItem('token');
+    let autorizacija = localStorage.getItem('token');
     $(document).on('click', '#dodajkompaniju', function () {
         if (checkAll(['naziv', 'adresa', 'telefon', 'email'])) {
             let data = {
@@ -74,7 +74,7 @@ function register() {
 
 
 async function fetchKompanije() {
-    if (sessionStorage.getItem('token')) {
+    if (localStorage.getItem('token')) {
         const naziv = $('#nazivPretraga').val();
         const adresa = $('#adresaPretraga').val();
         const telefon = $('#telefonPretraga').val();

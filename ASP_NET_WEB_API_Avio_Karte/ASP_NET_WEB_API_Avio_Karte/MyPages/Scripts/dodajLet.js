@@ -3,9 +3,9 @@
     register();
 });
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!localStorage.getItem('token'))
         window.location = '/MyPages/index.html';
-    if (sessionStorage.getItem('role') != 'Administrator')
+    if (localStorage.getItem('role') != 'Administrator')
         window.location = '/MyPages/index.html';
 }
 
@@ -56,7 +56,7 @@ function register() {
                 url: '/api/let',
                 type: 'POST',
                 headers: {
-                    'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+                    'Authorization': 'Bearer ' + localStorage.getItem('token'),
                     'Content-Type': 'application/json'
                 },
                 data: JSON.stringify(data),

@@ -4,7 +4,7 @@
 });
 
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!localStorage.getItem('token'))
         window.location = '/MyPages/index.html';
 }
 
@@ -22,7 +22,7 @@ function loadLet() {
             url: '/api/let/' + id,
             type: 'GET',
             headers: {
-                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
             },
             success: function (data) {
                 let statusText = "";

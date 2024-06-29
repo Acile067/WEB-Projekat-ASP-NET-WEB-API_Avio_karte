@@ -13,21 +13,21 @@
 });
 
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!localStorage.getItem('token'))
         window.location = '/MyPages/index.html';
 }
 
 async function fetchLetove() {
-    if (sessionStorage.getItem('token')) {
+    if (localStorage.getItem('token')) {
         const statusleta = $('#statusPretraga').val();
-        let korisnik = sessionStorage.getItem('korisnickoime');
+        let korisnik = localStorage.getItem('korisnickoime');
 
         try {
             const response = await $.ajax({
                 url: `/api/letovizakorisnika/${korisnik}`,
                 method: "GET",
                 headers: {
-                    'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
                 },
                 data: { statusleta: statusleta }
             });

@@ -5,20 +5,20 @@
 });
 
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!localStorage.getItem('token'))
         window.location = '/MyPages/index.html';
-    if (sessionStorage.getItem('role') != 'Administrator')
+    if (localStorage.getItem('role') != 'Administrator')
         window.location = '/MyPages/index.html';
 }
 
 async function fetchKreirane() {
-    if (sessionStorage.getItem('token')) {
+    if (localStorage.getItem('token')) {
         try {
             const response = await $.ajax({
                 url: '/api/kreiranerecenzije',
                 method: "GET",
                 headers: {
-                    'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
                 }
             });
             populateKreirane(response);
@@ -89,7 +89,7 @@ function populateKreirane(users) {
 }
 
 async function updateStatusRecenzije(recenzijaId, status) {
-    if (sessionStorage.getItem('token')) {
+    if (localStorage.getItem('token')) {
         try {
             await $.ajax({
                 url: `/api/recenzija/${recenzijaId}/status`,
@@ -97,7 +97,7 @@ async function updateStatusRecenzije(recenzijaId, status) {
                 data: JSON.stringify({ status: status }),
                 contentType: 'application/json',
                 headers: {
-                    'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
                 },
                 success: function (data) {
                     alert('Status recenzije je uspešno ažuriran.');
@@ -119,13 +119,13 @@ async function updateStatusRecenzije(recenzijaId, status) {
 
 
 async function fetchOdobreneOdbijene() {
-    if (sessionStorage.getItem('token')) {
+    if (localStorage.getItem('token')) {
         try {
             const response = await $.ajax({
                 url: '/api/odobreneodbijenerecenzije',
                 method: "GET",
                 headers: {
-                    'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
                 }
             });
             populateOdobreneOdbijene(response);

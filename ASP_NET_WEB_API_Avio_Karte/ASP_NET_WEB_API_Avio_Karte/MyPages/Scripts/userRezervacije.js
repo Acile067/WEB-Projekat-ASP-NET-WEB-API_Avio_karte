@@ -16,14 +16,14 @@
 });
 
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!localStorage.getItem('token'))
         window.location = '/MyPages/index.html';
 }
 
 // Modifikacija fetchRecenzije funkcije da prihvati status
 async function fetchRecenzije(status = '') {
-    var korisnickoime = sessionStorage.getItem('korisnickoime');
-    var token = sessionStorage.getItem('token');
+    var korisnickoime = localStorage.getItem('korisnickoime');
+    var token = localStorage.getItem('token');
     console.log('Korisničko ime:', korisnickoime);
     console.log('Token:', token);
 

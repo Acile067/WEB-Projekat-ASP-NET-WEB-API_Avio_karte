@@ -5,10 +5,10 @@
 });
 
 function getReady() {
-    if (!sessionStorage.getItem('token')) {
+    if (!localStorage.getItem('token')) {
         window.location = '/MyPages/login.html';
     }
-    else if (sessionStorage.getItem('role') != 'Putnik') {
+    else if (localStorage.getItem('role') != 'Putnik') {
         window.location = '/MyPages/index.html';
     }
         
@@ -28,7 +28,7 @@ function loadLet() {
             url: '/api/let/' + id,
             type: 'GET',
             headers: {
-                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
             },
             success: function (data) {
                 var tableRow = `
@@ -87,7 +87,7 @@ function checkAll(list) {
 function register() {
     $(document).on('click', '#rezervisibtn', function () {
         var id = getUrlParameter('id');
-        var trenutniKorisnik = sessionStorage.getItem('korisnickoime');
+        var trenutniKorisnik = localStorage.getItem('korisnickoime');
         if (checkAll(['brojKarata'])) {
             data = {
                 'brojputnika': $('#brojKarata').val(),
@@ -99,7 +99,7 @@ function register() {
                 url: '/api/rezervacija',
                 type: 'POST',
                 headers: {
-                    'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+                    'Authorization': 'Bearer ' + localStorage.getItem('token'),
                     'Content-Type': 'application/json'
                 },
                 data: JSON.stringify(data),

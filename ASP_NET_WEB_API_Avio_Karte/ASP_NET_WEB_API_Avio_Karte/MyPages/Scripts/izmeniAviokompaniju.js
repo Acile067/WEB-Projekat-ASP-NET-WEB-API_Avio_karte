@@ -13,9 +13,9 @@
 });
 
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!localStorage.getItem('token'))
         window.location = '/MyPages/index.html';
-    if (sessionStorage.getItem('role') != 'Administrator')
+    if (localStorage.getItem('role') != 'Administrator')
         window.location = '/MyPages/index.html';
 }
 
@@ -53,7 +53,7 @@ function loadAviokompanija() {
             url: '/api/aviokompanija/' + id,
             type: 'GET',
             headers: {
-                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
             },
             success: function (data) {
                 $('#naziv').val(data.Naziv);
@@ -86,7 +86,7 @@ function updateAviokompanija() {
             url: '/api/aviokompanija/' + id,
             type: 'PUT',
             headers: {
-                'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+                'Authorization': 'Bearer ' + localStorage.getItem('token'),
                 'Content-Type': 'application/json'
             },
             data: JSON.stringify(aviokompanija),
@@ -113,7 +113,7 @@ function deleteAviokompanija() {
             url: '/api/aviokompanija/' + id,
             type: 'DELETE',
             headers: {
-                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
             },
             success: function () {
                 alert('Aviokompanija uspesno obrisana');

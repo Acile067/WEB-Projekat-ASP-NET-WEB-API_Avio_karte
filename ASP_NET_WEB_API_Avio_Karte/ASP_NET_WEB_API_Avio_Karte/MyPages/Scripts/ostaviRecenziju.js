@@ -6,7 +6,7 @@
 });
 
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!localStorage.getItem('token'))
         window.location = '/MyPages/index.html';
 }
 
@@ -24,7 +24,7 @@ function loadLet() {
             url: '/api/let/' + id,
             type: 'GET',
             headers: {
-                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
             },
             success: function (data) {
                 let statusText = "";
@@ -70,7 +70,7 @@ function loadAviokompanija() {
             url: '/api/aviokompanijaLetId/' + letid,
             type: 'GET',
             headers: {
-                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
             },
             success: function (data) {
 
@@ -115,7 +115,7 @@ function checkAll(list) {
 
 function register() {
     $(document).on('click', '#postaviRecenziju', function () {
-        let korisnik = sessionStorage.getItem('korisnickoime');
+        let korisnik = localStorage.getItem('korisnickoime');
         let letid = getUrlParameter('letid');
 
         if (checkAll(['naslov', 'sadrzaj'])) {
@@ -139,7 +139,7 @@ function register() {
                 processData: false,
                 contentType: false,
                 headers: {
-                    'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
                 },
                 success: function (result) {
                     alert("Uspešno dodana recenzija " + $('#naslov').val());

@@ -14,9 +14,9 @@
 });
 
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!localStorage.getItem('token'))
         window.location = '/MyPages/index.html';
-    if (sessionStorage.getItem('role') != 'Administrator')
+    if (localStorage.getItem('role') != 'Administrator')
         window.location = '/MyPages/index.html';
 }
 
@@ -70,7 +70,7 @@ function loadAviokompanije() {
         url: '/api/nazivaviokompanija',
         type: 'GET',
         headers: {
-            'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+            'Authorization': 'Bearer ' + localStorage.getItem('token')
         },
         success: function (data) {
             var aviokompanijaSelect = $('#aviokompanija');
@@ -94,7 +94,7 @@ function loadLet() {
             url: '/api/let/' + id,
             type: 'GET',
             headers: {
-                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
             },
             success: function (data) {
 
@@ -147,7 +147,7 @@ function updateLet() {
             url: '/api/let/' + id,
             type: 'PUT',
             headers: {
-                'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+                'Authorization': 'Bearer ' + localStorage.getItem('token'),
                 'Content-Type': 'application/json'
             },
             data: JSON.stringify(let),
@@ -173,7 +173,7 @@ function deleteLet() {
             url: '/api/let/' + id,
             type: 'DELETE',
             headers: {
-                'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
             },
             success: function () {
                 alert('Let uspešno obrisan');

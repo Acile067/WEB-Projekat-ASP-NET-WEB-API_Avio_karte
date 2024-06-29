@@ -5,12 +5,12 @@
 });
 
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!localStorage.getItem('token'))
         window.location = '/MyPages/index.html';
 }
 
 function fillBlanks() {
-    let token = sessionStorage.getItem('token');
+    let token = localStorage.getItem('token');
     if (token) {
         $.get('/api/user/' + token, function (data, status) {
             if (data) {
@@ -50,7 +50,7 @@ function checkAll(list) {
     return goodInput;
 }
 function change() {
-    let token = sessionStorage.getItem('token');
+    let token = localStorage.getItem('token');
     if (token) {
         $(document).on('click', '#editbtn', function () {
             if (checkAll(['ime', 'prezime', 'korisnickoime', 'email', 'lozinka', 'pol', 'datumrodjenja'])) {

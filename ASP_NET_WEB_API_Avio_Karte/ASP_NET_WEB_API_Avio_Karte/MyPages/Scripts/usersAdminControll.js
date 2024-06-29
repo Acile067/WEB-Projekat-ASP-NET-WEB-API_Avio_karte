@@ -7,20 +7,20 @@
 });
 
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!localStorage.getItem('token'))
         window.location = '/MyPages/index.html';
-    if (sessionStorage.getItem('role') != 'Administrator')
+    if (localStorage.getItem('role') != 'Administrator')
         window.location = '/MyPages/index.html';
 }
 
 async function fetchUsers() {
-    if (sessionStorage.getItem('token')) {
+    if (localStorage.getItem('token')) {
         const ime = $('#imePretraga').val();
         const prezime = $('#prezimePretraga').val();
         const datumOd = $('#datumOdPretraga').val();
         const datumDo = $('#datumDoPretraga').val();
 
-        const autorizacija = sessionStorage.getItem('token');
+        const autorizacija = localStorage.getItem('token');
 
         try {
             const response = await $.ajax({

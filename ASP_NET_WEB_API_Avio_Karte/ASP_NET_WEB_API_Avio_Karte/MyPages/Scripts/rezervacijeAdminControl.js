@@ -6,20 +6,20 @@
 });
 
 function getReady() {
-    if (!sessionStorage.getItem('token'))
+    if (!localStorage.getItem('token'))
         window.location = '/MyPages/index.html';
-    if (sessionStorage.getItem('role') != 'Administrator')
+    if (localStorage.getItem('role') != 'Administrator')
         window.location = '/MyPages/index.html';
 }
 
 async function fetchNeodobrene() {
-    if (sessionStorage.getItem('token')) {
+    if (localStorage.getItem('token')) {
         try {
             const response = await $.ajax({
                 url: '/api/neodobrene',
                 method: "GET",
                 headers: {
-                    'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+                    'Authorization': 'Bearer ' + localStorage.getItem('token'),
                     'Content-Type': 'application/json'
                 }
             });
@@ -128,13 +128,13 @@ function columnIndex(columnName) {
 
 
 async function fetchOdobrene() {
-    if (sessionStorage.getItem('token')) {
+    if (localStorage.getItem('token')) {
         try {
             const response = await $.ajax({
                 url: '/api/odobrene',
                 method: "GET",
                 headers: {
-                    'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+                    'Authorization': 'Bearer ' + localStorage.getItem('token'),
                     'Content-Type': 'application/json'
                 }
             });
@@ -245,13 +245,13 @@ function populateOdobrene(users) {
 
 
 async function fetchZavrseneOtkazane() {
-    if (sessionStorage.getItem('token')) {
+    if (localStorage.getItem('token')) {
         try {
             const response = await $.ajax({
                 url: '/api/zavrseneotkazane',
                 method: "GET",
                 headers: {
-                    'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+                    'Authorization': 'Bearer ' + localStorage.getItem('token'),
                     'Content-Type': 'application/json'
                 }
             });

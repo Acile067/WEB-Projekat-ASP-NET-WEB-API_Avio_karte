@@ -4,8 +4,8 @@
 });
 
 function getReady() {
-    if (sessionStorage.getItem('token')) {
-        sessionStorage.clear();
+    if (localStorage.getItem('token')) {
+        localStorage.clear();
         window.location = '/MyPages/index.html';
     }
 }
@@ -29,9 +29,9 @@ function login() {
 
         let data = { 'korisnickoime': $('#korisnickoime').val(), 'lozinka': $('#lozinka').val() };
         $.post('/api/login', data, function (result) {
-            sessionStorage.clear();
-            sessionStorage.setItem('token', result);
-            sessionStorage.setItem('korisnickoime', $('#korisnickoime').val());
+            localStorage.clear();
+            localStorage.setItem('token', result);
+            localStorage.setItem('korisnickoime', $('#korisnickoime').val());
             window.location = '/MyPages/index.html';
         }).fail(function (xhr, status, err) {
             alert("Lose uneti podaci");

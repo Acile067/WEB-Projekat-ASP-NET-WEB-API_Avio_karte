@@ -5,16 +5,16 @@
 
 async function navbar() {
     $('ul').empty();
-    if (sessionStorage.getItem('token')) {
-        if (!sessionStorage.getItem('role')) {
+    if (localStorage.getItem('token')) {
+        if (!localStorage.getItem('role')) {
             await $.ajax({
-                url: '/api/role/' + sessionStorage.getItem('token'),
+                url: '/api/role/' + localStorage.getItem('token'),
                 method: "GET",
-                success: function (data, status) { sessionStorage.setItem('role', data) },
+                success: function (data, status) { localStorage.setItem('role', data) },
                 error: (xhr) => { console.log(xhr.responseText); }
             });
         }
-        var role = sessionStorage.getItem('role');
+        var role = localStorage.getItem('role');
         if (role === "Administrator") {
             
         }
@@ -54,14 +54,14 @@ async function navbar() {
 
 function clearSessionAndRedirect() {
     console.log('Clearing session storage');
-    sessionStorage.clear();
+    localStorage.clear();
     console.log('Redirecting to index.html');
     window.location = "/MyPages/index.html";
 }
 
 function logout() {
     $(document).on('click', "#logout", async function () {
-        let id = sessionStorage.getItem('token');
+        let id = localStorage.getItem('token');
         console.log('Starting logout for token:', id); // Dodato za logovanje
         try {
             await $.ajax({
