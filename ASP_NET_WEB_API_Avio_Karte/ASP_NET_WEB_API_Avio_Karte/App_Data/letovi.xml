@@ -352,4 +352,30 @@
     </Rezervacije>
     <Obrisan>Ne</Obrisan>
   </Let>
+  <Let>
+    <AviokompanijaId>1</AviokompanijaId>
+    <Id>15</Id>
+    <Aviokompanija>AvioLet</Aviokompanija>
+    <PolaznaDestinacija>Beograd</PolaznaDestinacija>
+    <OdredistnaDestinacija>Moskva</OdredistnaDestinacija>
+    <DatumPolaska>29/06/2024</DatumPolaska>
+    <VremePolaska>21:15</VremePolaska>
+    <DatumDolaska>29/06/2024</DatumDolaska>
+    <VremeDolaska>21:23</VremeDolaska>
+    <BrojSlobodnihMesta>34</BrojSlobodnihMesta>
+    <BrojZauzetihMesta>6</BrojZauzetihMesta>
+    <Cena>5500</Cena>
+    <StatusLeta>Zavrsen</StatusLeta>
+    <Rezervacije>
+      <Rezervacija>
+        <Id>14</Id>
+        <LetId>15</LetId>
+        <Korisnik>Stefan</Korisnik>
+        <BrojPutnika>6</BrojPutnika>
+        <UkupnaCena>33000</UkupnaCena>
+        <Status>Odobrena</Status>
+      </Rezervacija>
+    </Rezervacije>
+    <Obrisan>Ne</Obrisan>
+  </Let>
 </ArrayOfLet>

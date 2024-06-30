@@ -199,6 +199,14 @@
         <UkupnaCena>29400</UkupnaCena>
         <Status>Zavrsena</Status>
       </Rezervacija>
+      <Rezervacija>
+        <Id>14</Id>
+        <LetId>15</LetId>
+        <Korisnik>Stefan</Korisnik>
+        <BrojPutnika>6</BrojPutnika>
+        <UkupnaCena>33000</UkupnaCena>
+        <Status>Zavrsena</Status>
+      </Rezervacija>
     </Rezervacije>
   </Putnik>
   <Putnik>
