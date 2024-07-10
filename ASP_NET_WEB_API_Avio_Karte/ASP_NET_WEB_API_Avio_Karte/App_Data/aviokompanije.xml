@@ -2,7 +2,7 @@
 <ArrayOfAviokompanija xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Aviokompanija>
     <Id>1</Id>
-    <Naziv>AvioLet</Naziv>
+    <Naziv>AvioLet2</Naziv>
     <Adresa>Beograd</Adresa>
     <Telefon>0611554241</Telefon>
     <Email>avio@let.com</Email>
@@ -11,7 +11,7 @@
       <Let>
         <AviokompanijaId>1</AviokompanijaId>
         <Id>6</Id>
-        <Aviokompanija>AvioLet</Aviokompanija>
+        <Aviokompanija>AvioLet2</Aviokompanija>
         <PolaznaDestinacija>Beograd</PolaznaDestinacija>
         <OdredistnaDestinacija>London</OdredistnaDestinacija>
         <DatumPolaska>07/07/2024</DatumPolaska>
@@ -21,14 +21,14 @@
         <BrojSlobodnihMesta>60</BrojSlobodnihMesta>
         <BrojZauzetihMesta>0</BrojZauzetihMesta>
         <Cena>6900</Cena>
-        <StatusLeta>Aktivan</StatusLeta>
+        <StatusLeta>Zavrsen</StatusLeta>
         <Rezervacije />
         <Obrisan>Ne</Obrisan>
       </Let>
       <Let>
         <AviokompanijaId>1</AviokompanijaId>
         <Id>1</Id>
-        <Aviokompanija>AvioLet</Aviokompanija>
+        <Aviokompanija>AvioLet2</Aviokompanija>
         <PolaznaDestinacija>Beograd</PolaznaDestinacija>
         <OdredistnaDestinacija>Madrid</OdredistnaDestinacija>
         <DatumPolaska>12/12/2050</DatumPolaska>
@@ -54,7 +54,7 @@
       <Let>
         <AviokompanijaId>1</AviokompanijaId>
         <Id>11</Id>
-        <Aviokompanija>AvioLet</Aviokompanija>
+        <Aviokompanija>AvioLet2</Aviokompanija>
         <PolaznaDestinacija>Beograd</PolaznaDestinacija>
         <OdredistnaDestinacija>Loznica</OdredistnaDestinacija>
         <DatumPolaska>20/06/2024</DatumPolaska>
@@ -88,7 +88,7 @@
       <Let>
         <AviokompanijaId>1</AviokompanijaId>
         <Id>15</Id>
-        <Aviokompanija>AvioLet</Aviokompanija>
+        <Aviokompanija>AvioLet2</Aviokompanija>
         <PolaznaDestinacija>Beograd</PolaznaDestinacija>
         <OdredistnaDestinacija>Moskva</OdredistnaDestinacija>
         <DatumPolaska>29/06/2024</DatumPolaska>
@@ -107,6 +107,58 @@
             <BrojPutnika>6</BrojPutnika>
             <UkupnaCena>33000</UkupnaCena>
             <Status>Zavrsena</Status>
+          </Rezervacija>
+        </Rezervacije>
+        <Obrisan>Ne</Obrisan>
+      </Let>
+      <Let>
+        <AviokompanijaId>1</AviokompanijaId>
+        <Id>16</Id>
+        <Aviokompanija>AvioLet2</Aviokompanija>
+        <PolaznaDestinacija>Novi Sad</PolaznaDestinacija>
+        <OdredistnaDestinacija>Sabac</OdredistnaDestinacija>
+        <DatumPolaska>03/07/2024</DatumPolaska>
+        <VremePolaska>09:02</VremePolaska>
+        <DatumDolaska>03/07/2024</DatumDolaska>
+        <VremeDolaska>09:04</VremeDolaska>
+        <BrojSlobodnihMesta>95</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>5</BrojZauzetihMesta>
+        <Cena>1000</Cena>
+        <StatusLeta>Zavrsen</StatusLeta>
+        <Rezervacije>
+          <Rezervacija>
+            <Id>15</Id>
+            <LetId>16</LetId>
+            <Korisnik>Test</Korisnik>
+            <BrojPutnika>5</BrojPutnika>
+            <UkupnaCena>5000</UkupnaCena>
+            <Status>Zavrsena</Status>
+          </Rezervacija>
+        </Rezervacije>
+        <Obrisan>Ne</Obrisan>
+      </Let>
+      <Let>
+        <AviokompanijaId>1</AviokompanijaId>
+        <Id>7</Id>
+        <Aviokompanija>AvioLet2</Aviokompanija>
+        <PolaznaDestinacija>Frankfurt</PolaznaDestinacija>
+        <OdredistnaDestinacija>Valencia</OdredistnaDestinacija>
+        <DatumPolaska>08/01/2030</DatumPolaska>
+        <VremePolaska>16:30</VremePolaska>
+        <DatumDolaska>08/01/2030</DatumDolaska>
+        <VremeDolaska>17:00</VremeDolaska>
+        <BrojSlobodnihMesta>11333</BrojSlobodnihMesta>
+        <BrojZauzetihMesta>7</BrojZauzetihMesta>
+        <Cena>8000</Cena>
+        <StatusLeta>Aktivan</StatusLeta>
+        <Rezervacije>
+          <Rezervacija>
+            <Id>4</Id>
+            <LetId>7</LetId>
+            <Korisnik>Sanja</Korisnik>
+            <BrojPutnika>7</BrojPutnika>
+            <UkupnaCena>56000</UkupnaCena>
+            <Status>Kreirana</Status>
           </Rezervacija>
         </Rezervacije>
         <Obrisan>Ne</Obrisan>
@@ -134,6 +186,17 @@
         <Slika>../Uploads/250adbb99-9cbe-4e9e-bc69-94d6a784181a.png</Slika>
         <StatusRecenzije>Odobrena</StatusRecenzije>
       </Recenzija>
+      <Recenzija>
+        <Id>9</Id>
+        <LetId>16</LetId>
+        <Korisnik>Test</Korisnik>
+        <Aviokompanija>AvioLet2</Aviokompanija>
+        <Naslov>saddsa</Naslov>
+        <Sadrzaj>asdasd asdasd</Sadrzaj>
+        <Ocena>5</Ocena>
+        <Slika>../Uploads/9d93e0c74-8ce9-425d-a05e-d1725638524c.png</Slika>
+        <StatusRecenzije>Odobrena</StatusRecenzije>
+      </Recenzija>
     </Recenzije>
   </Aviokompanija>
   <Aviokompanija>
@@ -159,32 +222,6 @@
         <Cena>6500</Cena>
         <StatusLeta>Aktivan</StatusLeta>
         <Rezervacije />
-        <Obrisan>Ne</Obrisan>
-      </Let>
-      <Let>
-        <AviokompanijaId>2</AviokompanijaId>
-        <Id>7</Id>
-        <Aviokompanija>Eckener</Aviokompanija>
-        <PolaznaDestinacija>Frankfurt</PolaznaDestinacija>
-        <OdredistnaDestinacija>Valencia</OdredistnaDestinacija>
-        <DatumPolaska>08/01/2030</DatumPolaska>
-        <VremePolaska>16:30</VremePolaska>
-        <DatumDolaska>08/01/2030</DatumDolaska>
-        <VremeDolaska>17:00</VremeDolaska>
-        <BrojSlobodnihMesta>113</BrojSlobodnihMesta>
-        <BrojZauzetihMesta>7</BrojZauzetihMesta>
-        <Cena>8000</Cena>
-        <StatusLeta>Aktivan</StatusLeta>
-        <Rezervacije>
-          <Rezervacija>
-            <Id>4</Id>
-            <LetId>7</LetId>
-            <Korisnik>Sanja</Korisnik>
-            <BrojPutnika>7</BrojPutnika>
-            <UkupnaCena>56000</UkupnaCena>
-            <Status>Kreirana</Status>
-          </Rezervacija>
-        </Rezervacije>
         <Obrisan>Ne</Obrisan>
       </Let>
     </Letovi>
@@ -404,7 +441,7 @@
             <Korisnik>Stefan</Korisnik>
             <BrojPutnika>3</BrojPutnika>
             <UkupnaCena>16800</UkupnaCena>
-            <Status>Odobrena</Status>
+            <Status>Otkazana</Status>
           </Rezervacija>
         </Rezervacije>
         <Obrisan>Ne</Obrisan>

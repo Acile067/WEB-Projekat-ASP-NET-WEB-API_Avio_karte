@@ -85,4 +85,15 @@
     <Slika>../Uploads/8fa3093f5-c51f-4494-a03a-202833b547d0.png</Slika>
     <StatusRecenzije>Odobrena</StatusRecenzije>
   </Recenzija>
+  <Recenzija>
+    <Id>9</Id>
+    <LetId>16</LetId>
+    <Korisnik>Test</Korisnik>
+    <Aviokompanija>AvioLet2</Aviokompanija>
+    <Naslov>saddsa</Naslov>
+    <Sadrzaj>asdasd asdasd</Sadrzaj>
+    <Ocena>5</Ocena>
+    <Slika>../Uploads/9d93e0c74-8ce9-425d-a05e-d1725638524c.png</Slika>
+    <StatusRecenzije>Odobrena</StatusRecenzije>
+  </Recenzija>
 </ArrayOfRecenzija>
